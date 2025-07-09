@@ -18,6 +18,10 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/yangfinity-logo-notext.png" type="image/png" sizes="32x32" />
+      </head>
       <body className={`${inter.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
         <CartProvider>
           <Navbar />
