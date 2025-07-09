@@ -1,11 +1,11 @@
 'use client';
 
 import clsx from 'clsx';
-import type { SortFilterItem } from 'lib/constants';
-import { createUrl } from 'lib/utils';
+import type { ListItem, PathFilterItem } from '.';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import type { ListItem, PathFilterItem } from '.';
+
+type SortFilterItem = { title: string; slug: string };
 
 function PathFilterItem({ item }: { item: PathFilterItem }) {
   const pathname = usePathname();
@@ -60,6 +60,11 @@ function SortFilterItem({ item }: { item: SortFilterItem }) {
       </DynamicTag>
     </li>
   );
+}
+
+function createUrl(path: string, params: URLSearchParams) {
+  const qs = params.toString();
+  return qs ? `${path}?${qs}` : path;
 }
 
 export function FilterItem({ item }: { item: ListItem }) {
