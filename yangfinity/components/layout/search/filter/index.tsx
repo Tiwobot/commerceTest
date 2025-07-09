@@ -1,4 +1,4 @@
-import { SortFilterItem } from 'lib/constants';
+type SortFilterItem = { title: string; slug: string };
 import { Suspense } from 'react';
 import FilterItemDropdown from './dropdown';
 import { FilterItem } from './item';
