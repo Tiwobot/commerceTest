@@ -167,12 +167,12 @@ export function Navbar() {
           >
             <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
           </Link>
-          <ul className="hidden gap-6 text-sm md:flex md:items-center">
+            <ul className="hidden gap-6 text-sm md:flex md:items-center">
             <li><Link href="/" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">Home</Link></li>
             <li><Link href="/products" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">Products</Link></li>
             <li><Link href="/about" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">About</Link></li>
             <li><Link href="/faq" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">FAQ</Link></li>
-          </ul>
+            </ul>
         </div>
         <div className="hidden justify-center md:flex md:w-1/3">
           <Suspense fallback={<SearchSkeleton />}>

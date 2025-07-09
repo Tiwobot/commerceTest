@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href="/products" className="hover:underline">Products</Link>
           <Link href="/about" className="hover:underline">About</Link>
           <Link href="/faq" className="hover:underline">FAQ</Link>
-        </div>
+            </div>
         <div className="md:ml-auto">
         </div>
       
@@ -28,7 +28,7 @@ export default function Footer() {
             &copy; {copyrightDate} Yangfinity. All rights reserved.
           </p>
         </div>
-      </div>
+        </div>
       </div>
     </footer>
   );
