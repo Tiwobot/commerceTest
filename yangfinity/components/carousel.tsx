@@ -1,35 +1,40 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
-const products = [
-  {
-    id: 1,
-    name: "Yang - Server A",
-    price: 10,
-    server: "Server A",
-    image: "/globe.svg",
-  },
-  {
-    id: 2,
-    name: "Yang - Server B",
-    price: 15,
-    server: "Server B",
-    image: "/window.svg",
-  },
-  {
-    id: 3,
-    name: "Yang - Server C",
-    price: 20,
-    server: "Server C",
-    image: "/file.svg",
-  },
-  {
-    id: 4,
-    name: "Yang - Server D",
-    price: 25,
-    server: "Server D",
-    image: "/vercel.svg",
-  },
-];
+const serverNames: Record<string, string> = {
+  'yang-1': 'Elveron',
+  'yang-2': 'Alturi',
+  'yang-3': 'Merlis',
+  'yang-4': 'Helios',
+  'yang-5': 'Helios2',
+  'yang-6': 'Levia',
+  'yang-7': 'Shiva',
+  'yang-8': 'Dominus',
+  'yang-9': 'Lupin',
+  'yang-10': 'Lupin2',
+  'yang-11': 'Rubinum',
+  'yang-12': 'Azyrah',
+  'yang-13': 'Goodtimes',
+  'yang-14': 'MT2Classic',
+  'yang-15': 'Lucerna',
+  'yang-16': 'Laetus',
+  'yang-17': 'StoneBreakers',
+  'yang-18': 'StoneBreakers2',
+  'yang-19': 'WOM',
+  'yang-20': 'WOM2',
+  'yang-21': 'NEWMT2',
+  'yang-22': 'Fortis2',
+};
+
+const productHandles = Object.keys(serverNames);
+const products = productHandles.map((handle, idx) => ({
+  id: idx + 1,
+  name: serverNames[handle],
+  price: 25,
+  server: serverNames[handle],
+  image: '/yangfinity-logo-notext.png',
+  handle,
+}));
 
 export function Carousel() {
   // Duplicate products for looping effect
@@ -43,7 +48,7 @@ export function Carousel() {
             key={`${product.name}${i}`}
             className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
           >
-            <div className="relative h-full w-full rounded-2xl bg-black border border-neutral-800 shadow-lg overflow-hidden">
+            <Link href={`/products/${product.handle}`} className="relative h-full w-full rounded-2xl bg-black border border-neutral-800 shadow-lg overflow-hidden block">
               <Image
                 src={product.image}
                 alt={product.name}
@@ -56,10 +61,10 @@ export function Carousel() {
                   {product.name}
                 </span>
                 <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow">
-                  ${product.price}.00 USD
+                  $25.00 USD
                 </span>
               </div>
-            </div>
+            </Link>
           </li>
         ))}
       </ul>

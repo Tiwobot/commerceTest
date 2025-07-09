@@ -7,6 +7,8 @@ import MobileMenu from './mobile-menu';
 import Search, { SearchSkeleton } from './search';
 import { useCart } from '../../cart/CartContext';
 import { useState } from 'react';
+import React from 'react';
+import { GeistSans } from 'geist/font/sans';
 
 function CartIcon({ quantity, onClick }: { quantity: number; onClick: () => void }) {
   return (
@@ -65,27 +67,39 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
           <>
             <ul className="flex-1 overflow-y-auto divide-y divide-neutral-800 mb-4">
               {items.map(item => (
-                <li key={item.id} className="flex items-center py-3">
-                  <img src={item.image} alt={item.name} className="w-12 h-12 rounded-lg object-contain bg-neutral-900 border border-neutral-800 mr-3" />
-                  <div className="flex-1">
-                    <div className="font-medium text-sm">{item.name}</div>
-                    <div className="text-xs text-neutral-400">${item.price} x {item.quantity}</div>
-                    <div className="flex items-center mt-1">
-                      <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-2 text-lg">-</button>
-                      <span className="px-2 text-sm">{item.quantity}</span>
-                      <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-2 text-lg">+</button>
+                <li key={item.id} className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700">
+                  <div className="relative flex w-full flex-row justify-between px-1 py-4">
+                    <button onClick={() => removeItem(item.id)} aria-label="Remove cart item" className="absolute z-40 left-0 top-0.2 -translate-x-0.2 -translate-y-1/2 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-500">
+                      <span className="h-4 w-4 flex items-center justify-center text-white dark:text-black">×</span>
+                    </button>
+                    <div className="flex flex-row">
+                      <div className="relative h-16 w-16 overflow-hidden rounded-md border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
+                        <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+                      </div>
+                      <div className="z-30 ml-2 flex flex-row space-x-4">
+                        <div className="flex flex-1 flex-col text-base">
+                          <span className="leading-tight font-medium truncate">{item.name}</span>
+                          <span className="text-sm text-neutral-500 dark:text-neutral-400">Amount: {item.quantity}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex h-16 flex-col justify-between items-end ml-2">
+                      <span className={`flex justify-end space-y-2 text-right text-sm text-white ${GeistSans.className}`}>{(item.price * item.quantity).toFixed(2)}</span>
+                      <div className="ml-auto flex h-9 flex-row items-center rounded-full border border-neutral-200 dark:border-neutral-700">
+                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-2 text-lg">-</button>
+                        <span className="w-6 text-center text-sm">{item.quantity}</span>
+                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-2 text-lg">+</button>
+                      </div>
                     </div>
                   </div>
-                  <button onClick={() => removeItem(item.id)} className="ml-2 text-red-400 text-lg" aria-label="Remove">×</button>
                 </li>
               ))}
             </ul>
             <div className="flex justify-between items-center border-t border-neutral-800 pt-4">
               <span className="font-semibold">Total:</span>
-              <span className="font-bold">${totalPrice.toFixed(2)}</span>
+              <span className={`text-white ${GeistSans.className}`}>${totalPrice.toFixed(2)}</span>
             </div>
-            <button onClick={clearCart} className="mt-4 w-full bg-red-600 hover:bg-red-700 text-white py-2 rounded">Clear Cart</button>
-            <button disabled className="mt-2 w-full bg-blue-600 text-white py-2 rounded opacity-60 cursor-not-allowed">Checkout (disabled)</button>
+            <button disabled className={`mt-4 w-full bg-blue-600 text-white py-3 rounded-full opacity-60 cursor-not-allowed ${GeistSans.className}`}>Proceed to checkout</button>
           </>
         )}
       </div>
@@ -140,6 +154,13 @@ export function Navbar() {
   const [cartOpen, setCartOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [user, setUser] = useState<{ username: string } | null>(null);
+
+  // Listen for custom event to open cart modal from anywhere
+  React.useEffect(() => {
+    const openCart = () => setCartOpen(true);
+    window.addEventListener('open-cart-modal', openCart);
+    return () => window.removeEventListener('open-cart-modal', openCart);
+  }, []);
 
   const handleLogin = (username: string) => {
     setUser({ username });

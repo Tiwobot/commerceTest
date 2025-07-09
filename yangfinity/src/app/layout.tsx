@@ -1,14 +1,10 @@
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Navbar } from "../../components/layout/navbar";
 import Footer from "../../components/layout/footer";
 import { CartProvider } from '../../components/cart/CartContext';
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+// GeistSans already provides a .variable and .className for Tailwind/Next.js
 
 export const metadata = {
   title: "Yangfinity",
@@ -65,7 +61,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }
         }) }} />
       </head>
-      <body className={`${inter.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
+      <body className={`${GeistSans.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
         <CartProvider>
           <Navbar />
           <main>{children}</main>

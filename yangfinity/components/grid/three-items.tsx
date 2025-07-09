@@ -1,29 +1,40 @@
 import { GridTileImage } from './tile';
 import Link from 'next/link';
 
-const products = [
-  {
-    id: 1,
-    name: "Yang - Server A",
-    price: 10,
-    server: "Server A",
-    image: "/globe.svg",
-  },
-  {
-    id: 2,
-    name: "Yang - Server B",
-    price: 15,
-    server: "Server B",
-    image: "/window.svg",
-  },
-  {
-    id: 3,
-    name: "Yang - Server C",
-    price: 20,
-    server: "Server C",
-    image: "/file.svg",
-  },
-];
+const serverNames: Record<string, string> = {
+  'yang-1': 'Elveron',
+  'yang-2': 'Alturi',
+  'yang-3': 'Merlis',
+  'yang-4': 'Helios',
+  'yang-5': 'Helios2',
+  'yang-6': 'Levia',
+  'yang-7': 'Shiva',
+  'yang-8': 'Dominus',
+  'yang-9': 'Lupin',
+  'yang-10': 'Lupin2',
+  'yang-11': 'Rubinum',
+  'yang-12': 'Azyrah',
+  'yang-13': 'Goodtimes',
+  'yang-14': 'MT2Classic',
+  'yang-15': 'Lucerna',
+  'yang-16': 'Laetus',
+  'yang-17': 'StoneBreakers',
+  'yang-18': 'StoneBreakers2',
+  'yang-19': 'WOM',
+  'yang-20': 'WOM2',
+  'yang-21': 'NEWMT2',
+  'yang-22': 'Fortis2',
+};
+
+const productHandles = Object.keys(serverNames);
+const products = productHandles.slice(0, 3).map((handle, idx) => ({
+  id: idx + 1,
+  name: serverNames[handle],
+  price: 25,
+  server: serverNames[handle],
+  image: '/yangfinity-logo-notext.png',
+  handle,
+}));
 
 type Product = typeof products[0];
 
@@ -42,7 +53,7 @@ function ThreeItemGridItem({
     >
       <Link
         className="relative block aspect-square h-full w-full"
-        href="#"
+        href={`/products/${item.handle}`}
         prefetch={false}
       >
         <GridTileImage

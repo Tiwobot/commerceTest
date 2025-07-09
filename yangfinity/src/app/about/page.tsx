@@ -15,7 +15,7 @@ export default function AboutPage() {
         YANG
       </span>
       <div className="relative z-10">
-        <h1 className="text-5xl font-extrabold mb-8 text-white text-center">
+        <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
           About Yangfinity
         </h1>
         <p className="mb-4">
