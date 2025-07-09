@@ -45,7 +45,7 @@ function ProfileIcon() {
 }
 
 function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
-  const { items, removeItem, updateQuantity, totalPrice, clearCart } = useCart();
+  const { items, removeItem, updateQuantity, totalPrice } = useCart();
   return (
     <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
@@ -74,7 +74,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
                     </button>
                     <div className="flex flex-row">
                       <div className="relative h-16 w-16 overflow-hidden rounded-md border border-neutral-300 bg-neutral-300 dark:border-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800">
-                        <img src={item.image} alt={item.name} className="h-full w-full object-cover" />
+                        <Image src={item.image} alt={item.name || ''} fill className="h-full w-full object-cover" />
                       </div>
                       <div className="z-30 ml-2 flex flex-row space-x-4">
                         <div className="flex flex-1 flex-col text-base">
