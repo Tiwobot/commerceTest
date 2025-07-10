@@ -45,7 +45,7 @@ function ProfileIcon() {
   );
 }
 
-function LanguageSelector() {
+function LanguageSelector({ mobile }: { mobile?: boolean }) {
   const [open, setOpen] = React.useState(false);
   const [lang, setLang] = React.useState('EN');
   const languages = [
@@ -58,7 +58,7 @@ function LanguageSelector() {
       <button
         aria-label="Select language"
         onClick={() => setOpen((v) => !v)}
-        className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white ml-2"
+        className={`relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white ${!mobile ? 'ml-2' : ''}`}
       >
         <GlobeAltIcon className="h-5 w-5" />
         <span className="absolute bottom-1 right-1 text-xs font-semibold">{lang}</span>
@@ -214,15 +214,17 @@ export function Navbar() {
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
+        <div className="flex flex-row items-center gap-2">
         <Suspense fallback={null}>
-          <MobileMenu menu={[
-            { title: 'Home', path: '/' },
-            { title: 'Products', path: '/products' },
-            { title: 'About', path: '/about' },
-            { title: 'FAQ', path: '/faq' },
-          ]} />
+            <MobileMenu menu={[
+              { title: 'Home', path: '/' },
+              { title: 'Products', path: '/products' },
+              { title: 'About', path: '/about' },
+              { title: 'FAQ', path: '/faq' },
+            ]} />
         </Suspense>
-        <span className="ml-2"><LanguageSelector /></span>
+          <LanguageSelector mobile />
+        </div>
       </div>
       <div className="flex w-full items-center">
         <div className="flex w-full md:w-1/3">

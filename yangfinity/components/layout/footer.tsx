@@ -14,11 +14,11 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-2">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/products" className="hover:underline">Products</Link>
-          <Link href="/about" className="hover:underline">About</Link>
           <Link href="/faq" className="hover:underline">FAQ</Link>
-            </div>
+          <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
+          <Link href="/refund-policy" className="hover:underline">Refund Policy</Link>
+          <Link href="/contact" className="hover:underline">Contact</Link>
+        </div>
         <div className="md:ml-auto">
         </div>
       

@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-export default function AboutPage() {
+export default function TermsPage() {
   const yangRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -42,16 +42,20 @@ export default function AboutPage() {
         </span>
         <div className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
-            About Yangfinity
+            Terms & Conditions
           </h1>
           <p className="mb-4">
-            Yangfinity is dedicated to providing Metin2 players with the fastest, most reliable Yang delivery for a wide range of private servers. Our mission is to empower players by making in-game currency accessible, affordable, and secure.
+            Welcome to Yangfinity. By accessing or using our website, you agree to be bound by these Terms & Conditions. Please read them carefully.
           </p>
-          <p className="mb-4">
-            We support popular servers such as Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2, and more. Our team is passionate about Metin2 and committed to excellent customer service.
-          </p>
+          <ul className="mb-4 list-disc pl-6">
+            <li>All sales are final unless otherwise stated in our Refund Policy.</li>
+            <li>Users must provide accurate information for order fulfillment.</li>
+            <li>We reserve the right to refuse service to anyone for any reason at any time.</li>
+            <li>Use of our service is at your own risk. We are not responsible for any losses incurred.</li>
+            <li>These terms may be updated at any time without prior notice.</li>
+          </ul>
           <p>
-            Whether you’re a new player or a seasoned veteran, Yangfinity is your trusted partner for all your Yang needs. Join our community and experience the difference!
+            For questions regarding these terms, please contact us via the Contact page.
           </p>
         </div>
       </div>

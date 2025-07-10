@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
-export default function AboutPage() {
+export default function ContactPage() {
   const yangRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -42,17 +42,17 @@ export default function AboutPage() {
         </span>
         <div className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
-            About Yangfinity
+            Contact
           </h1>
-          <p className="mb-4">
-            Yangfinity is dedicated to providing Metin2 players with the fastest, most reliable Yang delivery for a wide range of private servers. Our mission is to empower players by making in-game currency accessible, affordable, and secure.
+          <p className="mb-8">
+            Have a question or need support? Fill out the form below and our team will get back to you as soon as possible.
           </p>
-          <p className="mb-4">
-            We support popular servers such as Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2, and more. Our team is passionate about Metin2 and committed to excellent customer service.
-          </p>
-          <p>
-            Whether you’re a new player or a seasoned veteran, Yangfinity is your trusted partner for all your Yang needs. Join our community and experience the difference!
-          </p>
+          <form className="flex flex-col gap-4 max-w-lg mx-auto">
+            <input type="text" placeholder="Name" className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
+            <input type="email" placeholder="Email" className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
+            <textarea placeholder="Message" rows={5} className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
+            <button type="submit" className="rounded bg-white/10 border border-white/30 text-white font-bold py-2 px-6 mt-2 hover:bg-white/20 transition">Send</button>
+          </form>
         </div>
       </div>
     </main>
