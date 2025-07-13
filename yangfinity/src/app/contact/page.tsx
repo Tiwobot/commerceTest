@@ -43,7 +43,7 @@ export default function ContactPage() {
         const data = await res.json();
         setResult(data.error || 'Something went wrong.');
       }
-    } catch (err) {
+    } catch {
       setResult('Something went wrong.');
     } finally {
       setLoading(false);

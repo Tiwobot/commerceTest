@@ -35,8 +35,12 @@ export async function POST(req: NextRequest) {
 
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ success: true });
-  } catch (err: any) {
-    console.error('Contact form error:', err);
+  } catch (err: unknown) {
+    if (err instanceof Error) {
+      console.error('Contact form error:', err.message, err.stack);
+    } else {
+      console.error('Contact form error:', err);
+    }
     return NextResponse.json({ error: 'Failed to send message.' }, { status: 500 });
   }
 } 
