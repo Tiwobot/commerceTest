@@ -6,6 +6,7 @@ import Label from '../../../components/label';
 import Collections from '../../../components/layout/search/collections';
 import FilterList from '../../../components/layout/search/filter';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 const sorting = [
   { title: 'Relevance', slug: 'relevance' },
@@ -47,6 +48,14 @@ const products = productHandles.map((handle) => ({
 }));
 
 export default function SearchPage() {
+  return (
+    <Suspense>
+      <SearchPageContent />
+    </Suspense>
+  );
+}
+
+function SearchPageContent() {
   const searchParams = useSearchParams();
   const query = (searchParams.get('q') || '').toLowerCase();
   const filtered = query === ''
