@@ -15,10 +15,7 @@
     "clsx": "^2.1.1",
     "geist": "^1.4.2",
     "next": "15.3.5",
-    "next-intl": {
-      "locales": ["en", "de", "tr", "es", "it", "fr"],
-      "defaultLocale": "en"
-    },
+    "next-intl": "^4.3.4",
     "nodemailer": "^7.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
