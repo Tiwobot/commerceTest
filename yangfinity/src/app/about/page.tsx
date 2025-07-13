@@ -46,7 +46,7 @@ export default function AboutPage() {
             We support popular servers such as Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2, and more. Our team is passionate about Metin2 and committed to excellent customer service.
           </p>
           <p>
-            Whether you're a new player or a seasoned veteran, Yangfinity is your trusted partner for all your Yang needs. <span role="img" aria-label="handshake">🤝</span> Join our community and experience the difference!
+            Whether you&apos;re a new player or a seasoned veteran, Yangfinity is your trusted partner for all your Yang needs. <span role="img" aria-label="handshake">🤝</span> Join our community and experience the difference!
           </p>
         </div>
       </div>

@@ -4,7 +4,7 @@ import { Navbar } from "../../components/layout/navbar";
 import Footer from "../../components/layout/footer";
 import { CartProvider } from '../../components/cart/CartContext';
 import Script from 'next/script';
-import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 

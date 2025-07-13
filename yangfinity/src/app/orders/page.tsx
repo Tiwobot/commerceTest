@@ -1,6 +1,7 @@
 'use client';
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { useEffect, useRef } from "react";
+import Link from 'next/link';
 
 export default function OrdersPage() {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -41,9 +42,9 @@ export default function OrdersPage() {
             <h1 className="text-3xl font-bold mb-4 text-white text-center">Your Orders</h1>
             <div className="flex flex-col items-center justify-center">
               <span className="text-5xl mb-2">🛒😭</span>
-              <p className="text-neutral-200 text-center mb-2">You haven't placed any orders yet.</p>
+              <p className="text-neutral-200 text-center mb-2">You haven&apos;t placed any orders yet.</p>
               <p className="text-neutral-200 text-center mb-4">Ready to get started? Explore our products and treat yourself to some Yang!</p>
-              <a href="/products" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition">Shop Now</a>
+              <Link href="/products" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition">Shop Now</Link>
             </div>
           </div>
         </main>
