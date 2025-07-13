@@ -9,46 +9,6 @@ import { GeistSans } from 'geist/font/sans';
 import { useCart } from '../../../../components/cart/CartContext';
 import { productData } from '../productData';
 
-const serverNames: Record<string, string> = {
-  'yang-1': 'Elveron',
-  'yang-2': 'Alturi',
-  'yang-3': 'Merlis',
-  'yang-4': 'Helios',
-  'yang-5': 'Helios2',
-  'yang-6': 'Levia',
-  'yang-7': 'Shiva',
-  'yang-8': 'Dominus',
-  'yang-9': 'Lupin',
-  'yang-10': 'Lupin2',
-  'yang-11': 'Rubinum',
-  'yang-12': 'Azyrah',
-  'yang-13': 'Goodtimes',
-  'yang-14': 'MT2Classic',
-  'yang-15': 'Lucerna',
-  'yang-16': 'Laetus',
-  'yang-17': 'StoneBreakers',
-  'yang-18': 'StoneBreakers2',
-  'yang-19': 'WOM',
-  'yang-20': 'WOM2',
-  'yang-21': 'NEWMT2',
-  'yang-22': 'Fortis2',
-};
-
-const amountOptions = [
-  { label: '100M', value: 100, price: 5 },
-  { label: '500M', value: 500, price: 20 },
-  { label: '1B', value: 1000, price: 35 },
-];
-
-const placeholderProduct = {
-  description: 'Buy Yang for Metin2 servers. Fast, safe, and reliable delivery.',
-  images: [
-    '/yangfinity-logo-notext.png',
-    '/yangfinity-logo-notext.png',
-    '/yangfinity-logo-notext.png',
-  ],
-};
-
 export default function ProductPage({ params }: { params: Promise<{ handle: string }> }) {
   const { handle } = React.use(params);
   // Find the product by handle (slugified name)
