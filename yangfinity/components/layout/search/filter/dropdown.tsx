@@ -26,14 +26,24 @@ export default function FilterItemDropdown({ list }: { list: ListItem[] }) {
   }, []);
 
   useEffect(() => {
-    list.forEach((listItem: ListItem) => {
-      if (
-        ('path' in listItem && pathname === listItem.path) ||
-        ('slug' in listItem && searchParams.get('sort') === listItem.slug)
-      ) {
-        setActive(listItem.title);
+    // For category dropdowns, use the 'category' search param
+    const categoryParam = searchParams.get('category');
+    if (list.length && 'path' in list[0]) {
+      // Category dropdown
+      if (!categoryParam || categoryParam === list[0].title) {
+        setActive(list[0].title); // 'All' or first
+      } else {
+        const found = list.find(item => 'title' in item && item.title === categoryParam);
+        setActive(found ? found.title : list[0].title);
       }
-    });
+    } else {
+      // Sorting dropdown (by slug)
+      list.forEach((listItem) => {
+        if ('slug' in listItem && searchParams.get('sort') === listItem.slug) {
+          setActive(listItem.title);
+        }
+      });
+    }
   }, [pathname, list, searchParams]);
 
   return (
