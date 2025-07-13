@@ -10,6 +10,16 @@ import { useEffect, useState } from 'react';
 import React from 'react';
 import { GeistSans } from 'geist/font/sans';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+  useUser,
+  useClerk
+} from "@clerk/nextjs";
+import { useRouter } from 'next/navigation';
 
 function useHasMounted() {
   const [hasMounted, setHasMounted] = useState(false);
@@ -183,13 +193,10 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   );
 }
 
-function ProfilePanel({ open, onClose, user, onLogin, onLogout }: {
-  open: boolean;
-  onClose: () => void;
-  user: { username: string } | null;
-  onLogin: (username: string) => void;
-  onLogout: () => void;
-}) {
+function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const { user } = useUser();
+  const { signOut } = useClerk();
+  const router = useRouter();
   return (
     <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
@@ -197,29 +204,39 @@ function ProfilePanel({ open, onClose, user, onLogin, onLogout }: {
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className={`fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform ${open ? 'translate-x-0' : 'translate-x-full'} duration-300 p-6 flex flex-col`}>
+      <div className="fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform translate-x-0 duration-300 p-6 flex flex-col">
         <div className="flex items-center justify-between mb-6">
           <span className="text-xl font-bold">Profile</span>
           <button onClick={onClose} aria-label="Close panel" className="text-white hover:text-neutral-400 text-2xl font-bold">&times;</button>
         </div>
-        {user ? (
+        <SignedIn>
           <>
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-lg font-semibold">{user.username}</span>
-              <button className="ml-2 px-2 py-1 text-xs bg-black hover:bg-neutral-900 text-white rounded" aria-label="Edit profile">Edit</button>
+              <span className="text-lg font-semibold">{user?.username || user?.fullName || user?.primaryEmailAddress?.emailAddress}</span>
+              <UserButton afterSignOutUrl="/" />
             </div>
-            <div className="mb-4 text-sm text-neutral-400">user@email.com</div>
-            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded mb-2">Orders</button>
-            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded">Support</button>
+            <div className="mb-4 text-sm text-neutral-400">{user?.primaryEmailAddress?.emailAddress}</div>
+            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded mb-2" onClick={() => router.push('/orders')}>Orders</button>
+            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded" onClick={() => router.push('/support')}>Support</button>
             <div className="flex-1" />
-            <button onClick={onLogout} className="w-full mt-8 mb-12 bg-red-600 hover:bg-red-700 text-white py-2 rounded">Logout</button>
+            <button
+              onClick={() => signOut(() => { window.location.href = '/'; })}
+              className="w-full mt-8 mb-12 bg-red-600 hover:bg-red-700 text-white py-2 rounded"
+            >
+              Logout
+            </button>
           </>
-        ) : (
+        </SignedIn>
+        <SignedOut>
           <>
-            <button onClick={() => onLogin('DemoUser')} className="w-full bg-neutral-700 hover:bg-neutral-800 text-white py-2 rounded mb-2">Login</button>
-            <button onClick={() => onLogin('NewUser')} className="w-full bg-white hover:bg-neutral-200 text-black py-2 rounded border border-neutral-700">Sign Up</button>
+            <SignInButton mode="modal">
+              <button className="w-full bg-neutral-700 hover:bg-neutral-800 text-white py-2 rounded mb-2">Login</button>
+            </SignInButton>
+            <SignUpButton mode="modal">
+              <button className="w-full bg-white hover:bg-neutral-200 text-black py-2 rounded border border-neutral-700">Sign Up</button>
+            </SignUpButton>
           </>
-        )}
+        </SignedOut>
       </div>
     </div>
   );
@@ -229,25 +246,6 @@ export function Navbar() {
   const { totalQuantity } = useCart();
   const [cartOpen, setCartOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
-  const [user, setUser] = useState<{ username: string } | null>(null);
-
-  // Listen for custom event to open cart modal from anywhere
-  React.useEffect(() => {
-    const openCart = () => setCartOpen(true);
-    window.addEventListener('open-cart-modal', openCart);
-    return () => window.removeEventListener('open-cart-modal', openCart);
-  }, []);
-
-  const handleLogin = (username: string) => {
-    setUser({ username });
-    setProfileOpen(false);
-  };
-  const handleLogout = () => {
-    setUser(null);
-    setProfileOpen(false);
-  };
-
-  // Remove menu logic for now, static links only
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
@@ -292,7 +290,7 @@ export function Navbar() {
       </div>
       <CartModal open={cartOpen} onClose={() => setCartOpen(false)} />
       {profileOpen && (
-        <ProfilePanel open={profileOpen} onClose={() => setProfileOpen(false)} user={user} onLogin={handleLogin} onLogout={handleLogout} />
+        <ProfilePanel open={profileOpen} onClose={() => setProfileOpen(false)} />
       )}
     </nav>
   );

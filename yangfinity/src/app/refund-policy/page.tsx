@@ -2,19 +2,15 @@
 import { useEffect, useRef } from 'react';
 
 export default function RefundPolicyPage() {
-  const yangRef = useRef<HTMLSpanElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (yangRef.current) {
+      if (contentRef.current) {
         const scrollY = window.scrollY;
-        yangRef.current.style.transform = `translate(-50%, calc(-50% + ${scrollY * 0.2}px))`;
+        contentRef.current.style.transform = `translateY(${scrollY * 0.08}px)`;
       }
     };
-    // Initial position
-    if (yangRef.current) {
-      yangRef.current.style.transform = 'translate(-50%, -50%)';
-    }
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -22,9 +18,8 @@ export default function RefundPolicyPage() {
   return (
     <main className="relative w-full overflow-x-hidden bg-transparent">
       <div className="relative w-full h-screen overflow-y-auto overflow-x-hidden flex items-center justify-center">
-        {/* Giant solid color background YANG text with parallax */}
+        {/* Giant solid color background YANG text, fixed */}
         <span
-          ref={yangRef}
           aria-hidden
           className="pointer-events-none select-none z-0 font-extrabold uppercase opacity-30 text-[51.5vw] text-[#b6e700] max-w-full max-h-full"
           style={{
@@ -35,12 +30,12 @@ export default function RefundPolicyPage() {
             position: 'absolute',
             left: '31%',
             top: '40%',
-            transform: yangRef.current ? yangRef.current.style.transform : 'translate(-50%, -50%)',
+            transform: 'translate(-50%, -50%)',
           }}
         >
           YANG
         </span>
-        <div className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4">
+        <div ref={contentRef} className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
             Refund Policy
           </h1>
