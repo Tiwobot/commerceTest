@@ -8,13 +8,12 @@ import { usePathname, useSearchParams } from 'next/navigation';
 type SortFilterItem = { title: string; slug: string };
 
 function PathFilterItem({ item }: { item: PathFilterItem }) {
-  const pathname = usePathname();
   const searchParams = useSearchParams();
   // Determine if this item is active
   let active = false;
   if (item.title === 'All') {
     // 'All' is active if there is no category param
-    active = pathname === '/products' && !searchParams.get('category');
+    active = usePathname() === '/products' && !searchParams.get('category');
   } else {
     // Other categories are active if category param matches
     active = searchParams.get('category') === item.title;
