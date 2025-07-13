@@ -135,7 +135,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className={`fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform ${open ? 'translate-x-0' : 'translate-x-full'} duration-300 p-6 flex flex-col`}>
+      <div className={`fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform ${open ? 'translate-x-0' : 'translate-x-full'} duration-300 p-6 flex flex-col overflow-x-hidden`}>
         <div className="flex items-center justify-between mb-4">
           <span className="text-lg font-semibold">My Cart</span>
           <button onClick={onClose} aria-label="Close cart" className="text-2xl">×</button>
@@ -164,7 +164,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
                       </div>
                       <div className="z-30 ml-2 flex flex-row space-x-4">
                         <div className="flex flex-1 flex-col text-base">
-                          <span className="leading-tight font-medium truncate">{item.name}</span>
+                          <span className="leading-tight font-medium break-words max-w-[140px] md:max-w-[200px] whitespace-normal line-clamp-2">{item.name}</span>
                           <span className="text-sm text-neutral-500 dark:text-neutral-400">Amount: {item.quantity}</span>
                         </div>
                       </div>
