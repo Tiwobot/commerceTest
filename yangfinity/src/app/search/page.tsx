@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Label from '../../../components/label';
 import Collections from '../../../components/layout/search/collections';
 import FilterList from '../../../components/layout/search/filter';
+import { useSearchParams } from 'next/navigation';
 
 const sorting = [
   { title: 'Relevance', slug: 'relevance' },
@@ -45,8 +46,9 @@ const products = productHandles.map((handle) => ({
   currencyCode: 'EUR',
 }));
 
-export default function SearchPage({ searchParams }: { searchParams: { q?: string } }) {
-  const query = (searchParams.q || '').toLowerCase();
+export default function SearchPage() {
+  const searchParams = useSearchParams();
+  const query = (searchParams.get('q') || '').toLowerCase();
   const filtered = query === ''
     ? products
     : products.filter(p => p.title.toLowerCase().includes(query));
@@ -63,7 +65,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
             {filtered.length === 0
               ? 'There are no products that match '
               : `Showing ${filtered.length} ${resultsText} for `}
-            <span className="font-bold">&quot;{searchParams.q}&quot;</span>
+            <span className="font-bold">&quot;{searchParams.get('q')}&quot;</span>
           </p>
         )}
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
