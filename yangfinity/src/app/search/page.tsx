@@ -36,7 +36,7 @@ const serverNames: Record<string, string> = {
 };
 
 const productHandles = Object.keys(serverNames);
-const products = productHandles.map((handle, idx) => ({
+const products = productHandles.map((handle) => ({
   handle,
   title: serverNames[handle],
   price: '25.00',
@@ -61,7 +61,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
             {filtered.length === 0
               ? 'There are no products that match '
               : `Showing ${filtered.length} ${resultsText} for `}
-            <span className="font-bold">"{searchParams.q}"</span>
+            <span className="font-bold">&quot;{searchParams.q}&quot;</span>
           </p>
         )}
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
