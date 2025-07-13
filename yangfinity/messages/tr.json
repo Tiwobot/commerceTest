@@ -119,5 +119,12 @@
     "desc": "Yardıma mı ihtiyacınız var? Bize <a>info@yangfinity.com</a> adresinden ulaşın veya aşağıdaki canlı sohbeti kullanın.",
     "signin": "Desteğe erişmek için giriş yapın",
     "signInButton": "Giriş Yap"
+  },
+  "product": {
+    "notFound": "Ürün bulunamadı.",
+    "quantity": "Adet",
+    "description": "Metin2 sunucuları için Yang satın alın. Hızlı, güvenli ve güvenilir teslimat.",
+    "addToCart": "Sepete Ekle",
+    "related": "Benzer Ürünler"
   }
 }

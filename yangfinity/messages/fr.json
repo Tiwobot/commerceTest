@@ -119,5 +119,12 @@
     "desc": "Besoin d'aide ? Contactez-nous à <a>info@yangfinity.com</a> ou utilisez le chat en direct ci-dessous.",
     "signin": "Connectez-vous pour accéder au support",
     "signInButton": "Se connecter"
+  },
+  "product": {
+    "notFound": "Produit non trouvé.",
+    "quantity": "Quantité",
+    "description": "Achetez du Yang pour les serveurs Metin2. Livraison rapide, sûre et fiable.",
+    "addToCart": "Ajouter au panier",
+    "related": "Produits associés"
   }
 }

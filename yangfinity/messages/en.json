@@ -119,5 +119,12 @@
     "desc": "Need help? Contact us at <a>info@yangfinity.com</a> or use the live chat below.",
     "signin": "Sign in to access support",
     "signInButton": "Sign In"
+  },
+  "product": {
+    "notFound": "Product not found.",
+    "quantity": "Quantity",
+    "description": "Buy Yang for Metin2 servers. Fast, safe, and reliable delivery.",
+    "addToCart": "Add to Cart",
+    "related": "Related Products"
   }
 }

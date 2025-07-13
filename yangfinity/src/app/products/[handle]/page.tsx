@@ -8,8 +8,10 @@ import { GridTileImage } from '../../../../components/grid/tile';
 import { GeistSans } from 'geist/font/sans';
 import { useCart } from '../../../../components/cart/CartContext';
 import { productData } from '../productData';
+import { useTranslations } from 'next-intl';
 
 export default function ProductPage({ params }: { params: Promise<{ handle: string }> }) {
+  const t = useTranslations('product');
   const { handle } = React.use(params);
   // Find the product by handle (slugified name)
   const product = productData.find(p =>
@@ -19,7 +21,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
   const { addItem } = useCart();
 
   if (!product) {
-    return <div className="p-8 text-center text-lg">Product not found.</div>;
+    return <div className="p-8 text-center text-lg">{t('notFound')}</div>;
   }
 
   const handleAddToCart = () => {
@@ -56,7 +58,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
           </div>
           <div className="border-b pb-6 mb-6 dark:border-neutral-700" />
           <div className={`mb-6 ${GeistSans.className}`}>
-            <div className="mb-2 text-sm font-semibold uppercase tracking-wide">Quantity</div>
+            <div className="mb-2 text-sm font-semibold uppercase tracking-wide">{t('quantity')}</div>
             <input
               type="number"
               min={1}
@@ -65,17 +67,17 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
               className="w-24 px-3 py-2 rounded border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-black dark:text-white text-lg"
             />
           </div>
-          <p className={`mb-6 text-sm leading-tight dark:text-white/[60%] ${GeistSans.className}`}>Buy Yang for Metin2 servers. Fast, safe, and reliable delivery.</p>
+          <p className={`mb-6 text-sm leading-tight dark:text-white/[60%] ${GeistSans.className}`}>{t('description')}</p>
           <button
             className="mt-4 rounded-lg bg-blue-600 px-6 py-3 text-lg font-bold text-white transition hover:bg-blue-700"
             onClick={handleAddToCart}
           >
-            Add to Cart
+            {t('addToCart')}
           </button>
         </div>
       </div>
       <div className="py-8">
-        <h2 className="mb-4 text-2xl font-bold">Related Products</h2>
+        <h2 className="mb-4 text-2xl font-bold">{t('related')}</h2>
         <ul className="flex w-full gap-4 overflow-x-auto pt-1">
           {productData.filter(p => p.name !== product.name).slice(0, 10).map((related, idx) => (
             <li
