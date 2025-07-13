@@ -17,6 +17,9 @@ importers:
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.1.0)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       geist:
         specifier: ^1.4.2
         version: 1.4.2(next@15.3.5(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
