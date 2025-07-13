@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Collections from '../../../../components/layout/search/collections';
 import FilterList from '../../../../components/layout/search/filter';
+import { productData } from '../productData';
 
 const sorting = [
   { title: 'Relevance', slug: 'relevance' },
@@ -10,38 +11,25 @@ const sorting = [
   { title: 'Price: High to Low', slug: 'price-desc' },
 ];
 
-const products = [
-  {
-    handle: 'yang-1',
-    title: 'Yang Package 1 (Sale)',
-    price: '8.00',
-    currencyCode: 'EUR',
-  },
-  {
-    handle: 'yang-3',
-    title: 'Yang Package 3 (Sale)',
-    price: '40.00',
-    currencyCode: 'EUR',
-  },
-];
-
 function ProductGrid() {
+  // Example: filter for products on sale, or just use all products for now
+  const saleProducts = productData.filter(p => p.name.toLowerCase().includes('sale'));
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {products.map((product) => (
-        <li key={product.handle} className="aspect-square transition-opacity animate-fadeIn">
-          <a href={"/product/" + product.handle} className="relative inline-block h-full w-full group">
+      {saleProducts.map((product, idx) => (
+        <li key={product.name + idx} className="aspect-square transition-opacity animate-fadeIn">
+          <a href={"/products/" + encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())} className="relative inline-block h-full w-full group">
             <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black border-neutral-200 dark:border-neutral-800">
               <Image
                 src="/yangfinity-logo-notext.png"
-                alt={product.title}
+                alt={product.name}
                 fill
                 className="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
                 sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
                 priority
               />
               <div className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                {product.title} — €{product.price} EUR
+                {product.name} — €{product.price} EUR
               </div>
             </div>
           </a>

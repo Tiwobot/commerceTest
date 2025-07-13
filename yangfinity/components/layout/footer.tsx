@@ -18,7 +18,7 @@ export default function Footer() {
           <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
           <Link href="/refund-policy" className="hover:underline">Refund Policy</Link>
           <Link href="/contact" className="hover:underline">Contact</Link>
-        </div>
+            </div>
         <div className="md:ml-auto flex flex-col gap-2">
           <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="hover:underline">Discord</a>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>

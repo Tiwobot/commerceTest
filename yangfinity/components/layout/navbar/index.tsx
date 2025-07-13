@@ -21,6 +21,15 @@ import {
 } from "@clerk/nextjs";
 import { useRouter } from 'next/navigation';
 
+// Add Tawk_API type to window
+declare global {
+  interface Window {
+    Tawk_API?: {
+      setAttributes: (attrs: Record<string, string>, callback: (error: any) => void) => void;
+    };
+  }
+}
+
 function useHasMounted() {
   const [hasMounted, setHasMounted] = useState(false);
   useEffect(() => {
@@ -246,6 +255,16 @@ export function Navbar() {
   const { totalQuantity } = useCart();
   const [cartOpen, setCartOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
+  const { user, isLoaded } = useUser();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.Tawk_API && user) {
+      window.Tawk_API.setAttributes({
+        'name': user.username || user.fullName || user.primaryEmailAddress?.emailAddress || 'Customer',
+        'email': user.primaryEmailAddress?.emailAddress || ''
+      }, function(error: any){ /* ignore */ });
+    }
+  }, [isLoaded, user]);
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
