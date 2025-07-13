@@ -47,7 +47,6 @@ function PathFilterItem({ item }: { item: PathFilterItem }) {
 }
 
 function SortFilterItem({ item }: { item: SortFilterItem }) {
-  const pathname = usePathname();
   const searchParams = useSearchParams();
   const active = searchParams.get('sort') === item.slug;
   const q = searchParams.get('q');
