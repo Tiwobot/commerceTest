@@ -1,13 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-// Required in .env.local:
-// SMTP_HOST=smtp.zoho.eu
-// SMTP_PORT=587
-// SMTP_USER=info@yangfinity.com
-// SMTP_PASS=b7Dwawj_
-// CONTACT_TO=tuganatila@gmail.com
-
 export async function POST(req: NextRequest) {
   try {
     const { name, email, message } = await req.json();

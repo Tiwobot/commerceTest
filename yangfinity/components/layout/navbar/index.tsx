@@ -212,7 +212,7 @@ function ProfilePanel({ open, onClose, user, onLogin, onLogout }: {
             <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded mb-2">Orders</button>
             <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded">Support</button>
             <div className="flex-1" />
-            <button onClick={onLogout} className="w-full mt-8 bg-red-600 hover:bg-red-700 text-white py-2 rounded">Logout</button>
+            <button onClick={onLogout} className="w-full mt-8 mb-12 bg-red-600 hover:bg-red-700 text-white py-2 rounded">Logout</button>
           </>
         ) : (
           <>
