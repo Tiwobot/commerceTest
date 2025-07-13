@@ -1,3 +1,5 @@
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale, getMessages } from 'next-intl/server';
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { Navbar } from "../../components/layout/navbar";
@@ -16,10 +18,13 @@ export const metadata = {
   ].join(", ")
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang={locale}>
         <head>
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/yangfinity-logo-notext.png" type="image/png" sizes="32x32" />
@@ -64,29 +69,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }
           }) }} />
           {/* Google Analytics (GA4) */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-XXXXXXXXXX');`
-          }} />
+          <Script id="ga-script" strategy="afterInteractive">
+            {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');`}
+          </Script>
         </head>
         <body className={`${GeistSans.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
-          <CartProvider>
-            <Navbar />
-            <main>{children}</main>
-            <Footer />
-          </CartProvider>
-          {/*Start of Tawk.to Script*/}
-          <Script
-            id="tawkto"
-            strategy="afterInteractive"
-            src="https://embed.tawk.to/6873746206a5dd1916716ceb/1j01ft82m"
-            crossOrigin="anonymous"
-          />
-          {/*End of Tawk.to Script*/}
-        </body>
-      </html>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <CartProvider>
+              <Navbar />
+              <main>{children}</main>
+              <Footer />
+            </CartProvider>
+            {/*Start of Tawk.to Script*/}
+            <Script
+              id="tawkto"
+              strategy="afterInteractive"
+              src="https://embed.tawk.to/6873746206a5dd1916716ceb/1j01ft82m"
+              crossOrigin="anonymous"
+            />
+            {/*End of Tawk.to Script*/}
+          </NextIntlClientProvider>
+      </body>
+    </html>
     </ClerkProvider>
   );
 }

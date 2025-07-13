@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ContactPage() {
+  const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -68,17 +70,17 @@ export default function ContactPage() {
         </span>
         <div ref={contentRef} className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
-            Contact
+            {t('contact.title')}
           </h1>
           <p className="mb-8">
-            Have a question or need support? Fill out the form below and our team will get back to you as soon as possible.
+            {t('contact.intro')}
           </p>
           <form className="flex flex-col gap-4 max-w-lg mx-auto" onSubmit={handleSubmit}>
-            <input type="text" placeholder="Name" value={name} onChange={e => setName(e.target.value)} required className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
-            <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} required className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
-            <textarea placeholder="Message" rows={5} value={message} onChange={e => setMessage(e.target.value)} required className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
-            <button type="submit" className="rounded bg-white/10 border border-white/30 text-white font-bold py-2 px-6 mt-2 hover:bg-white/20 transition" disabled={loading}>{loading ? 'Sending...' : 'Send'}</button>
-            {result && <div className="mt-2 text-center text-white/80">{result}</div>}
+            <input type="text" placeholder={t('contact.name')} value={name} onChange={e => setName(e.target.value)} required className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
+            <input type="email" placeholder={t('contact.email')} value={email} onChange={e => setEmail(e.target.value)} required className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
+            <textarea placeholder={t('contact.message')} rows={5} value={message} onChange={e => setMessage(e.target.value)} required className="rounded px-4 py-2 bg-white/10 border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 transition" />
+            <button type="submit" className="rounded bg-white/10 border border-white/30 text-white font-bold py-2 px-6 mt-2 hover:bg-white/20 transition" disabled={loading}>{loading ? t('contact.sending') : t('contact.send')}</button>
+            {result && <div className="mt-2 text-center text-white/80">{result === 'Your message has been sent!' ? t('contact.success') : result === 'Something went wrong.' ? t('contact.error') : result}</div>}
           </form>
         </div>
       </div>

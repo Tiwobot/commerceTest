@@ -2,40 +2,21 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
+import { useTranslations } from 'next-intl';
 
-
-
-const faqs = [
-  {
-    question: 'What is Yangfinity?',
-    answer:
-      'Yangfinity is a service that provides fast and secure Yang (in-game currency) delivery for Metin2 private servers.',
-  },
-  {
-    question: 'Which servers do you support?',
-    answer:
-      'We support a wide range of servers including Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2, and more.',
-  },
-  {
-    question: 'How fast is the Yang delivery?',
-    answer:
-      'Most orders are delivered within minutes. Delivery times may vary depending on server status and order volume.',
-  },
-  {
-    question: 'Is buying Yang safe?',
-    answer:
-      'We prioritize your safety and privacy. Our methods are designed to minimize risk, but please be aware that buying in-game currency may violate some server rules. Proceed at your own discretion.',
-  },
-  {
-    question: 'How can I contact support?',
-    answer:
-      'You can reach out to our support team via the contact form on our website or through our social media channels.',
-  },
-];
 
 export default function FAQPage() {
+  const t = useTranslations();
   const [open, setOpen] = useState<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+  // Build Q&A pairs from translation keys
+  const faqs = [
+    { question: t('faq.q1'), answer: t('faq.a1') },
+    { question: t('faq.q2'), answer: t('faq.a2') },
+    { question: t('faq.q3'), answer: t('faq.a3') },
+    { question: t('faq.q4'), answer: t('faq.a4') },
+    { question: t('faq.q5'), answer: t('faq.a5') },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,7 +56,7 @@ export default function FAQPage() {
               className="text-4xl font-extrabold text-center text-white tracking-tight"
               style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}
             >
-              Frequently Asked Questions
+              {t('faq.title')}
             </h1>
           </div>
           <div className="space-y-6">

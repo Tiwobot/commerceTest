@@ -2,9 +2,11 @@
 
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { useEffect, useRef } from "react";
+import { useTranslations } from 'next-intl';
 
 export default function SupportPage() {
   const contentRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('support');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,8 +41,14 @@ export default function SupportPage() {
             YANG
           </span>
           <div ref={contentRef} className="relative z-10 w-full max-w-2xl mx-auto pt-2 pb-20 px-4 flex flex-col items-center transition-transform duration-300 will-change-transform">
-            <h1 className="text-3xl font-bold mb-4 text-white text-center">Support</h1>
-            <p className="text-neutral-200 mb-8 text-center">Need help? Contact us at <a href="mailto:info@yangfinity.com" className="underline">info@yangfinity.com</a> or use the live chat below.</p>
+            <h1 className="text-3xl font-bold mb-4 text-white text-center">{t('title')}</h1>
+            <p className="text-neutral-200 mb-8 text-center">
+              {t.rich('desc', {
+                a: (chunks) => (
+                  <a href="mailto:info@yangfinity.com" className="underline">{chunks}</a>
+                ),
+              })}
+            </p>
             {/* Embedded Tawk.to chat widget */}
             <div className="w-full max-w-2xl h-[600px] rounded-lg overflow-hidden shadow-2xl border border-white/20 bg-black/80">
               <iframe
@@ -57,9 +65,9 @@ export default function SupportPage() {
       </SignedIn>
       <SignedOut>
         <main className="max-w-2xl mx-auto py-16 px-4 text-center">
-          <h1 className="text-2xl font-bold mb-4">Sign in to access support</h1>
+          <h1 className="text-2xl font-bold mb-4">{t('signin')}</h1>
           <SignInButton mode="modal">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded">Sign In</button>
+            <button className="bg-blue-600 text-white px-4 py-2 rounded">{t('signInButton')}</button>
           </SignInButton>
         </main>
       </SignedOut>

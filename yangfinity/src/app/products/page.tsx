@@ -1,25 +1,33 @@
 'use client';
 
 import Image from 'next/image';
-import Collections from '../../../components/layout/search/collections';
-import FilterList from '../../../components/layout/search/filter';
 import Label from '../../../components/label';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { productData } from './productData';
 import { Suspense } from 'react';
+import { useTranslations } from 'next-intl';
 
-const sorting = [
-  { title: 'Relevance', slug: 'relevance' },
-  { title: 'Price: Low to High', slug: 'price-asc' },
-  { title: 'Price: High to Low', slug: 'price-desc' },
+const sortingKeys = [
+  { key: 'relevance', slug: 'relevance' },
+  { key: 'priceAsc', slug: 'price-asc' },
+  { key: 'priceDesc', slug: 'price-desc' },
 ];
 
-function ProductGrid() {
+const categoryKeys = [
+  { key: 'all', value: 'All' },
+  { key: 'gfWest', value: 'Gameforge West' },
+  { key: 'gfEast', value: 'Gameforge East' },
+  { key: 'gfTR', value: 'Gameforge TR' },
+  { key: 'private', value: 'Private Servers' },
+  { key: 'mobile', value: 'Mobile Metin2' },
+];
+
+function ProductGrid({ t }: { t: (key: string) => string }) {
   const searchParams = useSearchParams();
   const selectedCategory = searchParams.get('category');
   const sort = searchParams.get('sort');
-  let filtered = selectedCategory && selectedCategory !== 'All'
+  let filtered = selectedCategory && selectedCategory !== t('products.categories.all')
     ? productData.filter(p => p.category === selectedCategory)
     : productData;
 
@@ -61,18 +69,49 @@ function ProductGrid() {
 }
 
 export default function ProductsPage() {
+  const t = useTranslations();
+  // Build translated sorting and category lists
+  const sorting = sortingKeys.map(s => ({ title: t(`products.sorting.${s.key}`), slug: s.slug }));
+  const categories = categoryKeys.map(c => t(`products.categories.${c.key}`));
+  // Collections sidebar expects [{title, path}]
+  const collections = categories.map(cat => ({
+    title: cat,
+    path: cat === t('products.categories.all') ? '/products' : `/products?category=${encodeURIComponent(cat)}`
+  }));
   return (
     <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-black md:flex-row dark:text-white">
       <div className="order-first w-full flex-none md:max-w-[110px]">
-        <Collections />
+        <nav>
+          <h3 className="hidden text-xs text-neutral-500 md:block dark:text-neutral-400">{t('products.collections')}</h3>
+          <ul className="hidden md:block">
+            {collections.map((item) => (
+              <li className="mt-2 flex text-black dark:text-white" key={item.title}>
+                <Link href={item.path} className="w-full text-sm underline-offset-4 hover:underline dark:hover:text-neutral-100">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
       <div className="order-last w-full md:order-none">
         <Suspense fallback={<div>Loading products...</div>}>
-          <ProductGrid />
+          <ProductGrid t={t} />
         </Suspense>
       </div>
       <div className="order-none flex-none md:order-last md:w-[180px]">
-        <FilterList list={sorting} title="Sort by" />
+        <nav>
+          <h3 className="hidden text-xs text-neutral-500 md:block dark:text-neutral-400">{t('products.sortBy')}</h3>
+          <ul className="hidden md:block">
+            {sorting.map((item) => (
+              <li className="mt-2 flex text-sm text-black dark:text-white" key={item.title}>
+                <Link href={`/products?sort=${item.slug}`} className="w-full hover:underline hover:underline-offset-4">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </div>
   );

@@ -1,0 +1,123 @@
+{
+  "welcome": "Bienvenue chez Yangfinity!",
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "about": "À propos",
+    "faq": "FAQ"
+  },
+  "search": {
+    "placeholder": "Rechercher des produits..."
+  },
+  "products": {
+    "collections": "Collections",
+    "sortBy": "Trier par",
+    "categories": {
+      "all": "Tous",
+      "gfWest": "Gameforge Ouest",
+      "gfEast": "Gameforge Est",
+      "gfTR": "Gameforge TR",
+      "private": "Serveurs Privés",
+      "mobile": "Metin2 Mobile"
+    },
+    "sorting": {
+      "relevance": "Pertinence",
+      "priceAsc": "Prix : Croissant",
+      "priceDesc": "Prix : Décroissant"
+    }
+  },
+  "about": {
+    "title": "À propos de Yangfinity",
+    "heading": "🚀 À propos de Yangfinity",
+    "p1": "Yangfinity s'engage à fournir aux joueurs de Metin2 la livraison de Yang la plus rapide et la plus fiable pour une large gamme de serveurs privés. Notre mission est de permettre aux joueurs d'accéder à la monnaie du jeu de manière accessible, abordable et sécurisée.",
+    "p2": "Nous soutenons des serveurs populaires tels que Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 et plus encore. Notre équipe est passionnée par Metin2 et engagée à offrir un excellent service client.",
+    "p3": "Que vous soyez un nouveau joueur ou un vétéran chevronné, Yangfinity est votre partenaire de confiance pour tous vos besoins en Yang. 🤝 Rejoignez notre communauté et faites la différence !"
+  },
+  "faq": {
+    "title": "Foire Aux Questions",
+    "q1": "Qu'est-ce que Yangfinity ?",
+    "a1": "Yangfinity est un service qui fournit une livraison rapide et sécurisée de Yang (monnaie du jeu) pour les serveurs privés Metin2.",
+    "q2": "Quels serveurs supportez-vous ?",
+    "a2": "Nous supportons une large gamme de serveurs, y compris Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 et plus encore.",
+    "q3": "Quelle est la rapidité de la livraison de Yang ?",
+    "a3": "La plupart des commandes sont livrées en quelques minutes. Les délais de livraison peuvent varier en fonction de l'état du serveur et du volume des commandes.",
+    "q4": "Acheter du Yang est-il sûr ?",
+    "a4": "Nous accordons la priorité à votre sécurité et à votre vie privée. Nos méthodes sont conçues pour minimiser les risques, mais sachez que l'achat de monnaie du jeu peut enfreindre certaines règles du serveur. Procédez à votre propre discrétion.",
+    "q5": "Comment puis-je contacter le support ?",
+    "a5": "Vous pouvez contacter notre équipe d'assistance via le formulaire de contact sur notre site Web ou via nos réseaux sociaux."
+  },
+  "terms": {
+    "title": "Conditions Générales",
+    "intro": "Bienvenue chez Yangfinity. En accédant ou en utilisant notre site Web, vous acceptez d'être lié par ces Conditions Générales. Veuillez les lire attentivement.",
+    "li1": "Toutes les ventes sont définitives sauf indication contraire dans notre Politique de Remboursement.",
+    "li2": "Les utilisateurs doivent fournir des informations exactes pour l'exécution de la commande.",
+    "li3": "Nous nous réservons le droit de refuser le service à quiconque pour quelque raison que ce soit à tout moment.",
+    "li4": "L'utilisation de notre service se fait à vos propres risques. Nous ne sommes pas responsables des pertes encourues.",
+    "li5": "Ces conditions peuvent être mises à jour à tout moment sans préavis.",
+    "contact": "Pour toute question concernant ces conditions, veuillez nous contacter via la page Contact."
+  },
+  "refund": {
+    "title": "Politique de Remboursement",
+    "intro": "Chez Yangfinity, la satisfaction du client est notre priorité. Veuillez consulter notre politique de remboursement ci-dessous :",
+    "li1": "Les remboursements ne sont effectués que si nous ne pouvons pas livrer votre commande dans le délai promis.",
+    "li2": "Les demandes de remboursement doivent être faites dans les 24 heures suivant l'achat.",
+    "li3": "Aucun remboursement ne sera effectué pour les commandes terminées et livrées.",
+    "li4": "Pour demander un remboursement, veuillez contacter notre équipe d'assistance avec les détails de votre commande.",
+    "contact": "Pour toute question supplémentaire, veuillez nous contacter via la page Contact."
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Vous avez une question ou besoin d'aide ? Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les plus brefs délais.",
+    "name": "Nom",
+    "email": "E-mail",
+    "message": "Message",
+    "send": "Envoyer",
+    "sending": "Envoi...",
+    "success": "Votre message a été envoyé !",
+    "error": "Une erreur s'est produite."
+  },
+  "footer": {
+    "faq": "FAQ",
+    "terms": "Conditions Générales",
+    "refund": "Politique de Remboursement",
+    "contact": "Contact",
+    "discord": "Discord",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "trustpilot": "Trustpilot",
+    "copyright": "© {date} Yangfinity. Tous droits réservés."
+  },
+  "cart": {
+    "title": "Mon Panier",
+    "loading": "Chargement...",
+    "empty": "Votre panier est vide.",
+    "amount": "Quantité :",
+    "total": "Total :",
+    "proceed": "Passer à la caisse",
+    "whatsapp": "Commander via WhatsApp",
+    "remove": "Supprimer l'article"
+  },
+  "profile": {
+    "title": "Profil",
+    "close": "Fermer le panneau",
+    "orders": "Commandes",
+    "support": "Support",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "signup": "S'inscrire"
+  },
+  "orders": {
+    "title": "Vos Commandes",
+    "empty": "Vous n'avez pas encore passé de commande.",
+    "cta": "Prêt à commencer ? Découvrez nos produits et faites-vous plaisir avec du Yang !",
+    "shop": "Acheter maintenant",
+    "signin": "Connectez-vous pour voir vos commandes",
+    "signInButton": "Se connecter"
+  },
+  "support": {
+    "title": "Support",
+    "desc": "Besoin d'aide ? Contactez-nous à <a>info@yangfinity.com</a> ou utilisez le chat en direct ci-dessous.",
+    "signin": "Connectez-vous pour accéder au support",
+    "signInButton": "Se connecter"
+  }
+}

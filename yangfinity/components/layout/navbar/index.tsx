@@ -20,6 +20,7 @@ import {
   useClerk
 } from "@clerk/nextjs";
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 // Add Tawk_API type to window
 declare global {
@@ -76,13 +77,14 @@ function ProfileIcon() {
 function LanguageSelector({ mobile }: { mobile?: boolean }) {
   const [open, setOpen] = React.useState(false);
   const [lang, setLang] = React.useState('EN');
+  const router = useRouter();
   const languages = [
-    { code: 'EN', label: 'English' },
-    { code: 'DE', label: 'Deutsch' },
-    { code: 'TR', label: 'Türkçe' },
-    { code: 'ES', label: 'Español' },
-    { code: 'IT', label: 'Italiano' },
-    { code: 'FR', label: 'Français' },
+    { code: 'en', label: 'English' },
+    { code: 'de', label: 'Deutsch' },
+    { code: 'tr', label: 'Türkçe' },
+    { code: 'es', label: 'Español' },
+    { code: 'it', label: 'Italiano' },
+    { code: 'fr', label: 'Français' },
   ];
   return (
     <div className="relative">
@@ -92,7 +94,7 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
         className={`relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white ${!mobile ? 'ml-2' : ''}`}
       >
         <GlobeAltIcon className="h-5 w-5" />
-        <span className="absolute bottom-1 right-1 text-xs font-semibold">{lang}</span>
+        <span className="absolute bottom-1 right-1 text-xs font-semibold">{lang.toUpperCase()}</span>
       </button>
       {open && (
         <div className="absolute right-0 mt-2 w-28 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-neutral-900 z-50">
@@ -100,8 +102,13 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
             {languages.map((l) => (
               <li key={l.code}>
                 <button
-                  className={`w-full px-4 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 ${lang === l.code ? 'font-bold' : ''}`}
-                  onClick={() => { setLang(l.code); setOpen(false); }}
+                  className={`w-full px-4 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 ${lang.toLowerCase() === l.code ? 'font-bold' : ''}`}
+                  onClick={() => {
+                    setLang(l.code.toUpperCase());
+                    setOpen(false);
+                    document.cookie = `NEXT_LOCALE=${l.code}; path=/`;
+                    router.refresh();
+                  }}
                 >
                   {l.label}
                 </button>
@@ -117,6 +124,7 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
 function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { items, removeItem, updateQuantity, totalPrice } = useCart();
   const hasMounted = useHasMounted();
+  const t = useTranslations('cart');
 
   // Build WhatsApp message with cart details
   const cartMessage = encodeURIComponent(
@@ -124,7 +132,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
     items.map(item =>
       `• ${item.name} x${item.quantity} (${item.price} EUR each)`
     ).join('\n') +
-    (items.length ? `\n\nTotal: €${totalPrice.toFixed(2)}` : '')
+    (items.length ? `\n\n${t('total')} €${totalPrice.toFixed(2)}` : '')
   );
   const whatsappHref = `https://wa.me/4915736729768?text=${cartMessage}`;
   
@@ -137,17 +145,17 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
       />
       <div className={`fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform ${open ? 'translate-x-0' : 'translate-x-full'} duration-300 p-6 flex flex-col overflow-x-hidden`}>
         <div className="flex items-center justify-between mb-4">
-          <span className="text-lg font-semibold">My Cart</span>
-          <button onClick={onClose} aria-label="Close cart" className="text-2xl">×</button>
+          <span className="text-lg font-semibold">{t('title')}</span>
+          <button onClick={onClose} aria-label={t('remove')} className="text-2xl">×</button>
         </div>
         {!hasMounted ? (
           <div className="flex flex-1 flex-col items-center justify-center">
-            <span className="text-lg">Loading...</span>
+            <span className="text-lg">{t('loading')}</span>
           </div>
         ) : items.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center">
             <span className="text-4xl mb-2">🛒</span>
-            <span className="text-lg">Your cart is empty.</span>
+            <span className="text-lg">{t('empty')}</span>
           </div>
         ) : (
           <>
@@ -155,7 +163,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
               {items.map(item => (
                 <li key={item.id} className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700">
                   <div className="relative flex w-full flex-row justify-between px-1 py-4">
-                    <button onClick={() => removeItem(item.id)} aria-label="Remove cart item" className="absolute z-40 left-0 top-0.2 -translate-x-0.2 -translate-y-1/2 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-500">
+                    <button onClick={() => removeItem(item.id)} aria-label={t('remove')} className="absolute z-40 left-0 top-0.2 -translate-x-0.2 -translate-y-1/2 flex h-6 w-6 items-center justify-center rounded-full bg-neutral-500">
                       <span className="h-4 w-4 flex items-center justify-center text-white dark:text-black">×</span>
                     </button>
                     <div className="flex flex-row">
@@ -165,7 +173,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
                       <div className="z-30 ml-2 flex flex-row space-x-4">
                         <div className="flex flex-1 flex-col text-base">
                           <span className="leading-tight font-medium break-words max-w-[140px] md:max-w-[200px] whitespace-normal line-clamp-2">{item.name}</span>
-                          <span className="text-sm text-neutral-500 dark:text-neutral-400">Amount: {item.quantity}</span>
+                          <span className="text-sm text-neutral-500 dark:text-neutral-400">{t('amount')} {item.quantity}</span>
                         </div>
                       </div>
                     </div>
@@ -182,17 +190,17 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
               ))}
             </ul>
             <div className="flex justify-between items-center border-t border-neutral-800 pt-4">
-              <span className="font-semibold">Total:</span>
+              <span className="font-semibold">{t('total')}</span>
               <span className={`text-white ${GeistSans.className}`}>${totalPrice.toFixed(2)}</span>
             </div>
-            <button disabled className={`mt-4 w-full bg-blue-600 text-white py-3 rounded-full opacity-60 cursor-not-allowed ${GeistSans.className}`}>Proceed to checkout</button>
+            <button disabled className={`mt-4 w-full bg-blue-600 text-white py-3 rounded-full opacity-60 cursor-not-allowed ${GeistSans.className}`}>{t('proceed')}</button>
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-full font-semibold transition"
             >
-              Checkout via WhatsApp
+              {t('whatsapp')}
             </a>
             <div className="py-6" />
           </>
@@ -206,6 +214,7 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
   const { user } = useUser();
   const { signOut } = useClerk();
   const router = useRouter();
+  const t = useTranslations('profile');
   return (
     <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
@@ -215,8 +224,8 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
       />
       <div className="fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform translate-x-0 duration-300 p-6 flex flex-col">
         <div className="flex items-center justify-between mb-6">
-          <span className="text-xl font-bold">Profile</span>
-          <button onClick={onClose} aria-label="Close panel" className="text-white hover:text-neutral-400 text-2xl font-bold">&times;</button>
+          <span className="text-xl font-bold">{t('title')}</span>
+          <button onClick={onClose} aria-label={t('close')} className="text-white hover:text-neutral-400 text-2xl font-bold">&times;</button>
         </div>
         <SignedIn>
           <>
@@ -225,24 +234,24 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
               <UserButton afterSignOutUrl="/" />
             </div>
             <div className="mb-4 text-sm text-neutral-400">{user?.primaryEmailAddress?.emailAddress}</div>
-            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded mb-2" onClick={() => router.push('/orders')}>Orders</button>
-            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded" onClick={() => router.push('/support')}>Support</button>
+            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded mb-2" onClick={() => router.push('/orders')}>{t('orders')}</button>
+            <button className="w-full bg-black hover:bg-neutral-900 text-white py-2 rounded" onClick={() => router.push('/support')}>{t('support')}</button>
             <div className="flex-1" />
             <button
               onClick={() => signOut(() => { window.location.href = '/'; })}
               className="w-full mt-8 mb-12 bg-red-600 hover:bg-red-700 text-white py-2 rounded"
             >
-              Logout
+              {t('logout')}
             </button>
           </>
         </SignedIn>
         <SignedOut>
           <>
             <SignInButton mode="modal">
-              <button className="w-full bg-neutral-700 hover:bg-neutral-800 text-white py-2 rounded mb-2">Login</button>
+              <button className="w-full bg-neutral-700 hover:bg-neutral-800 text-white py-2 rounded mb-2">{t('login')}</button>
             </SignInButton>
             <SignUpButton mode="modal">
-              <button className="w-full bg-white hover:bg-neutral-200 text-black py-2 rounded border border-neutral-700">Sign Up</button>
+              <button className="w-full bg-white hover:bg-neutral-200 text-black py-2 rounded border border-neutral-700">{t('signup')}</button>
             </SignUpButton>
           </>
         </SignedOut>
@@ -252,6 +261,7 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
 }
 
 export function Navbar() {
+  const t = useTranslations();
   const { totalQuantity } = useCart();
   const [cartOpen, setCartOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
@@ -271,10 +281,10 @@ export function Navbar() {
         <div className="flex flex-row items-center gap-2">
         <Suspense fallback={null}>
             <MobileMenu menu={[
-              { title: 'Home', path: '/' },
-              { title: 'Products', path: '/products' },
-              { title: 'About', path: '/about' },
-              { title: 'FAQ', path: '/faq' },
+              { title: t('nav.home'), path: '/' },
+              { title: t('nav.products'), path: '/products' },
+              { title: t('nav.about'), path: '/about' },
+              { title: t('nav.faq'), path: '/faq' },
             ]} />
         </Suspense>
           <LanguageSelector mobile />
@@ -290,10 +300,10 @@ export function Navbar() {
             <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
           </Link>
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
-            <li><Link href="/" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">Home</Link></li>
-            <li><Link href="/products" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">Products</Link></li>
-            <li><Link href="/about" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">About</Link></li>
-            <li><Link href="/faq" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">FAQ</Link></li>
+            <li><Link href="/" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.home')}</Link></li>
+            <li><Link href="/products" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.products')}</Link></li>
+            <li><Link href="/about" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.about')}</Link></li>
+            <li><Link href="/faq" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.faq')}</Link></li>
             </ul>
         </div>
         <div className="hidden justify-center md:flex md:w-1/3">

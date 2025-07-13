@@ -1,7 +1,11 @@
-import type { NextConfig } from "next";
+import { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const nextConfig: NextConfig = {};
+
+const withNextIntl = createNextIntlPlugin();
+export default withNextIntl(nextConfig);
+
+export const config = {
+  matcher: ['/((?!_next|.*\..*).*)']
 };
-
-export default nextConfig;

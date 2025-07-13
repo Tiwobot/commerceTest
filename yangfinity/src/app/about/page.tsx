@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function AboutPage() {
+  const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,16 +39,16 @@ export default function AboutPage() {
         </span>
         <div ref={contentRef} className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
-            <span role="img" aria-label="rocket">🚀</span> About Yangfinity
+            {t('about.heading')}
           </h1>
           <p className="mb-4">
-            Yangfinity is dedicated to providing Metin2 players with the fastest, most reliable Yang delivery for a wide range of private servers. Our mission is to empower players by making in-game currency accessible, affordable, and secure.
+            {t('about.p1')}
           </p>
           <p className="mb-4">
-            We support popular servers such as Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2, and more. Our team is passionate about Metin2 and committed to excellent customer service.
+            {t('about.p2')}
           </p>
           <p>
-            Whether you&apos;re a new player or a seasoned veteran, Yangfinity is your trusted partner for all your Yang needs. <span role="img" aria-label="handshake">🤝</span> Join our community and experience the difference!
+            {t('about.p3')}
           </p>
         </div>
       </div>

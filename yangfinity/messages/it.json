@@ -1,0 +1,123 @@
+{
+  "welcome": "Benvenuto su Yangfinity!",
+  "nav": {
+    "home": "Home",
+    "products": "Prodotti",
+    "about": "Chi siamo",
+    "faq": "FAQ"
+  },
+  "search": {
+    "placeholder": "Cerca prodotti..."
+  },
+  "products": {
+    "collections": "Collezioni",
+    "sortBy": "Ordina per",
+    "categories": {
+      "all": "Tutti",
+      "gfWest": "Gameforge Ovest",
+      "gfEast": "Gameforge Est",
+      "gfTR": "Gameforge TR",
+      "private": "Server Privati",
+      "mobile": "Metin2 Mobile"
+    },
+    "sorting": {
+      "relevance": "Rilevanza",
+      "priceAsc": "Prezzo: dal più basso al più alto",
+      "priceDesc": "Prezzo: dal più alto al più basso"
+    }
+  },
+  "about": {
+    "title": "Informazioni su Yangfinity",
+    "heading": "🚀 Informazioni su Yangfinity",
+    "p1": "Yangfinity si dedica a fornire ai giocatori di Metin2 la consegna di Yang più veloce e affidabile per una vasta gamma di server privati. La nostra missione è quella di consentire ai giocatori di accedere alla valuta di gioco in modo accessibile, conveniente e sicuro.",
+    "p2": "Supportiamo server popolari come Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 e altri. Il nostro team è appassionato di Metin2 e impegnato a fornire un eccellente servizio clienti.",
+    "p3": "Che tu sia un nuovo giocatore o un veterano esperto, Yangfinity è il tuo partner di fiducia per tutte le tue esigenze di Yang. 🤝 Unisciti alla nostra community e scopri la differenza!"
+  },
+  "faq": {
+    "title": "Domande Frequenti",
+    "q1": "Cos'è Yangfinity?",
+    "a1": "Yangfinity è un servizio che fornisce una consegna rapida e sicura di Yang (valuta di gioco) per server privati Metin2.",
+    "q2": "Quali server supportate?",
+    "a2": "Supportiamo una vasta gamma di server tra cui Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 e altri.",
+    "q3": "Quanto è veloce la consegna di Yang?",
+    "a3": "La maggior parte degli ordini viene consegnata in pochi minuti. I tempi di consegna possono variare a seconda dello stato del server e del volume degli ordini.",
+    "q4": "È sicuro acquistare Yang?",
+    "a4": "Diamo priorità alla tua sicurezza e privacy. I nostri metodi sono progettati per ridurre al minimo i rischi, ma tieni presente che l'acquisto di valuta di gioco può violare alcune regole del server. Procedi a tua discrezione.",
+    "q5": "Come posso contattare il supporto?",
+    "a5": "Puoi contattare il nostro team di supporto tramite il modulo di contatto sul nostro sito web o tramite i nostri canali social."
+  },
+  "terms": {
+    "title": "Termini e Condizioni",
+    "intro": "Benvenuto su Yangfinity. Accedendo o utilizzando il nostro sito web, accetti di essere vincolato da questi Termini e Condizioni. Si prega di leggerli attentamente.",
+    "li1": "Tutte le vendite sono definitive salvo diversa indicazione nella nostra Politica di Rimborso.",
+    "li2": "Gli utenti devono fornire informazioni accurate per l'evasione dell'ordine.",
+    "li3": "Ci riserviamo il diritto di rifiutare il servizio a chiunque per qualsiasi motivo in qualsiasi momento.",
+    "li4": "L'uso del nostro servizio è a tuo rischio. Non siamo responsabili per eventuali perdite subite.",
+    "li5": "Questi termini possono essere aggiornati in qualsiasi momento senza preavviso.",
+    "contact": "Per domande relative a questi termini, contattaci tramite la pagina Contatti."
+  },
+  "refund": {
+    "title": "Politica di Rimborso",
+    "intro": "Da Yangfinity, la soddisfazione del cliente è la nostra priorità. Si prega di consultare la nostra politica di rimborso di seguito:",
+    "li1": "I rimborsi vengono emessi solo se non siamo in grado di consegnare il tuo ordine entro il tempo promesso.",
+    "li2": "Le richieste di rimborso devono essere effettuate entro 24 ore dall'acquisto.",
+    "li3": "I rimborsi non verranno emessi per ordini completati e consegnati.",
+    "li4": "Per richiedere un rimborso, contatta il nostro team di supporto con i dettagli dell'ordine.",
+    "contact": "Per ulteriori domande, contattaci tramite la pagina Contatti."
+  },
+  "contact": {
+    "title": "Contatto",
+    "intro": "Hai una domanda o hai bisogno di supporto? Compila il modulo qui sotto e il nostro team ti risponderà il prima possibile.",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "send": "Invia",
+    "sending": "Invio...",
+    "success": "Il tuo messaggio è stato inviato!",
+    "error": "Qualcosa è andato storto."
+  },
+  "cart": {
+    "title": "Il Mio Carrello",
+    "loading": "Caricamento...",
+    "empty": "Il tuo carrello è vuoto.",
+    "amount": "Quantità:",
+    "total": "Totale:",
+    "proceed": "Procedi al pagamento",
+    "whatsapp": "Acquista su WhatsApp",
+    "remove": "Rimuovi articolo"
+  },
+  "footer": {
+    "faq": "FAQ",
+    "terms": "Termini e Condizioni",
+    "refund": "Politica di Rimborso",
+    "contact": "Contatto",
+    "discord": "Discord",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "trustpilot": "Trustpilot",
+    "copyright": "© {date} Yangfinity. Tutti i diritti riservati."
+  },
+  "profile": {
+    "title": "Profilo",
+    "close": "Chiudi pannello",
+    "orders": "Ordini",
+    "support": "Supporto",
+    "logout": "Disconnetti",
+    "login": "Accedi",
+    "signup": "Registrati"
+  },
+  "orders": {
+    "title": "I Tuoi Ordini",
+    "empty": "Non hai ancora effettuato ordini.",
+    "cta": "Pronto per iniziare? Esplora i nostri prodotti e concediti un po' di Yang!",
+    "shop": "Acquista ora",
+    "signin": "Accedi per vedere i tuoi ordini",
+    "signInButton": "Accedi"
+  },
+  "support": {
+    "title": "Supporto",
+    "desc": "Hai bisogno di aiuto? Contattaci a <a>info@yangfinity.com</a> o usa la chat dal vivo qui sotto.",
+    "signin": "Accedi per accedere al supporto",
+    "signInButton": "Accedi"
+  }
+}

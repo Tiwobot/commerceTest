@@ -2,9 +2,11 @@
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { useEffect, useRef } from "react";
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function OrdersPage() {
   const contentRef = useRef<HTMLDivElement>(null);
+  const t = useTranslations('orders');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,21 +41,21 @@ export default function OrdersPage() {
             YANG
           </span>
           <div ref={contentRef} className="relative z-10 w-full max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
-            <h1 className="text-3xl font-bold mb-4 text-white text-center">Your Orders</h1>
+            <h1 className="text-3xl font-bold mb-4 text-white text-center">{t('title')}</h1>
             <div className="flex flex-col items-center justify-center">
               <span className="text-5xl mb-2">🛒😭</span>
-              <p className="text-neutral-200 text-center mb-2">You haven&apos;t placed any orders yet.</p>
-              <p className="text-neutral-200 text-center mb-4">Ready to get started? Explore our products and treat yourself to some Yang!</p>
-              <Link href="/products" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition">Shop Now</Link>
+              <p className="text-neutral-200 text-center mb-2">{t('empty')}</p>
+              <p className="text-neutral-200 text-center mb-4">{t('cta')}</p>
+              <Link href="/products" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded transition">{t('shop')}</Link>
             </div>
           </div>
         </main>
       </SignedIn>
       <SignedOut>
         <main className="max-w-2xl mx-auto py-16 px-4 text-center">
-          <h1 className="text-2xl font-bold mb-4">Sign in to view your orders</h1>
+          <h1 className="text-2xl font-bold mb-4">{t('signin')}</h1>
           <SignInButton mode="modal">
-            <button className="bg-blue-600 text-white px-4 py-2 rounded">Sign In</button>
+            <button className="bg-blue-600 text-white px-4 py-2 rounded">{t('signInButton')}</button>
           </SignInButton>
         </main>
       </SignedOut>

@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function RefundPolicyPage() {
+  const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,19 +39,19 @@ export default function RefundPolicyPage() {
         </span>
         <div ref={contentRef} className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
-            Refund Policy
+            {t('refund.title')}
           </h1>
           <p className="mb-4">
-            At Yangfinity, customer satisfaction is our priority. Please review our refund policy below:
+            {t('refund.intro')}
           </p>
           <ul className="mb-4 list-disc pl-6">
-            <li>Refunds are only issued if we are unable to deliver your order within the promised timeframe.</li>
-            <li>Refund requests must be made within 24 hours of purchase.</li>
-            <li>Refunds will not be issued for completed and delivered orders.</li>
-            <li>To request a refund, please contact our support team with your order details.</li>
+            <li>{t('refund.li1')}</li>
+            <li>{t('refund.li2')}</li>
+            <li>{t('refund.li3')}</li>
+            <li>{t('refund.li4')}</li>
           </ul>
           <p>
-            For further questions, please reach out via the Contact page.
+            {t('refund.contact')}
           </p>
         </div>
       </div>

@@ -1,0 +1,123 @@
+{
+  "welcome": "Yangfinity'ye hoş geldiniz!",
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "about": "Hakkımızda",
+    "faq": "SSS"
+  },
+  "search": {
+    "placeholder": "Ürünlerde ara..."
+  },
+  "products": {
+    "collections": "Koleksiyonlar",
+    "sortBy": "Sırala",
+    "categories": {
+      "all": "Tümü",
+      "gfWest": "Gameforge Batı",
+      "gfEast": "Gameforge Doğu",
+      "gfTR": "Gameforge TR",
+      "private": "Özel Sunucular",
+      "mobile": "Mobil Metin2"
+    },
+    "sorting": {
+      "relevance": "Alaka",
+      "priceAsc": "Fiyat: Artan",
+      "priceDesc": "Fiyat: Azalan"
+    }
+  },
+  "about": {
+    "title": "Yangfinity Hakkında",
+    "heading": "🚀 Yangfinity Hakkında",
+    "p1": "Yangfinity, Metin2 oyuncularına çok çeşitli özel sunucular için en hızlı ve en güvenilir Yang teslimatını sunmaya kendini adamıştır. Amacımız, oyun içi para birimini erişilebilir, uygun fiyatlı ve güvenli hale getirerek oyuncuları güçlendirmektir.",
+    "p2": "Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 ve daha fazlası gibi popüler sunucuları destekliyoruz. Ekibimiz Metin2'ye tutkuyla bağlı ve mükemmel müşteri hizmetine kendini adamıştır.",
+    "p3": "Yeni bir oyuncu ya da deneyimli bir veteran olun, Yangfinity tüm Yang ihtiyaçlarınız için güvenilir ortağınızdır. 🤝 Topluluğumuza katılın ve farkı yaşayın!"
+  },
+  "faq": {
+    "title": "Sıkça Sorulan Sorular",
+    "q1": "Yangfinity nedir?",
+    "a1": "Yangfinity, Metin2 özel sunucuları için hızlı ve güvenli Yang (oyun içi para birimi) teslimatı sağlayan bir hizmettir.",
+    "q2": "Hangi sunucuları destekliyorsunuz?",
+    "a2": "Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 ve daha fazlası dahil olmak üzere çok çeşitli sunucuları destekliyoruz.",
+    "q3": "Yang teslimatı ne kadar hızlı?",
+    "a3": "Çoğu sipariş dakikalar içinde teslim edilir. Teslimat süreleri sunucu durumu ve sipariş yoğunluğuna göre değişebilir.",
+    "q4": "Yang satın almak güvenli mi?",
+    "a4": "Güvenliğinize ve gizliliğinize öncelik veriyoruz. Yöntemlerimiz riski en aza indirecek şekilde tasarlanmıştır, ancak oyun içi para birimi satın almanın bazı sunucu kurallarını ihlal edebileceğini unutmayın. Kendi takdirinize göre hareket edin.",
+    "q5": "Destek ile nasıl iletişime geçebilirim?",
+    "a5": "Destek ekibimize web sitemizdeki iletişim formu veya sosyal medya kanallarımız aracılığıyla ulaşabilirsiniz."
+  },
+  "terms": {
+    "title": "Şartlar ve Koşullar",
+    "intro": "Yangfinity'ye hoş geldiniz. Web sitemize erişerek veya kullanarak bu Şartlar ve Koşullara bağlı kalmayı kabul ediyorsunuz. Lütfen dikkatlice okuyun.",
+    "li1": "Tüm satışlar, İade Politikamızda aksi belirtilmedikçe kesindir.",
+    "li2": "Kullanıcılar, siparişin yerine getirilmesi için doğru bilgi sağlamalıdır.",
+    "li3": "Herhangi birine herhangi bir nedenle hizmet vermeyi reddetme hakkımızı saklı tutarız.",
+    "li4": "Hizmetimizin kullanımı kendi riskinizdedir. Oluşabilecek kayıplardan sorumlu değiliz.",
+    "li5": "Bu şartlar önceden haber verilmeksizin herhangi bir zamanda güncellenebilir.",
+    "contact": "Bu şartlarla ilgili sorularınız için lütfen İletişim sayfası üzerinden bize ulaşın."
+  },
+  "refund": {
+    "title": "İade Politikası",
+    "intro": "Yangfinity'de müşteri memnuniyeti önceliğimizdir. Lütfen aşağıdaki iade politikamızı inceleyin:",
+    "li1": "İadeler yalnızca siparişinizi taahhüt edilen süre içinde teslim edemezsek yapılır.",
+    "li2": "İade talepleri satın alma işleminden sonraki 24 saat içinde yapılmalıdır.",
+    "li3": "Tamamlanmış ve teslim edilmiş siparişler için iade yapılmaz.",
+    "li4": "İade talebinde bulunmak için lütfen sipariş bilgilerinizle destek ekibimizle iletişime geçin.",
+    "contact": "Daha fazla soru için lütfen İletişim sayfası üzerinden bize ulaşın."
+  },
+  "contact": {
+    "title": "İletişim",
+    "intro": "Bir sorunuz mu var veya desteğe mi ihtiyacınız var? Aşağıdaki formu doldurun, ekibimiz en kısa sürede size geri dönecektir.",
+    "name": "Ad",
+    "email": "E-posta",
+    "message": "Mesaj",
+    "send": "Gönder",
+    "sending": "Gönderiliyor...",
+    "success": "Mesajınız gönderildi!",
+    "error": "Bir şeyler yanlış gitti."
+  },
+  "cart": {
+    "title": "Sepetim",
+    "loading": "Yükleniyor...",
+    "empty": "Sepetiniz boş.",
+    "amount": "Adet:",
+    "total": "Toplam:",
+    "proceed": "Ödemeye geç",
+    "whatsapp": "WhatsApp ile Satın Al",
+    "remove": "Ürünü kaldır"
+  },
+  "footer": {
+    "faq": "SSS",
+    "terms": "Şartlar ve Koşullar",
+    "refund": "İade Politikası",
+    "contact": "İletişim",
+    "discord": "Discord",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "trustpilot": "Trustpilot",
+    "copyright": "© {date} Yangfinity. Tüm hakları saklıdır."
+  },
+  "profile": {
+    "title": "Profil",
+    "close": "Paneli kapat",
+    "orders": "Siparişler",
+    "support": "Destek",
+    "logout": "Çıkış yap",
+    "login": "Giriş yap",
+    "signup": "Kayıt ol"
+  },
+  "orders": {
+    "title": "Siparişleriniz",
+    "empty": "Henüz hiç sipariş vermediniz.",
+    "cta": "Başlamak için hazır mısınız? Ürünlerimizi keşfedin ve kendinizi biraz Yang ile ödüllendirin!",
+    "shop": "Şimdi Alışveriş Yap",
+    "signin": "Siparişlerinizi görmek için giriş yapın",
+    "signInButton": "Giriş Yap"
+  },
+  "support": {
+    "title": "Destek",
+    "desc": "Yardıma mı ihtiyacınız var? Bize <a>info@yangfinity.com</a> adresinden ulaşın veya aşağıdaki canlı sohbeti kullanın.",
+    "signin": "Desteğe erişmek için giriş yapın",
+    "signInButton": "Giriş Yap"
+  }
+}

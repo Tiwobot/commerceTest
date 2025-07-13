@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function Footer() {
+  const t = useTranslations();
   const currentYear = new Date().getFullYear();
   const copyrightDate = 2025 + (currentYear > 2025 ? `-${currentYear}` : '');
 
@@ -14,22 +16,21 @@ export default function Footer() {
           </Link>
         </div>
         <div className="flex flex-col gap-2">
-          <Link href="/faq" className="hover:underline">FAQ</Link>
-          <Link href="/terms" className="hover:underline">Terms & Conditions</Link>
-          <Link href="/refund-policy" className="hover:underline">Refund Policy</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
-            </div>
-        <div className="md:ml-auto flex flex-col gap-2">
-          <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="hover:underline">Discord</a>
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
-          <a href="https://www.trustpilot.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Trustpilot</a>
+          <Link href="/faq" className="hover:underline">{t('footer.faq')}</Link>
+          <Link href="/terms" className="hover:underline">{t('footer.terms')}</Link>
+          <Link href="/refund-policy" className="hover:underline">{t('footer.refund')}</Link>
+          <Link href="/contact" className="hover:underline">{t('footer.contact')}</Link>
         </div>
-      
+        <div className="md:ml-auto flex flex-col gap-2">
+          <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.discord')}</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.facebook')}</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.instagram')}</a>
+          <a href="https://www.trustpilot.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.trustpilot')}</a>
+        </div>
       <div className="py-6 text-sm dark:border-neutral-700">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p>
-            &copy; {copyrightDate} Yangfinity. All rights reserved.
+            {t('footer.copyright', { date: copyrightDate })}
           </p>
         </div>
         </div>

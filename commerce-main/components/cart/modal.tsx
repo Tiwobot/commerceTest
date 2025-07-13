@@ -9,13 +9,14 @@ import { DEFAULT_OPTION } from 'lib/constants';
 import { createUrl } from 'lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { createCartAndSetCookie, redirectToCheckout } from './actions';
 import { useCart } from './cart-context';
 import { DeleteItemButton } from './delete-item-button';
 import { EditItemQuantityButton } from './edit-item-quantity-button';
 import OpenCart from './open-cart';
+import { useTranslations } from 'next-intl';
 
 type MerchandiseSearchParams = {
   [key: string]: string;
@@ -27,6 +28,7 @@ export default function CartModal() {
   const quantityRef = useRef(cart?.totalQuantity);
   const openCart = () => setIsOpen(true);
   const closeCart = () => setIsOpen(false);
+  const t = useTranslations('cart');
 
   useEffect(() => {
     if (!cart) {
@@ -49,7 +51,7 @@ export default function CartModal() {
 
   return (
     <>
-      <button aria-label="Open cart" onClick={openCart}>
+      <button aria-label={t('title')} onClick={openCart}>
         <OpenCart quantity={cart?.totalQuantity} />
       </button>
       <Transition show={isOpen}>
@@ -76,8 +78,8 @@ export default function CartModal() {
           >
             <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl md:w-[390px] dark:border-neutral-700 dark:bg-black/80 dark:text-white">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-semibold">My Cart</p>
-                <button aria-label="Close cart" onClick={closeCart}>
+                <p className="text-lg font-semibold">{t('title')}</p>
+                <button aria-label={t('remove')} onClick={closeCart}>
                   <CloseCart />
                 </button>
               </div>
@@ -86,7 +88,7 @@ export default function CartModal() {
                 <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
                   <ShoppingCartIcon className="h-16" />
                   <p className="mt-6 text-center text-2xl font-bold">
-                    Your cart is empty.
+                    {t('empty')}
                   </p>
                 </div>
               ) : (
@@ -126,6 +128,7 @@ export default function CartModal() {
                                 <DeleteItemButton
                                   item={item}
                                   optimisticUpdate={updateCartItem}
+                                  aria-label={t('remove')}
                                 />
                               </div>
                               <div className="flex flex-row">
@@ -207,7 +210,7 @@ export default function CartModal() {
                       <p className="text-right">Calculated at checkout</p>
                     </div>
                     <div className="mb-3 flex items-center justify-between border-b border-neutral-200 pb-1 pt-1 dark:border-neutral-700">
-                      <p>Total</p>
+                      <p>{t('total')}</p>
                       <Price
                         className="text-right text-base text-black dark:text-white"
                         amount={cart.cost.totalAmount.amount}
@@ -216,7 +219,7 @@ export default function CartModal() {
                     </div>
                   </div>
                   <form action={redirectToCheckout}>
-                    <CheckoutButton />
+                    <CheckoutButton t={t} />
                   </form>
                 </div>
               )}
@@ -241,7 +244,7 @@ function CloseCart({ className }: { className?: string }) {
   );
 }
 
-function CheckoutButton() {
+function CheckoutButton({ t }: { t: any }) {
   const { pending } = useFormStatus();
 
   return (
@@ -250,7 +253,7 @@ function CheckoutButton() {
       type="submit"
       disabled={pending}
     >
-      {pending ? <LoadingDots className="bg-white" /> : 'Proceed to Checkout'}
+      {pending ? t('loading') : t('proceed')}
     </button>
   );
 }

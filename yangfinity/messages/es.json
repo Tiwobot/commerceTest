@@ -1,0 +1,120 @@
+{
+  "welcome": "¡Bienvenido a Yangfinity!",
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Acerca de",
+    "faq": "FAQ"
+  },
+  "search": {
+    "placeholder": "Buscar productos..."
+  },
+  "products": {
+    "collections": "Colecciones",
+    "sortBy": "Ordenar por",
+    "categories": {
+      "all": "Todos",
+      "gfWest": "Gameforge Oeste",
+      "gfEast": "Gameforge Este",
+      "gfTR": "Gameforge TR",
+      "private": "Servidores Privados",
+      "mobile": "Metin2 Móvil"
+    },
+    "sorting": {
+      "relevance": "Relevancia",
+      "priceAsc": "Precio: Menor a Mayor",
+      "priceDesc": "Precio: Mayor a Menor"
+    }
+  },
+  "about": {
+    "title": "Acerca de Yangfinity",
+    "heading": "🚀 Acerca de Yangfinity",
+    "p1": "Yangfinity se dedica a proporcionar a los jugadores de Metin2 la entrega de Yang más rápida y confiable para una amplia gama de servidores privados. Nuestra misión es empoderar a los jugadores haciendo que la moneda del juego sea accesible, asequible y segura.",
+    "p2": "Apoyamos servidores populares como Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 y más. Nuestro equipo es apasionado por Metin2 y está comprometido con un excelente servicio al cliente.",
+    "p3": "Ya seas un jugador nuevo o un veterano experimentado, Yangfinity es tu socio de confianza para todas tus necesidades de Yang. 🤝 ¡Únete a nuestra comunidad y experimenta la diferencia!"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "list": [
+      { "q": "¿Qué es Yangfinity?", "a": "Yangfinity es un servicio que proporciona entrega rápida y segura de Yang (moneda del juego) para servidores privados de Metin2." },
+      { "q": "¿Qué servidores soportan?", "a": "Soportamos una amplia gama de servidores incluyendo Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 y más." },
+      { "q": "¿Qué tan rápida es la entrega de Yang?", "a": "La mayoría de los pedidos se entregan en minutos. Los tiempos de entrega pueden variar según el estado del servidor y el volumen de pedidos." },
+      { "q": "¿Es seguro comprar Yang?", "a": "Priorizamos su seguridad y privacidad. Nuestros métodos están diseñados para minimizar el riesgo, pero tenga en cuenta que comprar moneda del juego puede violar algunas reglas del servidor. Proceda bajo su propio riesgo." },
+      { "q": "¿Cómo puedo contactar con soporte?", "a": "Puede comunicarse con nuestro equipo de soporte a través del formulario de contacto en nuestro sitio web o a través de nuestros canales de redes sociales." }
+    ]
+  },
+  "terms": {
+    "title": "Términos y Condiciones",
+    "intro": "Bienvenido a Yangfinity. Al acceder o utilizar nuestro sitio web, acepta estar sujeto a estos Términos y Condiciones. Por favor, léalos cuidadosamente.",
+    "li1": "Todas las ventas son finales a menos que se indique lo contrario en nuestra Política de Reembolso.",
+    "li2": "Los usuarios deben proporcionar información precisa para el cumplimiento del pedido.",
+    "li3": "Nos reservamos el derecho de rechazar el servicio a cualquier persona por cualquier motivo en cualquier momento.",
+    "li4": "El uso de nuestro servicio es bajo su propio riesgo. No somos responsables de ninguna pérdida incurrida.",
+    "li5": "Estos términos pueden actualizarse en cualquier momento sin previo aviso.",
+    "contact": "Para preguntas sobre estos términos, contáctenos a través de la página de Contacto."
+  },
+  "refund": {
+    "title": "Política de Reembolso",
+    "intro": "En Yangfinity, la satisfacción del cliente es nuestra prioridad. Por favor, revise nuestra política de reembolso a continuación:",
+    "li1": "Los reembolsos solo se emiten si no podemos entregar su pedido dentro del plazo prometido.",
+    "li2": "Las solicitudes de reembolso deben realizarse dentro de las 24 horas posteriores a la compra.",
+    "li3": "No se emitirán reembolsos para pedidos completados y entregados.",
+    "li4": "Para solicitar un reembolso, comuníquese con nuestro equipo de soporte con los detalles de su pedido.",
+    "contact": "Para más preguntas, contáctenos a través de la página de Contacto."
+  },
+  "contact": {
+    "title": "Contacto",
+    "intro": "¿Tiene una pregunta o necesita ayuda? Complete el siguiente formulario y nuestro equipo le responderá lo antes posible.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "¡Su mensaje ha sido enviado!",
+    "error": "Algo salió mal."
+  },
+  "cart": {
+    "title": "Mi Carrito",
+    "loading": "Cargando...",
+    "empty": "Tu carrito está vacío.",
+    "amount": "Cantidad:",
+    "total": "Total:",
+    "proceed": "Proceder al pago",
+    "whatsapp": "Comprar por WhatsApp",
+    "remove": "Eliminar artículo"
+  },
+  "footer": {
+    "faq": "FAQ",
+    "terms": "Términos y Condiciones",
+    "refund": "Política de Reembolso",
+    "contact": "Contacto",
+    "discord": "Discord",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "trustpilot": "Trustpilot",
+    "copyright": "© {date} Yangfinity. Todos los derechos reservados."
+  },
+  "profile": {
+    "title": "Perfil",
+    "close": "Cerrar panel",
+    "orders": "Pedidos",
+    "support": "Soporte",
+    "logout": "Cerrar sesión",
+    "login": "Iniciar sesión",
+    "signup": "Registrarse"
+  },
+  "orders": {
+    "title": "Tus Pedidos",
+    "empty": "Aún no has realizado ningún pedido.",
+    "cta": "¿Listo para empezar? ¡Explora nuestros productos y date un gusto con Yang!",
+    "shop": "Comprar ahora",
+    "signin": "Inicia sesión para ver tus pedidos",
+    "signInButton": "Iniciar sesión"
+  },
+  "support": {
+    "title": "Soporte",
+    "desc": "¿Necesitas ayuda? Contáctanos en <a>info@yangfinity.com</a> o usa el chat en vivo abajo.",
+    "signin": "Inicia sesión para acceder al soporte",
+    "signInButton": "Iniciar sesión"
+  }
+}

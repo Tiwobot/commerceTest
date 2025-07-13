@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function TermsPage() {
+  const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,20 +39,20 @@ export default function TermsPage() {
         </span>
         <div ref={contentRef} className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
           <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
-            Terms & Conditions
+            {t('terms.title')}
           </h1>
           <p className="mb-4">
-            Welcome to Yangfinity. By accessing or using our website, you agree to be bound by these Terms & Conditions. Please read them carefully.
+            {t('terms.intro')}
           </p>
           <ul className="mb-4 list-disc pl-6">
-            <li>All sales are final unless otherwise stated in our Refund Policy.</li>
-            <li>Users must provide accurate information for order fulfillment.</li>
-            <li>We reserve the right to refuse service to anyone for any reason at any time.</li>
-            <li>Use of our service is at your own risk. We are not responsible for any losses incurred.</li>
-            <li>These terms may be updated at any time without prior notice.</li>
+            <li>{t('terms.li1')}</li>
+            <li>{t('terms.li2')}</li>
+            <li>{t('terms.li3')}</li>
+            <li>{t('terms.li4')}</li>
+            <li>{t('terms.li5')}</li>
           </ul>
           <p>
-            For questions regarding these terms, please contact us via the Contact page.
+            {t('terms.contact')}
           </p>
         </div>
       </div>

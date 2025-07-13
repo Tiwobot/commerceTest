@@ -1,0 +1,123 @@
+{
+  "welcome": "Willkommen bei Yangfinity!",
+  "nav": {
+    "home": "Startseite",
+    "products": "Produkte",
+    "about": "Über uns",
+    "faq": "FAQ"
+  },
+  "search": {
+    "placeholder": "Search for products..."
+  },
+  "products": {
+    "collections": "Kategorien",
+    "sortBy": "Sortieren nach",
+    "categories": {
+      "all": "Alle",
+      "gfWest": "Gameforge West",
+      "gfEast": "Gameforge East",
+      "gfTR": "Gameforge TR",
+      "private": "Private Server",
+      "mobile": "Mobile Metin2"
+    },
+    "sorting": {
+      "relevance": "Relevanz",
+      "priceAsc": "Preis: Aufsteigend",
+      "priceDesc": "Preis: Absteigend"
+    }
+  },
+  "about": {
+    "title": "Über Yangfinity",
+    "heading": "🚀 Über Yangfinity",
+    "p1": "Yangfinity bietet Metin2-Spielern die schnellste und zuverlässigste Yang-Lieferung für eine Vielzahl von Privatservern. Unsere Mission ist es, Spielern den Zugang zu Spielwährung einfach, erschwinglich und sicher zu machen.",
+    "p2": "Wir unterstützen beliebte Server wie Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 und mehr. Unser Team ist leidenschaftlich bei Metin2 und engagiert für exzellenten Kundenservice.",
+    "p3": "Ob Neuling oder erfahrener Spieler, Yangfinity ist Ihr vertrauenswürdiger Partner für alle Yang-Bedürfnisse. 🤝 Treten Sie unserer Community bei und erleben Sie den Unterschied!"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "q1": "Was ist Yangfinity?",
+    "a1": "Yangfinity ist ein Service, der schnelle und sichere Yang-Lieferung für Metin2-Privatserver bietet.",
+    "q2": "Welche Server werden unterstützt?",
+    "a2": "Wir unterstützen eine Vielzahl von Servern, darunter Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, WOM, NEWMT2, Fortis2 und mehr.",
+    "q3": "Wie schnell erfolgt die Yang-Lieferung?",
+    "a3": "Die meisten Bestellungen werden innerhalb von Minuten geliefert. Die Lieferzeiten können je nach Serverstatus und Bestellaufkommen variieren.",
+    "q4": "Ist der Kauf von Yang sicher?",
+    "a4": "Wir legen großen Wert auf Ihre Sicherheit und Privatsphäre. Unsere Methoden minimieren das Risiko, aber beachten Sie bitte, dass der Kauf von Spielwährung gegen Serverregeln verstoßen kann. Handeln Sie nach eigenem Ermessen.",
+    "q5": "Wie kann ich den Support kontaktieren?",
+    "a5": "Sie erreichen unser Support-Team über das Kontaktformular auf unserer Website oder über unsere Social-Media-Kanäle."
+  },
+  "terms": {
+    "title": "AGB",
+    "intro": "Willkommen bei Yangfinity. Durch den Zugriff auf oder die Nutzung unserer Website stimmen Sie diesen AGB zu. Bitte lesen Sie sie sorgfältig durch.",
+    "li1": "Alle Verkäufe sind endgültig, sofern in unserer Rückerstattungsrichtlinie nicht anders angegeben.",
+    "li2": "Benutzer müssen genaue Informationen für die Auftragsabwicklung angeben.",
+    "li3": "Wir behalten uns das Recht vor, jedem aus beliebigem Grund jederzeit den Service zu verweigern.",
+    "li4": "Die Nutzung unseres Dienstes erfolgt auf eigenes Risiko. Wir übernehmen keine Verantwortung für Verluste.",
+    "li5": "Diese Bedingungen können jederzeit ohne vorherige Ankündigung aktualisiert werden.",
+    "contact": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns bitte über die Kontaktseite."
+  },
+  "refund": {
+    "title": "Rückerstattungsrichtlinie",
+    "intro": "Bei Yangfinity steht die Kundenzufriedenheit an erster Stelle. Bitte lesen Sie unsere Rückerstattungsrichtlinie unten:",
+    "li1": "Rückerstattungen werden nur gewährt, wenn wir Ihre Bestellung nicht innerhalb des zugesagten Zeitrahmens liefern können.",
+    "li2": "Rückerstattungsanträge müssen innerhalb von 24 Stunden nach dem Kauf gestellt werden.",
+    "li3": "Für abgeschlossene und gelieferte Bestellungen werden keine Rückerstattungen gewährt.",
+    "li4": "Um eine Rückerstattung zu beantragen, kontaktieren Sie bitte unser Support-Team mit Ihren Bestelldaten.",
+    "contact": "Für weitere Fragen kontaktieren Sie uns bitte über die Kontaktseite."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "intro": "Haben Sie eine Frage oder benötigen Sie Unterstützung? Füllen Sie das untenstehende Formular aus und unser Team wird sich so schnell wie möglich bei Ihnen melden.",
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Senden",
+    "sending": "Senden...",
+    "success": "Ihre Nachricht wurde gesendet!",
+    "error": "Etwas ist schief gelaufen."
+  },
+  "footer": {
+    "faq": "FAQ",
+    "terms": "AGB",
+    "refund": "Rückerstattungsrichtlinie",
+    "contact": "Kontakt",
+    "discord": "Discord",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "trustpilot": "Trustpilot",
+    "copyright": "© {date} Yangfinity. Alle Rechte vorbehalten."
+  },
+  "cart": {
+    "title": "Mein Warenkorb",
+    "loading": "Lädt...",
+    "empty": "Ihr Warenkorb ist leer.",
+    "amount": "Menge:",
+    "total": "Gesamt:",
+    "proceed": "Zur Kasse",
+    "whatsapp": "Per WhatsApp bestellen",
+    "remove": "Artikel entfernen"
+  },
+  "profile": {
+    "title": "Profil",
+    "close": "Panel schließen",
+    "orders": "Bestellungen",
+    "support": "Support",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "signup": "Registrieren"
+  },
+  "orders": {
+    "title": "Ihre Bestellungen",
+    "empty": "Sie haben noch keine Bestellungen aufgegeben.",
+    "cta": "Bereit loszulegen? Entdecken Sie unsere Produkte und gönnen Sie sich etwas Yang!",
+    "shop": "Jetzt einkaufen",
+    "signin": "Melden Sie sich an, um Ihre Bestellungen zu sehen",
+    "signInButton": "Anmelden"
+  },
+  "support": {
+    "title": "Support",
+    "desc": "Brauchen Sie Hilfe? Kontaktieren Sie uns unter <a>info@yangfinity.com</a> oder nutzen Sie den Live-Chat unten.",
+    "signin": "Melden Sie sich an, um den Support zu nutzen",
+    "signInButton": "Anmelden"
+  }
+}
