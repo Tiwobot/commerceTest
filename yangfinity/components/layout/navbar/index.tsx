@@ -6,12 +6,21 @@ import { Suspense } from 'react';
 import MobileMenu from './mobile-menu';
 import Search, { SearchSkeleton } from './search';
 import { useCart } from '../../cart/CartContext';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 import { GeistSans } from 'geist/font/sans';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
 
+function useHasMounted() {
+  const [hasMounted, setHasMounted] = useState(false);
+  useEffect(() => {
+    setHasMounted(true);
+  }, []);
+  return hasMounted;
+}
+
 function CartIcon({ quantity, onClick }: { quantity: number; onClick: () => void }) {
+  const hasMounted = useHasMounted();
   return (
     <button
       aria-label="Open cart"
@@ -22,7 +31,7 @@ function CartIcon({ quantity, onClick }: { quantity: number; onClick: () => void
       <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437m0 0L6.6 9.75m-1.407-4.478h13.714c.889 0 1.542.86 1.346 1.725l-1.347 5.73a1.25 1.25 0 01-1.212.97H7.01m0 0L6.6 9.75m.41 0h9.9m-7.5 7.5a1.125 1.125 0 11-2.25 0 1.125 1.125 0 012.25 0zm9 0a1.125 1.125 0 11-2.25 0 1.125 1.125 0 012.25 0z" />
       </svg>
-      {quantity > 0 && (
+      {hasMounted && quantity > 0 && (
         <span className="absolute right-0 top-0 -mr-2 -mt-2 h-4 w-4 rounded-sm bg-blue-600 text-[11px] font-medium text-white flex items-center justify-center">
           {quantity}
         </span>
@@ -52,6 +61,9 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
     { code: 'EN', label: 'English' },
     { code: 'DE', label: 'Deutsch' },
     { code: 'TR', label: 'Türkçe' },
+    { code: 'ES', label: 'Español' },
+    { code: 'IT', label: 'Italiano' },
+    { code: 'FR', label: 'Français' },
   ];
   return (
     <div className="relative">
@@ -85,6 +97,18 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
 
 function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const { items, removeItem, updateQuantity, totalPrice } = useCart();
+  const hasMounted = useHasMounted();
+
+  // Build WhatsApp message with cart details
+  const cartMessage = encodeURIComponent(
+    `Hello, I want to checkout my cart on Yangfinity:\n\n` +
+    items.map(item =>
+      `• ${item.name} x${item.quantity} (${item.price} EUR each)`
+    ).join('\n') +
+    (items.length ? `\n\nTotal: €${totalPrice.toFixed(2)}` : '')
+  );
+  const whatsappHref = `https://wa.me/4915736729768?text=${cartMessage}`;
+  
   return (
     <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
@@ -97,7 +121,11 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
           <span className="text-lg font-semibold">My Cart</span>
           <button onClick={onClose} aria-label="Close cart" className="text-2xl">×</button>
         </div>
-        {items.length === 0 ? (
+        {!hasMounted ? (
+          <div className="flex flex-1 flex-col items-center justify-center">
+            <span className="text-lg">Loading...</span>
+          </div>
+        ) : items.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center">
             <span className="text-4xl mb-2">🛒</span>
             <span className="text-lg">Your cart is empty.</span>
@@ -139,6 +167,15 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
               <span className={`text-white ${GeistSans.className}`}>${totalPrice.toFixed(2)}</span>
             </div>
             <button disabled className={`mt-4 w-full bg-blue-600 text-white py-3 rounded-full opacity-60 cursor-not-allowed ${GeistSans.className}`}>Proceed to checkout</button>
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 w-full flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white py-3 rounded-full font-semibold transition"
+            >
+              Checkout via WhatsApp
+            </a>
+            <div className="py-6" />
           </>
         )}
       </div>

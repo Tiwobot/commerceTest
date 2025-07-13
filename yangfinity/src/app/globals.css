@@ -31,7 +31,7 @@ body {
 }
 
 .animate-carousel {
-  animation: carousel 30s linear infinite;
+  animation: carousel 20s linear infinite;
 }
 
 /* Custom scrollbar for carousel */
@@ -40,21 +40,21 @@ body {
 }
 
 .carousel-scroll::-webkit-scrollbar-thumb {
-  background: #222;
+  background: rgb(45, 45, 45);
   border-radius: 12px;
   transition: background 0.2s;
 }
 
 .carousel-scroll::-webkit-scrollbar-thumb:hover {
-  background: #222;
+  background: rgb(45, 45, 45);
 }
 
 .carousel-scroll::-webkit-scrollbar-track {
-  background: #222;
+  background: rgb(45, 45, 45)rgb(45, 45, 45);
   border-radius: 12px;
 }
 
 .carousel-scroll {
-  scrollbar-color: #222 #111;
+  scrollbar-color: rgb(108, 108, 108) rgb(45, 45, 45) ;
   scrollbar-width: thin;
 }

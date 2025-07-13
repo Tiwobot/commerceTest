@@ -40,7 +40,7 @@ const products = Object.entries(serverNames).map(([handle, name]) => ({
   handle,
   title: name,
   price: '25.00',
-  currencyCode: 'USD',
+  currencyCode: 'EUR',
 }));
 
 function ProductGrid() {

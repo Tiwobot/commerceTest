@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "../../components/layout/navbar";
 import Footer from "../../components/layout/footer";
 import { CartProvider } from '../../components/cart/CartContext';
+import Script from 'next/script';
 
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 
@@ -60,6 +61,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             'query-input': 'required name=search_term_string'
           }
         }) }} />
+        {/* Google Analytics (GA4) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');`
+        }} />
       </head>
       <body className={`${GeistSans.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
         <CartProvider>
@@ -67,6 +75,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <Footer />
         </CartProvider>
+        {/*Start of Tawk.to Script*/}
+        <Script
+          id="tawkto"
+          strategy="afterInteractive"
+          src="https://embed.tawk.to/6873746206a5dd1916716ceb/1j01ft82m"
+          crossOrigin="anonymous"
+        />
+        {/*End of Tawk.to Script*/}
       </body>
     </html>
   );

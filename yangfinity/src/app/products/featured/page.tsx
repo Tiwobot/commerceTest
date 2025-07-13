@@ -15,13 +15,13 @@ const products = [
     handle: 'yang-2',
     title: 'Yang Package 2 (Featured)',
     price: '25.00',
-    currencyCode: 'USD',
+    currencyCode: 'EUR',
   },
   {
     handle: 'yang-4',
     title: 'Yang Package 4 (Featured)',
     price: '100.00',
-    currencyCode: 'USD',
+    currencyCode: 'EUR',
   },
 ];
 
@@ -41,7 +41,7 @@ function ProductGrid() {
                 priority
               />
               <div className="absolute bottom-2 left-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                {product.title} — {product.price} {product.currencyCode}
+                {product.title} — €{product.price} EUR
               </div>
             </div>
           </a>

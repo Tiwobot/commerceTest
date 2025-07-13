@@ -19,7 +19,11 @@ export default function Footer() {
           <Link href="/refund-policy" className="hover:underline">Refund Policy</Link>
           <Link href="/contact" className="hover:underline">Contact</Link>
         </div>
-        <div className="md:ml-auto">
+        <div className="md:ml-auto flex flex-col gap-2">
+          <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="hover:underline">Discord</a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
+          <a href="https://www.trustpilot.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Trustpilot</a>
         </div>
       
       <div className="py-6 text-sm dark:border-neutral-700">

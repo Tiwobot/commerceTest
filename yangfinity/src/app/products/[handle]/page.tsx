@@ -85,7 +85,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
         <div className="basis-full lg:basis-2/6 flex flex-col justify-center">
           <h1 className={`mb-2 text-5xl font-medium ${GeistSans.className}`} style={{ letterSpacing: '-0.01em' }}>{serverName}</h1>
           <div className={`mr-auto w-auto rounded-full bg-blue-600 p-2 text-sm text-white mb-4 ${GeistSans.className}`}>
-            ${selectedAmount.price.toFixed(2)} USD
+            €{selectedAmount.price.toFixed(2)} EUR
           </div>
           <div className="border-b pb-6 mb-6 dark:border-neutral-700" />
           <div className={`mb-6 ${GeistSans.className}`}>
@@ -135,7 +135,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
                     label={{
                       title: name,
                       amount: price.toFixed(2),
-                      currencyCode: 'USD',
+                      currencyCode: 'EUR',
                       position: 'bottom',
                     }}
                     src="/yangfinity-logo-notext.png"

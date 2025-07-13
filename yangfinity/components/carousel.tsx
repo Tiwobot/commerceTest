@@ -61,7 +61,7 @@ export function Carousel() {
                   {product.name}
                 </span>
                 <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold shadow">
-                  $25.00 USD
+                  €25.00 EUR
                 </span>
               </div>
             </Link>

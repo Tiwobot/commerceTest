@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { useEffect, useRef } from 'react';
 import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 
+
+
 const faqs = [
   {
     question: 'What is Yangfinity?',
