@@ -25,7 +25,7 @@ import { useRouter } from 'next/navigation';
 declare global {
   interface Window {
     Tawk_API?: {
-      setAttributes: (attrs: Record<string, string>, callback: (error: any) => void) => void;
+      setAttributes: (attrs: Record<string, string>, callback: (error: unknown) => void) => void;
     };
   }
 }
@@ -262,7 +262,7 @@ export function Navbar() {
       window.Tawk_API.setAttributes({
         'name': user.username || user.fullName || user.primaryEmailAddress?.emailAddress || 'Customer',
         'email': user.primaryEmailAddress?.emailAddress || ''
-      }, function(error: any){ /* ignore */ });
+      }, () => {});
     }
   }, [isLoaded, user]);
   return (

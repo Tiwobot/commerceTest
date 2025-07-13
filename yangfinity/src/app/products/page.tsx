@@ -14,14 +14,6 @@ const sorting = [
   { title: 'Price: High to Low', slug: 'price-desc' },
 ];
 
-const categories = [
-  'Gameforge West',
-  'Gameforge East',
-  'Gameforge TR',
-  'Private Servers',
-  'Mobile Metin2',
-];
-
 function ProductGrid() {
   const searchParams = useSearchParams();
   const selectedCategory = searchParams.get('category');
@@ -40,7 +32,6 @@ function ProductGrid() {
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {filtered.map((product, idx) => {
-        const isFixed10 = product.category === 'Private Servers' || product.category === 'Mobile Metin2';
         return (
           <li key={product.name + idx} className="aspect-square transition-opacity animate-fadeIn">
             <Link href={`/products/${encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())}`} className="relative inline-block h-full w-full group">
