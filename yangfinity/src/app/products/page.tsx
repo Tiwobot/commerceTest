@@ -7,6 +7,7 @@ import { useSearchParams } from 'next/navigation';
 import { productData } from './productData';
 import { Suspense } from 'react';
 import { useTranslations } from 'next-intl';
+import FilterList from '../../../components/layout/search/filter';
 
 const sortingKeys = [
   { key: 'relevance', slug: 'relevance' },
@@ -80,6 +81,12 @@ export default function ProductsPage() {
   }));
   return (
     <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-black md:flex-row dark:text-white">
+      {/* Mobile filter/sort dropdowns */}
+      <div className="md:hidden flex flex-col gap-2 mb-4">
+        <FilterList list={collections} title={t('products.collections')} />
+        <FilterList list={sorting} title={t('products.sortBy')} />
+      </div>
+      {/* Desktop sidebar and grid */}
       <div className="order-first w-full flex-none md:max-w-[110px]">
         <nav>
           <h3 className="hidden text-xs text-neutral-500 md:block dark:text-neutral-400">{t('products.collections')}</h3>
