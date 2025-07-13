@@ -7,6 +7,7 @@ import Label from '../../../components/label';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { productData } from './productData';
+import { Suspense } from 'react';
 
 const sorting = [
   { title: 'Relevance', slug: 'relevance' },
@@ -66,7 +67,9 @@ export default function ProductsPage() {
         <Collections />
       </div>
       <div className="order-last w-full md:order-none">
-        <ProductGrid />
+        <Suspense fallback={<div>Loading products...</div>}>
+          <ProductGrid />
+        </Suspense>
       </div>
       <div className="order-none flex-none md:order-last md:w-[180px]">
         <FilterList list={sorting} title="Sort by" />
