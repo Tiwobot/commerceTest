@@ -7,7 +7,7 @@ export const productData = [
   { name: 'Metin2 Europe Won', price: 0.6, category: 'Gameforge West', logo: '/products/europa.png' },
   { name: 'Metin2 Tigerghost Won', price: 0.95, category: 'Gameforge West', logo: '/products/tigerghost.png' },
   { name: 'Metin2 Ruby Chimera Won', price: 0.7, category: 'Gameforge West', logo: '/products/ruby_chimera.png' },
-  { name: 'Metin2 Emerald Aurora Won', price: 0.63, category: 'Gameforge West' },
+  { name: 'Metin2 Emerald Aurora Won', price: 0.63, category: 'Gameforge West', logo: '/products/emerald.png' },
   { name: 'Metin2 Iberia Won', price: 0.37, category: 'Gameforge West' },
   { name: 'Metin2 Italy Won', price: 0.37, category: 'Gameforge West' },
   { name: 'Metin2 Azrael Won', price: 0.24, category: 'Gameforge West' },
