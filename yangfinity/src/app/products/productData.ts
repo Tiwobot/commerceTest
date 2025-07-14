@@ -9,7 +9,7 @@ export const productData = [
   { name: 'Metin2 Ruby Chimera Won', price: 0.7, category: 'Gameforge West', logo: '/products/ruby_chimera.png' },
   { name: 'Metin2 Emerald Aurora Won', price: 0.63, category: 'Gameforge West', logo: '/products/emerald.png' },
   { name: 'Metin2 Iberia Won', price: 0.37, category: 'Gameforge West', logo: '/products/iberia.png' },
-  { name: 'Metin2 Italy Won', price: 0.37, category: 'Gameforge West' },
+  { name: 'Metin2 Italy Won', price: 0.37, category: 'Gameforge West', logo: '/products/italy.png' },
   { name: 'Metin2 Azrael Won', price: 0.24, category: 'Gameforge West' },
   { name: 'Metin2 Onyx Obsidian Won', price: 0.75, category: 'Gameforge West' },
   // Gameforge East Servers
