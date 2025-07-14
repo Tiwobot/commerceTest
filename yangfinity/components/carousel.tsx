@@ -20,7 +20,7 @@ export function Carousel() {
             >
               <Link href={`/products/${handle}`} className="relative h-full w-full rounded-2xl bg-black border border-neutral-800 shadow-lg overflow-hidden block">
                 <Image
-                  src={'/yangfinity-logo-notext.png'}
+                  src={product.logo || '/yangfinity-logo-notext.png'}
                   alt={product.name}
                   fill
                   className="object-contain object-center transition-transform duration-300 group-hover:scale-105"

@@ -1,9 +1,9 @@
 // Product data source for all product pages
 export const productData = [
   // Gameforge West Servers
-  { name: 'Metin2 Eostre Won', price: 1.20, category: 'Gameforge West' },
-  { name: 'Metin2 Teutonia Won', price: 0.37, category: 'Gameforge West' },
-  { name: 'Metin2 Germania Won', price: 0.37, category: 'Gameforge West' },
+  { name: 'Metin2 Eostre Won', price: 1.20, category: 'Gameforge West', logo: '/products/eostre.png' },
+  { name: 'Metin2 Teutonia Won', price: 0.37, category: 'Gameforge West', logo: '/products/teutonia.png' },
+  { name: 'Metin2 Germania Won', price: 0.37, category: 'Gameforge West', logo: '/products/germania.png' },
   { name: 'Metin2 Europe Won', price: 0.6, category: 'Gameforge West' },
   { name: 'Metin2 Tigerghost Won', price: 0.95, category: 'Gameforge West' },
   { name: 'Metin2 Ruby Chimera Won', price: 0.7, category: 'Gameforge West' },
@@ -36,7 +36,7 @@ export const productData = [
   { name: 'Metin2 Ezel Won', price: 0.36, category: 'Gameforge TR' },
   // Private Servers (fixed price 10€)
   { name: 'Alturi2 Yang 18KKK', price: 10, category: 'Private Servers' },
-  { name: 'Elveron Yang 12KKK', price: 10, category: 'Private Servers' },
+  { name: 'Elveron Yang 12KKK', price: 10, category: 'Private Servers', logo: '/products/elveron.png' },
   { name: 'Kerion Yang 1KKKK', price: 10, category: 'Private Servers' },
   { name: 'NewMt2 Yang 17KKK', price: 10, category: 'Private Servers' },
   { name: 'Solis2 Yang 750KKK', price: 10, category: 'Private Servers' },

@@ -47,12 +47,14 @@ function ProductGrid({ t }: { t: (key: string) => string }) {
             <Link href={`/products/${encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())}`} className="relative inline-block h-full w-full group">
               <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black border-neutral-200 dark:border-neutral-800">
                 <Image
-                  src="/yangfinity-logo-notext.png"
+                  src={product.logo || "/yangfinity-logo-notext.png"}
                   alt={product.name}
                   fill
                   className="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
                   sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
                   priority
+                  onLoad={() => console.log(`Image loaded: ${product.logo || "/yangfinity-logo-notext.png"}`)}
+                  onError={() => console.error(`Image failed: ${product.logo || "/yangfinity-logo-notext.png"}`)}
                 />
                 <Label
                   title={product.name}
