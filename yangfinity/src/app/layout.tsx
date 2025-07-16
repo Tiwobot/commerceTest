@@ -11,10 +11,17 @@ import { ClerkProvider } from "@clerk/nextjs";
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 
 export const metadata = {
-  title: "Yangfinity",
-  description: "Buy Yang for Metin2 servers. Fast delivery for Metin2, Yang, Elveron, Alturi, Merlis, Helios, Helios2, Levia, Shiva, Dominus, Lupin, Lupin2, Rubinum, Azyrah, Goodtimes, MT2Classic, Lucerna, Laetus, StoneBreakers, StoneBreakers2, WOM, WOM2, NEWMT2, Fortis2.",
+  title: "Yangfinity - Buy Metin2 Yang & Won for Gameforge, Private & Mobile Servers",
+  description: "Buy Yang and Won for Metin2 Gameforge (West, East, TR), Private, and Mobile servers. Fast delivery for Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Elveron, Alturi2, Merlis, Helios2, Levia, Rubinum, Azyrah, Goodtimes, M2Classic, Lucerna, Laetus, StoneBreakers, WOM, Fortis2, and more.",
   keywords: [
-    "Metin2", "Yang", "Elveron", "Alturi", "Merlis", "Helios", "Helios2", "Levia", "Shiva", "Dominus", "Lupin", "Lupin2", "Rubinum", "Azyrah", "Goodtimes", "MT2Classic", "Lucerna", "Laetus", "StoneBreakers", "StoneBreakers2", "WOM", "WOM2", "NEWMT2", "Fortis2"
+    "Metin2", "Yang", "Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
+    "Private Servers", "Mobile Metin2", "Eostre", "Teutonia", "Germania", "Europe", "Tigerghost",
+    "Ruby Chimera", "Emerald Aurora", "Iberia", "Italy", "Azrael", "Onyx Obsidian", "Willow", "Ruby Kirin",
+    "Cesko", "Magyarorszag", "Polska", "Romania", "Tara Romanesca", "Greece", "Arabia", "Zephyr",
+    "Ruby Lucifer", "Onyx Bazalt", "Emerald Alesta", "Ruby Charon", "Anadolu", "Arkadaslar", "Bagjanamu",
+    "Barbaros", "Dandanakan", "Ezel", "Alturi2", "Elveron", "Kerion", "NewMt2", "Solis2", "Rubinum Saphirus",
+    "Merlis", "Lucerna Laetus", "Levia", "Celestial World", "Notorius2", "Pegasus2", "Fortis2", "Helios2",
+    "M2Classic", "Shiva", "Azyrah", "Rubinum", "Zenit", "Royale", "Mobile2 Tuva", "Mobile2 Tramola", "Mobile2 Alesta"
   ].join(", ")
 };
 
