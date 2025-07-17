@@ -11,10 +11,10 @@ import { ClerkProvider } from "@clerk/nextjs";
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 
 export const metadata = {
-  title: "Yangfinity - Buy Metin2 Yang & Won for Gameforge, Private & Mobile Servers",
-  description: "Buy Yang and Won for Metin2 Gameforge (West, East, TR), Private, and Mobile servers. Fast delivery for Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Elveron, Alturi2, Merlis, Helios2, Levia, Rubinum, Azyrah, Goodtimes, M2Classic, Lucerna, Laetus, StoneBreakers, WOM, Fortis2, and more.",
+  title: "Yangfinity - Buy Metin2 Yang for Gameforge, Private & Mobile Servers",
+  description: "Buy Yang for Metin2 Gameforge (West, East, TR), Private, and Mobile servers. Fast delivery for Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Elveron, Alturi2, Merlis, Helios2, Levia, Rubinum and more.",
   keywords: [
-    "Metin2", "Yang", "Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
+    "Metin2 Yang", "Metin2", "Yang", "Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
     "Private Servers", "Mobile Metin2", "Eostre", "Teutonia", "Germania", "Europe", "Tigerghost",
     "Ruby Chimera", "Emerald Aurora", "Iberia", "Italy", "Azrael", "Onyx Obsidian", "Willow", "Ruby Kirin",
     "Cesko", "Magyarorszag", "Polska", "Romania", "Tara Romanesca", "Greece", "Arabia", "Zephyr",
