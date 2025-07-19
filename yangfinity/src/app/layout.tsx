@@ -33,7 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <ClerkProvider>
-      <html lang={locale}>
+      <html lang={locale} className="dark">
         <head>
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/yangfinity-logo-notext.png" type="image/png" sizes="32x32" />
@@ -100,7 +100,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             tp('register', '049PdqiRfjj2TNGr');`}
           </Script>
         </head>
-        <body className={`${GeistSans.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
+        <body className={`${GeistSans.variable} antialiased font-sans bg-neutral-900 text-white`}>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <CartProvider>
               {/* Trustpilot Review Banner */}
