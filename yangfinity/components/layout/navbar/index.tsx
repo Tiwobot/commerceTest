@@ -45,7 +45,7 @@ function CartIcon({ quantity, onClick }: { quantity: number; onClick: () => void
     <button
       aria-label="Open cart"
       onClick={onClick}
-      className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white ml-2"
+      className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-700 text-white transition-colors bg-black hover:bg-neutral-800 ml-2"
     >
       {/* Simple cart SVG icon */}
       <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
@@ -64,7 +64,7 @@ function ProfileIcon() {
   return (
     <button
       aria-label="User profile"
-      className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white ml-2"
+      className="relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-700 text-white transition-colors bg-black hover:bg-neutral-800 ml-2"
     >
       {/* Simple user/profile SVG icon */}
       <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5" className="h-5 w-5">
@@ -91,18 +91,18 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
       <button
         aria-label="Select language"
         onClick={() => setOpen((v) => !v)}
-        className={`relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-200 text-black transition-colors dark:border-neutral-700 dark:text-white ${!mobile ? 'ml-2' : ''}`}
+        className={`relative flex h-11 w-11 items-center justify-center rounded-md border border-neutral-700 text-white transition-colors bg-black hover:bg-neutral-800 ${!mobile ? 'ml-2' : ''}`}
       >
         <GlobeAltIcon className="h-5 w-5" />
         <span className="absolute bottom-1 right-1 text-xs font-semibold">{lang.toUpperCase()}</span>
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-28 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 dark:bg-neutral-900 z-50">
+        <div className="absolute right-0 mt-2 w-28 rounded-md bg-black shadow-lg ring-0 z-50">
           <ul className="py-1">
             {languages.map((l) => (
               <li key={l.code}>
                 <button
-                  className={`w-full px-4 py-2 text-left text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 ${lang.toLowerCase() === l.code ? 'font-bold' : ''}`}
+                  className={`w-full px-4 py-2 text-left text-sm hover:bg-neutral-800 ${lang.toLowerCase() === l.code ? 'font-bold' : ''}`}
                   onClick={() => {
                     setLang(l.code.toUpperCase());
                     setOpen(false);
@@ -297,18 +297,15 @@ export function Navbar() {
             prefetch={true}
             className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
           >
-            <span className="block dark:hidden">
-              <Image src="/yangfinity-logo-trans-whitemode.png" alt="YANGFINITY Logo" width={120} height={32} />
-            </span>
-            <span className="hidden dark:block">
+            <span>
               <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
             </span>
           </Link>
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
-            <li><Link href="/" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.home')}</Link></li>
-            <li><Link href="/products" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.products')}</Link></li>
-            <li><Link href="/about" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.about')}</Link></li>
-            <li><Link href="/faq" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.faq')}</Link></li>
+            <li><Link href="/" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.home')}</Link></li>
+            <li><Link href="/products" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.products')}</Link></li>
+            <li><Link href="/about" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.about')}</Link></li>
+            <li><Link href="/faq" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.faq')}</Link></li>
             </ul>
         </div>
         <div className="hidden justify-center md:flex md:w-1/3">

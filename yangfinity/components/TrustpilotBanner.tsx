@@ -10,7 +10,7 @@ export default function TrustpilotBanner() {
         href="https://www.trustpilot.com/review/yangfinity.com"
         target="_blank"
         rel="noopener noreferrer"
-        className="ml-2 inline-block bg-white text-blue-700 font-bold px-3 py-1 rounded shadow hover:bg-blue-100 hover:text-blue-900 transition-colors duration-200"
+        className="ml-2 inline-block bg-black text-white font-bold px-3 py-1 rounded shadow hover:bg-neutral-800 hover:text-white transition-colors duration-200"
       >
         {t('trustpilotBanner.cta')}
       </a>

@@ -41,7 +41,7 @@ function ProductGrid() {
 
 export default function SaleProductsPage() {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-4 text-black md:flex-row dark:text-white">
+    <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-4 text-white md:flex-row">
       <div className="order-first w-full flex-none md:max-w-[125px]">
         <Collections />
       </div>

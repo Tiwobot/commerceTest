@@ -45,7 +45,7 @@ function ProductGrid() {
         return (
           <li key={product.name + idx} className="aspect-square transition-opacity animate-fadeIn">
             <Link href={`/products/${encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())}`} className="relative inline-block h-full w-full group">
-              <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black hover:border-blue-600 border-neutral-200 dark:border-neutral-800">
+              <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black hover:border-blue-600 border-neutral-800">
                 <Image
                   src={product.logo || "/yangfinity-logo-notext.png"}
                   alt={product.name}
@@ -83,7 +83,7 @@ export default function ProductsPage() {
     path: cat.value === 'All' ? '/products' : `/products?category=${encodeURIComponent(cat.value)}`
   }));
   return (
-    <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-black md:flex-row dark:text-white">
+    <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-white md:flex-row">
       {/* Mobile filter/sort dropdowns */}
       <div className="md:hidden flex flex-col gap-2 mb-4">
         <FilterList list={collections} title={t('products.collections')} />
@@ -92,11 +92,11 @@ export default function ProductsPage() {
       {/* Desktop sidebar and grid */}
       <div className="order-first w-full flex-none md:max-w-[110px]">
         <nav>
-          <h3 className="hidden text-xs text-neutral-500 md:block dark:text-neutral-400">{t('products.collections')}</h3>
+          <h3 className="hidden text-xs text-neutral-400 md:block">{t('products.collections')}</h3>
           <ul className="hidden md:block">
             {collections.map((item) => (
-              <li className="mt-2 flex text-black dark:text-white" key={item.title}>
-                <Link href={item.path} className="w-full text-sm underline-offset-4 hover:underline dark:hover:text-neutral-100">
+              <li className="mt-2 flex text-white" key={item.title}>
+                <Link href={item.path} className="w-full text-sm underline-offset-4 hover:underline hover:text-neutral-100">
                   {item.title}
                 </Link>
               </li>
@@ -111,10 +111,10 @@ export default function ProductsPage() {
       </div>
       <div className="order-none flex-none md:order-last md:w-[180px]">
         <nav>
-          <h3 className="hidden text-xs text-neutral-500 md:block dark:text-neutral-400">{t('products.sortBy')}</h3>
+          <h3 className="hidden text-xs text-neutral-400 md:block">{t('products.sortBy')}</h3>
           <ul className="hidden md:block">
             {sorting.map((item) => (
-              <li className="mt-2 flex text-sm text-black dark:text-white" key={item.title}>
+              <li className="mt-2 flex text-sm text-white" key={item.title}>
                 <Link href={`/products?sort=${item.slug}`} className="w-full hover:underline hover:underline-offset-4">
                   {item.title}
                 </Link>

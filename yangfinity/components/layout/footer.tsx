@@ -8,16 +8,11 @@ export default function Footer() {
   const copyrightDate = 2025 + (currentYear > 2025 ? `-${currentYear}` : '');
 
   return (
-    <footer className="text-sm text-neutral-500 dark:text-neutral-400">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
+    <footer className="text-sm text-neutral-400">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-700 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0">
         <div>
-          <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
-            <span className="block dark:hidden">
-              <Image src="/yangfinity-logo-trans-whitemode.png" alt="YANGFINITY Logo" width={120} height={32} />
-            </span>
-            <span className="hidden dark:block">
-              <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
-            </span>
+          <Link className="flex items-center gap-2 text-white md:pt-1" href="/">
+            <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
           </Link>
         </div>
         <div className="flex flex-col gap-2">

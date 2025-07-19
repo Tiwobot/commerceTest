@@ -38,7 +38,7 @@ export default function AboutPage() {
           YANG
         </span>
         <div ref={contentRef} className="relative z-10 max-w-2xl mx-auto pt-2 pb-52 px-4 transition-transform duration-300 will-change-transform">
-          <h1 className="text-5xl font-extrabold mb-8 text-black dark:text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
+          <h1 className="text-5xl font-extrabold mb-8 text-white text-center" style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}>
             {t('about.heading')}
           </h1>
           <p className="mb-4">

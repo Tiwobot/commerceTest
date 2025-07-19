@@ -19,7 +19,7 @@ function ProductGrid() {
       {featuredProducts.map((product, idx) => (
         <li key={product.name + idx} className="aspect-square transition-opacity animate-fadeIn">
           <a href={"/products/" + encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())} className="relative inline-block h-full w-full group">
-            <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black border-neutral-200 dark:border-neutral-800">
+            <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black hover:border-blue-600 border-neutral-800">
               <Image
                 src="/yangfinity-logo-notext.png"
                 alt={product.name}
@@ -41,7 +41,7 @@ function ProductGrid() {
 
 export default function FeaturedProductsPage() {
   return (
-    <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-4 text-black md:flex-row dark:text-white">
+    <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 pb-4 text-white md:flex-row">
       <div className="order-first w-full flex-none md:max-w-[125px]">
         <Collections />
       </div>

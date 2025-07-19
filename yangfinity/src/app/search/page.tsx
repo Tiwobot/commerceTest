@@ -35,13 +35,13 @@ function SearchPageContent() {
   const resultsText = filtered.length === 1 ? 'result' : 'results';
 
   return (
-    <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-black md:flex-row dark:text-white">
+    <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-white md:flex-row">
       <div className="order-first w-full flex-none md:max-w-[110px]">
         <Collections />
       </div>
       <div className="order-last w-full md:order-none">
         {query && (
-          <p className="mb-4 text-base text-neutral-600 dark:text-neutral-300">
+          <p className="mb-4 text-base text-neutral-300">
             {filtered.length === 0
               ? 'There are no products that match '
               : `Showing ${filtered.length} ${resultsText} for `}
@@ -52,7 +52,7 @@ function SearchPageContent() {
           {filtered.map((product) => (
             <li key={product.handle} className="aspect-square transition-opacity animate-fadeIn">
               <Link href={`/products/${product.handle}`} className="relative inline-block h-full w-full group">
-                <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-white hover:border-blue-600 dark:bg-black border-neutral-200 dark:border-neutral-800">
+                <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black hover:border-blue-600 border-neutral-800">
                   <Image
                     src={product.logo || "/yangfinity-logo-notext.png"}
                     alt={product.name}

@@ -53,7 +53,7 @@ export default function FAQPage() {
           <div className="flex items-center justify-center mb-8">
             <QuestionMarkCircleIcon className="h-12 w-12 text-green-500 dark:text-yellow-300 mr-3 animate-pulse" />
             <h1
-              className="text-4xl font-extrabold text-center text-black dark:text-white tracking-tight"
+              className="text-4xl font-extrabold text-center text-white tracking-tight"
               style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}
             >
               {t('faq.title')}
@@ -66,7 +66,7 @@ export default function FAQPage() {
                 className="overflow-visible bg-transparent"
               >
                 <button
-                  className="w-full flex items-center justify-between px-6 py-5 text-lg font-semibold text-left text-black dark:text-white focus:outline-none"
+                  className="w-full flex items-center justify-between px-6 py-5 text-lg font-semibold text-left text-white focus:outline-none"
                   onClick={() => setOpen(open === idx ? null : idx)}
                   aria-expanded={open === idx}
                 >
@@ -74,7 +74,7 @@ export default function FAQPage() {
                   <span className={`ml-4 transition-transform ${open === idx ? 'rotate-180' : ''}`}>▼</span>
                 </button>
                 <div
-                  className={`px-6 pb-5 text-neutral-700 dark:text-neutral-200 text-base transition-all duration-300 ease-in-out ${open === idx ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}
+                  className={`px-6 pb-5 text-neutral-200 text-base transition-all duration-300 ease-in-out ${open === idx ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`}
                   style={{
                     transitionProperty: 'max-height, opacity',
                   }}
