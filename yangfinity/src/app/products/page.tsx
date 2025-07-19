@@ -24,7 +24,7 @@ const categoryKeys = [
   { key: 'mobile', value: 'Mobile Metin2' },
 ];
 
-function ProductGrid({ t }: { t: (key: string) => string }) {
+function ProductGrid() {
   const searchParams = useSearchParams();
   const selectedCategory = searchParams.get('category');
   const sort = searchParams.get('sort');
@@ -106,7 +106,7 @@ export default function ProductsPage() {
       </div>
       <div className="order-last w-full md:order-none">
         <Suspense fallback={<div>Loading products...</div>}>
-          <ProductGrid t={t} />
+          <ProductGrid />
         </Suspense>
       </div>
       <div className="order-none flex-none md:order-last md:w-[180px]">
