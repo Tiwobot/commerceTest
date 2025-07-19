@@ -13,7 +13,7 @@ export const productData = [
   { name: 'Metin2 Azrael Won', handle: 'metin2-azrael-won', price: 0.24, category: 'Gameforge West', logo: '/products/azrael.png' },
   { name: 'Metin2 Onyx Obsidian Won', handle: 'metin2-onyx-obsidian-won', price: 0.75, category: 'Gameforge West', logo: '/products/onyx.png' },
   // Gameforge East Servers
-  { name: 'Metin2 Willow Won', handle: 'metin2-willow-won', price: 2.25, category: 'Gameforge East' },
+  { name: 'Metin2 Willow Won', handle: 'metin2-willow-won', price: 2.25, category: 'Gameforge East', logo: '/products/willow.png' },
   { name: 'Metin2 Ruby Kirin Won', handle: 'metin2-ruby-kirin-won', price: 0.5, category: 'Gameforge East' },
   { name: 'Metin2 Cesko Won', handle: 'metin2-cesko-won', price: 0.45, category: 'Gameforge East' },
   { name: 'Metin2 Magyarorszag Won', handle: 'metin2-magyarorszag-won', price: 0.37, category: 'Gameforge East' },
