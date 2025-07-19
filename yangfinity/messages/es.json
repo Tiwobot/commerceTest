@@ -122,6 +122,16 @@
     "quantity": "Cantidad",
     "description": "Compra Yang para servidores Metin2. Entrega rápida, segura y confiable.",
     "addToCart": "Agregar al carrito",
-    "related": "Productos relacionados"
+    "related": "Productos relacionados",
+    "liveChatWarning": "Siempre pregunte el precio actual en el chat en vivo.",
+    "descriptions": {
+      "metin2-eostre-won": "¡Conquista el mundo de Metin2 Eostre con el Eostre Won premium de Yangfinity! Sumérgete en un reino donde cada victoria está al alcance y cada comercio puede mejorar tu aventura. Eostre Won es tu llave para el mejor equipo, mejoras poderosas y una economía vibrante en el juego. Ya seas veterano o principiante, comprar Eostre Won en Yangfinity te asegura estar siempre un paso adelante.\n\n¿Por qué comprar Eostre Won en Yangfinity?\n- Equipa a tu personaje con el mejor equipo y objetos raros.\n- Disfruta de una entrega instantánea, segura y confiable.\n- Domina el mercado de Eostre y haz crecer tu fortuna.\n- Únete a una comunidad de jugadores satisfechos de Metin2 que confían en Yangfinity.\n\nEn Yangfinity, tu seguridad y satisfacción son nuestra prioridad. Las transacciones cifradas y un equipo de soporte dedicado garantizan una experiencia sin problemas.\n\nNo esperes más: potencia tu aventura en Metin2 con Eostre Won hoy mismo. ¡Haz clic en “Agregar al carrito” y experimenta la diferencia Yangfinity!",
+      "metin2-teutonia-won": "¡Alcanza la gloria en Metin2 Teutonia con el Teutonia Won de Yangfinity! Descubre un mundo de posibilidades donde cada batalla, comercio y mejora te acerca al estatus de leyenda. Teutonia Won es tu boleto para el mejor equipo, objetos exclusivos y una economía próspera.\n\n¿Por qué elegir Teutonia Won de Yangfinity?\n- Accede a armas y armaduras legendarias para superar a tus rivales.\n- Benefíciate de una entrega rápida, segura y confiable.\n- Comercia con confianza y haz crecer tu riqueza en Teutonia.\n- Confía en la reputación y atención al cliente de Yangfinity.\n\nCon Yangfinity, nunca estarás solo. Nuestra plataforma segura y equipo de expertos garantizan una experiencia impecable de compra a entrega.\n\nNo te conformes con menos: potencia tu viaje en Metin2 con Teutonia Won ahora. ¡Haz clic en “Agregar al carrito” y únete a los campeones!",
+      "metin2-germania-won": "¡Asciende a la victoria en Metin2 Germania con el Germania Won de Yangfinity! Emprende una aventura épica donde cada victoria y cada comercio pueden cambiar tu destino. Germania Won es tu acceso a equipo premium, mejoras poderosas y un mercado vibrante en el juego.\n\n¿Por qué comprar Germania Won en Yangfinity?\n- Desbloquea equipo exclusivo y objetos raros para tu héroe.\n- Disfruta de una entrega rápida, segura y confiable.\n- Domina los comercios y acumula riqueza en la economía de Germania.\n- Únete a miles de jugadores que confían en Yangfinity para sus necesidades de Metin2.\n\nEn Yangfinity, tu seguridad y satisfacción son lo primero. Las transacciones cifradas y un equipo de soporte atento garantizan una experiencia fluida.\n\nNo pierdas la oportunidad: potencia tu aventura en Metin2 con Germania Won hoy mismo. ¡Haz clic en “Agregar al carrito” y experimenta la ventaja Yangfinity!"
+    }
+  },
+  "trustpilotBanner": {
+    "text": "¿No estás seguro si el sitio es legítimo? Mira las reseñas aquí",
+    "cta": "¡Haz clic aquí!"
   }
 }

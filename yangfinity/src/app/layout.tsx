@@ -7,6 +7,7 @@ import Footer from "../../components/layout/footer";
 import { CartProvider } from '../../components/cart/CartContext';
 import Script from 'next/script';
 import { ClerkProvider } from "@clerk/nextjs";
+import TrustpilotBanner from '../../components/TrustpilotBanner';
 
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 
@@ -28,6 +29,7 @@ export const metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const locale = await getLocale();
   const messages = await getMessages();
+  // Remove: const t = useTranslations();
 
   return (
     <ClerkProvider>
@@ -101,6 +103,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <body className={`${GeistSans.variable} antialiased font-sans bg-neutral-50 text-black dark:bg-neutral-900 dark:text-white`}>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <CartProvider>
+              {/* Trustpilot Review Banner */}
+              <TrustpilotBanner />
               <Navbar />
               <main>{children}</main>
               <Footer />

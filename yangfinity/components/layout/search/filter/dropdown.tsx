@@ -40,9 +40,9 @@ export default function FilterItemDropdown({ list }: { list: ListItem[] }) {
       // Sorting dropdown (by slug)
       list.forEach((listItem) => {
         if ('slug' in listItem && searchParams.get('sort') === listItem.slug) {
-          setActive(listItem.title);
-        }
-      });
+        setActive(listItem.title);
+      }
+    });
     }
   }, [pathname, list, searchParams]);
 

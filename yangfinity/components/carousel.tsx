@@ -14,18 +14,18 @@ export function Carousel() {
         {carouselProducts.map((product, i) => {
           const handle = encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase());
           return (
-            <li
+          <li
               key={`${product.name}${i}`}
-              className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
-            >
+            className="relative aspect-square h-[30vh] max-h-[275px] w-2/3 max-w-[475px] flex-none md:w-1/3"
+          >
               <Link href={`/products/${handle}`} className="relative h-full w-full rounded-2xl bg-black border border-neutral-800 shadow-lg overflow-hidden block">
                 <Image
                   src={product.logo || '/yangfinity-logo-notext.png'}
                   alt={product.name}
                   fill
                   className="object-contain object-center transition-transform duration-300 group-hover:scale-105"
-                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
-                />
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+              />
                 <div className="absolute left-3 bottom-3 flex flex-col gap-2">
                   <span className="bg-black/80 text-white px-3 py-1 rounded-full text-xs font-semibold shadow">
                     {product.name}
@@ -34,8 +34,8 @@ export function Carousel() {
                     €{product.price.toFixed(2)} EUR
                   </span>
                 </div>
-              </Link>
-            </li>
+            </Link>
+          </li>
           );
         })}
       </ul>
