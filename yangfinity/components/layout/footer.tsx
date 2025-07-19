@@ -42,10 +42,6 @@ export default function Footer() {
           >
             <a href="https://www.trustpilot.com/review/yangfinity.com" target="_blank" rel="noopener noreferrer">Trustpilot</a>
           </div>
-          {/* TrustBox widget - Review Collector */}
-          <div className="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="687b7836c258ef140392cbd4" data-style-height="52px" data-style-width="100%">
-            <a href="https://www.trustpilot.com/review/yangfinity.com" target="_blank" rel="noopener">Trustpilot</a>
-          </div>
         </div>
       <div className="py-6 text-sm dark:border-neutral-700">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
