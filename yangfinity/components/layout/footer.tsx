@@ -12,7 +12,12 @@ export default function Footer() {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
         <div>
           <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
-            <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
+            <span className="block dark:hidden">
+              <Image src="/yangfinity-logo-trans-whitemode.png" alt="YANGFINITY Logo" width={120} height={32} />
+            </span>
+            <span className="hidden dark:block">
+              <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
+            </span>
           </Link>
         </div>
         <div className="flex flex-col gap-2">
@@ -20,12 +25,23 @@ export default function Footer() {
           <Link href="/terms" className="hover:underline">{t('footer.terms')}</Link>
           <Link href="/refund-policy" className="hover:underline">{t('footer.refund')}</Link>
           <Link href="/contact" className="hover:underline">{t('footer.contact')}</Link>
-        </div>
+            </div>
         <div className="md:ml-auto flex flex-col gap-2">
           <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.discord')}</a>
           <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.facebook')}</a>
           <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.instagram')}</a>
-          <a href="https://www.trustpilot.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{t('footer.trustpilot')}</a>
+          {/* Trustpilot Widget */}
+          <div
+            className="trustpilot-widget"
+            data-locale="en-US"
+            data-template-id="5419b6a8b0d04a076446a9ad"
+            data-businessunit-id="049PdqiRfjj2TNGr"
+            data-style-height="52px"
+            data-style-width="100%"
+            data-theme="dark"
+          >
+            <a href="https://www.trustpilot.com/review/yangfinity.com" target="_blank" rel="noopener noreferrer">Trustpilot</a>
+          </div>
         </div>
       <div className="py-6 text-sm dark:border-neutral-700">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">

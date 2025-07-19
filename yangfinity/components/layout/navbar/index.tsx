@@ -297,7 +297,12 @@ export function Navbar() {
             prefetch={true}
             className="mr-2 flex w-full items-center justify-center md:w-auto lg:mr-6"
           >
-            <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
+            <span className="block dark:hidden">
+              <Image src="/yangfinity-logo-trans-whitemode.png" alt="YANGFINITY Logo" width={120} height={32} />
+            </span>
+            <span className="hidden dark:block">
+              <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
+            </span>
           </Link>
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
             <li><Link href="/" className="text-neutral-500 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300">{t('nav.home')}</Link></li>
