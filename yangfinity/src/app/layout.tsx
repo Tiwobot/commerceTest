@@ -86,6 +86,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
               `
             }}
           />
+          {/* TrustBox script for Review Collector */}
+          <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
           {/* Google Analytics (GA4) */}
           <Script id="ga-script" strategy="afterInteractive">
             {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');`}
