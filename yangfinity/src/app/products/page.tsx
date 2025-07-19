@@ -28,7 +28,7 @@ function ProductGrid({ t }: { t: (key: string) => string }) {
   const searchParams = useSearchParams();
   const selectedCategory = searchParams.get('category');
   const sort = searchParams.get('sort');
-  let filtered = selectedCategory && selectedCategory !== t('products.categories.all')
+  let filtered = selectedCategory && selectedCategory !== 'All'
     ? productData.filter(p => p.category === selectedCategory)
     : productData;
 
@@ -75,11 +75,12 @@ export default function ProductsPage() {
   const t = useTranslations();
   // Build translated sorting and category lists
   const sorting = sortingKeys.map(s => ({ title: t(`products.sorting.${s.key}`), slug: s.slug }));
-  const categories = categoryKeys.map(c => t(`products.categories.${c.key}`));
+  // Use English value for path, translated for label
+  const categories = categoryKeys.map(c => ({ label: t(`products.categories.${c.key}`), value: c.value }));
   // Collections sidebar expects [{title, path}]
   const collections = categories.map(cat => ({
-    title: cat,
-    path: cat === t('products.categories.all') ? '/products' : `/products?category=${encodeURIComponent(cat)}`
+    title: cat.label,
+    path: cat.value === 'All' ? '/products' : `/products?category=${encodeURIComponent(cat.value)}`
   }));
   return (
     <div className="mx-auto flex w-full flex-col gap-8 px-4 md:px-8 pb-4 text-black md:flex-row dark:text-white">

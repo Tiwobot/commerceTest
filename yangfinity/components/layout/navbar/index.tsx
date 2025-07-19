@@ -128,9 +128,9 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
 
   // Build WhatsApp message with cart details
   const cartMessage = encodeURIComponent(
-    `Hello, I want to checkout my cart on Yangfinity:\n\n` +
+    `${t('whatsappIntro')}` +
     items.map(item =>
-      `• ${item.name} x${item.quantity} (${item.price} EUR each)`
+      t('whatsappItem', { name: item.name, quantity: item.quantity, price: item.price })
     ).join('\n') +
     (items.length ? `\n\n${t('total')} €${totalPrice.toFixed(2)}` : '')
   );
@@ -191,7 +191,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
             </ul>
             <div className="flex justify-between items-center border-t border-neutral-800 pt-4">
               <span className="font-semibold">{t('total')}</span>
-              <span className={`text-white ${GeistSans.className}`}>${totalPrice.toFixed(2)}</span>
+              <span className={`text-white ${GeistSans.className}`}>€{totalPrice.toFixed(2)}</span>
             </div>
             <button disabled className={`mt-4 w-full bg-blue-600 text-white py-3 rounded-full opacity-60 cursor-not-allowed ${GeistSans.className}`}>{t('proceed')}</button>
             <a

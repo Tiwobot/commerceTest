@@ -84,7 +84,9 @@
     "total": "Toplam:",
     "proceed": "Ödemeye geç",
     "whatsapp": "WhatsApp ile Satın Al",
-    "remove": "Ürünü kaldır"
+    "remove": "Ürünü kaldır",
+    "whatsappIntro": "Merhaba, Yangfinity'de sepetimi tamamlamak istiyorum:\n\n",
+    "whatsappItem": "• {name} x{quantity} ({price} EUR adet)"
   },
   "footer": {
     "faq": "SSS",

@@ -53,7 +53,7 @@ export default function FAQPage() {
           <div className="flex items-center justify-center mb-8">
             <QuestionMarkCircleIcon className="h-12 w-12 text-green-500 dark:text-yellow-300 mr-3 animate-pulse" />
             <h1
-              className="text-4xl font-extrabold text-center text-white tracking-tight"
+              className="text-4xl font-extrabold text-center text-black dark:text-white tracking-tight"
               style={{ fontFamily: 'Montserrat, sans-serif', letterSpacing: '-0.01em' }}
             >
               {t('faq.title')}

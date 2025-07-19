@@ -81,7 +81,9 @@
     "total": "Total:",
     "proceed": "Proceder al pago",
     "whatsapp": "Comprar por WhatsApp",
-    "remove": "Eliminar artículo"
+    "remove": "Eliminar artículo",
+    "whatsappIntro": "Hola, quiero finalizar mi compra en Yangfinity:\n\n",
+    "whatsappItem": "• {name} x{quantity} ({price} EUR cada uno)"
   },
   "footer": {
     "faq": "FAQ",

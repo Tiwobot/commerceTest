@@ -95,7 +95,9 @@
     "total": "Total:",
     "proceed": "Proceed to checkout",
     "whatsapp": "Checkout via WhatsApp",
-    "remove": "Remove cart item"
+    "remove": "Remove cart item",
+    "whatsappIntro": "Hello, I want to checkout my cart on Yangfinity:\n\n",
+    "whatsappItem": "• {name} x{quantity} ({price} EUR each)"
   },
   "profile": {
     "title": "Profile",
