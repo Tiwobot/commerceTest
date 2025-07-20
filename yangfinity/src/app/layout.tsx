@@ -105,9 +105,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <CartProvider>
               {/* Trustpilot Review Banner */}
               <TrustpilotBanner />
-              <Navbar />
-              <main>{children}</main>
-              <Footer />
+              <div className="pt-12">
+                <Navbar />
+                <main>{children}</main>
+                <Footer />
+              </div>
             </CartProvider>
             {/*Start of Tawk.to Script*/}
             <Script
