@@ -251,7 +251,8 @@ export default function YusakardelenPage() {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
-          padding: '40px 25px'
+          padding: '40px 25px',
+          margin: '0 auto'
         }}
       >
         {/* Gradient overlay on the card */}
