@@ -137,7 +137,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const whatsappHref = `https://wa.me/4915736729768?text=${cartMessage}`;
   
   return (
-    <div className={`fixed inset-0 z-100 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
+    <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
@@ -216,7 +216,7 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
   const router = useRouter();
   const t = useTranslations('profile');
   return (
-    <div className={`fixed inset-0 z-100 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
+    <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
