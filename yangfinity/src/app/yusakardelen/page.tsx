@@ -287,7 +287,7 @@ export default function YusakardelenPage() {
               textAlign: 'center'
             }}
           >
-            Kardelen ❤️ Yuşa
+            Kardelen <span style={{ color: 'white' }}>❤️</span> Yuşa
           </div>
           <div 
             style={{
