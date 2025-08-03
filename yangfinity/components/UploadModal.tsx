@@ -31,9 +31,9 @@ export default function UploadModal({ isOpen, onClose }: UploadModalProps) {
         continue;
       }
 
-      // Check file size (max 50MB)
-      if (file.size > 50 * 1024 * 1024) {
-        alert(`${file.name} is too large. Maximum size is 50MB`);
+      // Check file size (max 350MB)
+      if (file.size > 350 * 1024 * 1024) {
+        alert(`${file.name} is too large. Maximum size is 350MB`);
         continue;
       }
 
@@ -148,9 +148,9 @@ export default function UploadModal({ isOpen, onClose }: UploadModalProps) {
           <p style={{ fontSize: '14px', color: '#555', fontWeight: '400' }}>
             veya dosyaları buraya sürükleyin
           </p>
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '10px', fontWeight: '400' }}>
-            Maksimum dosya boyutu: 50MB
-          </p>
+                           <p style={{ fontSize: '12px', color: '#666', marginTop: '10px', fontWeight: '400' }}>
+                   Maksimum dosya boyutu: 350MB
+                 </p>
         </div>
 
         {/* Hidden file input */}
