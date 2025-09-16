@@ -59,7 +59,17 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@type': 'Organization',
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
-            logo: '/yangfinity-logo-notext.png',
+            logo: 'https://yangfinity.com/yangfinity-logo-notext.png',
+            description: 'Buy Yang for Metin2 Gameforge, Private, and Mobile servers. Fast delivery, secure payment, 24/7 support.',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'EU'
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              contactType: 'customer service',
+              availableLanguage: ['English', 'German', 'Spanish', 'French', 'Italian', 'Turkish']
+            },
             sameAs: [
               'https://www.facebook.com/',
               'https://twitter.com/',
@@ -71,11 +81,23 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@type': 'WebSite',
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
+            description: 'Buy Yang for Metin2 servers - Gameforge, Private, and Mobile. Instant delivery, secure payment.',
             potentialAction: {
               '@type': 'SearchAction',
-              target: 'https://yangfinity.com/?q={search_term_string}',
+              target: 'https://yangfinity.com/search?q={search_term_string}',
               'query-input': 'required name=search_term_string'
             }
+          }) }} />
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Store',
+            name: 'Yangfinity',
+            url: 'https://yangfinity.com/',
+            description: 'Metin2 Yang store for Gameforge, Private, and Mobile servers',
+            priceRange: '€0.20 - €10.00',
+            currenciesAccepted: 'EUR',
+            paymentAccepted: 'Credit Card, PayPal, Apple Pay, Google Pay',
+            openingHours: 'Mo-Su 00:00-23:59'
           }) }} />
           {/* Trustpilot Verification Script (plain for crawler detection) */}
           <script

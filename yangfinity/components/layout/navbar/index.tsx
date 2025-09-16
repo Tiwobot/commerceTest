@@ -283,6 +283,8 @@ export function Navbar() {
             <MobileMenu menu={[
               { title: t('nav.home'), path: '/' },
               { title: t('nav.products'), path: '/products' },
+              { title: 'Guides', path: '/guides' },
+              { title: 'Blog', path: '/blog' },
               { title: t('nav.about'), path: '/about' },
               { title: t('nav.faq'), path: '/faq' },
             ]} />
@@ -304,6 +306,8 @@ export function Navbar() {
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
             <li><Link href="/" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.home')}</Link></li>
             <li><Link href="/products" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.products')}</Link></li>
+            <li><Link href="/guides" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">Guides</Link></li>
+            <li><Link href="/blog" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">Blog</Link></li>
             <li><Link href="/about" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.about')}</Link></li>
             <li><Link href="/faq" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.faq')}</Link></li>
             </ul>
