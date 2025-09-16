@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { productData } from '../../products/productData';
+import { productData } from '@/app/products/productData';
 
 export async function GET() {
   const baseUrl = 'https://yangfinity.com';
