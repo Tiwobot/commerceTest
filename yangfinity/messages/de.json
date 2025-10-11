@@ -114,7 +114,16 @@
     "cta": "Bereit loszulegen? Entdecken Sie unsere Produkte und gönnen Sie sich etwas Yang!",
     "shop": "Jetzt einkaufen",
     "signin": "Melden Sie sich an, um Ihre Bestellungen zu sehen",
-    "signInButton": "Anmelden"
+    "signInButton": "Anmelden",
+    "success": {
+      "title": "Bestellung erfolgreich!",
+      "thanks": "Vielen Dank für Ihren Kauf!",
+      "orderIdLabel": "Bestellnummer:",
+      "emailLabel": "E-Mail:",
+      "confirmation": "Ihre Bestellung wurde bestätigt. Sie erhalten Ihre digitalen Produkte in Kürze per E-Mail.",
+      "continueShopping": "Weiter einkaufen",
+      "viewOrders": "Bestellungen anzeigen"
+    }
   },
   "support": {
     "title": "Support",

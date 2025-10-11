@@ -114,7 +114,16 @@
     "cta": "Pronto per iniziare? Esplora i nostri prodotti e concediti un po' di Yang!",
     "shop": "Acquista ora",
     "signin": "Accedi per vedere i tuoi ordini",
-    "signInButton": "Accedi"
+    "signInButton": "Accedi",
+    "success": {
+      "title": "Ordine riuscito!",
+      "thanks": "Grazie per il tuo acquisto!",
+      "orderIdLabel": "ID ordine:",
+      "emailLabel": "Email:",
+      "confirmation": "Il tuo ordine è stato confermato. Riceverai i tuoi prodotti digitali a breve via email.",
+      "continueShopping": "Continua lo shopping",
+      "viewOrders": "Visualizza ordini"
+    }
   },
   "support": {
     "title": "Supporto",

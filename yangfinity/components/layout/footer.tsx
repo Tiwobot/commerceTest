@@ -1,6 +1,9 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import GoogleRatingBadge from '../GoogleRatingBadge';
 
 export default function Footer() {
   const t = useTranslations();
@@ -37,6 +40,8 @@ export default function Footer() {
           >
             <a href="https://www.trustpilot.com/review/yangfinity.com" target="_blank" rel="noopener noreferrer">Trustpilot</a>
           </div>
+          {/* Google Merchant Rating Badge */}
+          <GoogleRatingBadge />
         </div>
       <div className="py-6 text-sm dark:border-neutral-700">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">

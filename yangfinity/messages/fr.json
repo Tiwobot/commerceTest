@@ -112,7 +112,16 @@
     "cta": "Prêt à commencer ? Découvrez nos produits et faites-vous plaisir avec du Yang !",
     "shop": "Acheter maintenant",
     "signin": "Connectez-vous pour voir vos commandes",
-    "signInButton": "Se connecter"
+    "signInButton": "Se connecter",
+    "success": {
+      "title": "Commande réussie !",
+      "thanks": "Merci pour votre achat !",
+      "orderIdLabel": "N° de commande :",
+      "emailLabel": "E-mail :",
+      "confirmation": "Votre commande a été confirmée. Vous recevrez vos produits numériques sous peu par e-mail.",
+      "continueShopping": "Continuer les achats",
+      "viewOrders": "Voir les commandes"
+    }
   },
   "support": {
     "title": "Support",

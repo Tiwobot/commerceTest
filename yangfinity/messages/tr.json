@@ -114,7 +114,16 @@
     "cta": "Başlamak için hazır mısınız? Ürünlerimizi keşfedin ve kendinizi biraz Yang ile ödüllendirin!",
     "shop": "Şimdi Alışveriş Yap",
     "signin": "Siparişlerinizi görmek için giriş yapın",
-    "signInButton": "Giriş Yap"
+    "signInButton": "Giriş Yap",
+    "success": {
+      "title": "Sipariş Başarılı!",
+      "thanks": "Satın aldığınız için teşekkür ederiz!",
+      "orderIdLabel": "Sipariş No:",
+      "emailLabel": "E-posta:",
+      "confirmation": "Siparişiniz onaylandı. Dijital ürünlerinizi kısa süre içinde e-posta ile alacaksınız.",
+      "continueShopping": "Alışverişe Devam Et",
+      "viewOrders": "Siparişleri Görüntüle"
+    }
   },
   "support": {
     "title": "Destek",
