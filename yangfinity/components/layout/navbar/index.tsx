@@ -97,7 +97,7 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
         <span className="absolute bottom-1 right-1 text-xs font-semibold">{lang.toUpperCase()}</span>
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-28 rounded-md bg-black shadow-lg ring-0 z-[200]">
+        <div className="absolute right-0 mt-2 w-28 rounded-md bg-black shadow-lg ring-0 z-[250]">
           <ul className="py-1">
             {languages.map((l) => (
               <li key={l.code}>
@@ -137,7 +137,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const whatsappHref = `https://wa.me/4915736729768?text=${cartMessage}`;
   
   return (
-    <div className={`fixed inset-0 z-[150] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
+    <div className={`fixed inset-0 z-[500] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
@@ -216,13 +216,13 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
   const router = useRouter();
   const t = useTranslations('profile');
   return (
-    <div className={`fixed inset-0 z-[150] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
+    <div className={`fixed inset-0 z-[500] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
         aria-hidden="true"
       />
-      <div className="fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform translate-x-0 duration-300 p-6 flex flex-col">
+      <div className={`fixed right-0 top-0 h-full w-full max-w-xs bg-black/90 text-white shadow-xl transition-transform ${open ? 'translate-x-0' : 'translate-x-full'} duration-300 p-6 flex flex-col`}>
         <div className="flex items-center justify-between mb-6">
           <span className="text-xl font-bold">{t('title')}</span>
           <button onClick={onClose} aria-label={t('close')} className="text-white hover:text-neutral-400 text-2xl font-bold">&times;</button>
@@ -276,7 +276,8 @@ export function Navbar() {
     }
   }, [isLoaded, user]);
   return (
-    <nav className="relative flex items-center justify-between p-4 lg:px-6 z-[250]">
+    <>
+    <nav className="relative flex items-center justify-between p-4 lg:px-6 z-[200]">
       <div className="block flex-none md:hidden">
         <div className="flex flex-row items-center gap-2 navbar-scale">
         <Suspense fallback={null}>
@@ -323,10 +324,9 @@ export function Navbar() {
           <span onClick={() => setProfileOpen(true)}><ProfileIcon /></span>
         </div>
       </div>
-      <CartModal open={cartOpen} onClose={() => setCartOpen(false)} />
-      {profileOpen && (
-        <ProfilePanel open={profileOpen} onClose={() => setProfileOpen(false)} />
-      )}
     </nav>
+    <CartModal open={cartOpen} onClose={() => setCartOpen(false)} />
+    <ProfilePanel open={profileOpen} onClose={() => setProfileOpen(false)} />
+    </>
   );
 }

@@ -42,6 +42,9 @@ function ProductGrid() {
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       {filtered.map((product, idx) => {
+        // First 8 products get priority loading, rest are lazy
+        const isPriority = idx < 8;
+        
         return (
           <li key={product.name + idx} className="aspect-square transition-opacity animate-fadeIn">
             <Link href={`/products/${encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())}`} className="relative inline-block h-full w-full group">
@@ -52,9 +55,10 @@ function ProductGrid() {
                   fill
                   className="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"
                   sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-                  priority
-                  onLoad={() => console.log(`Image loaded: ${product.logo || "/yangfinity-logo-notext.png"}`)}
-                  onError={() => console.error(`Image failed: ${product.logo || "/yangfinity-logo-notext.png"}`)}
+                  priority={isPriority}
+                  loading={isPriority ? undefined : 'lazy'}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
                 />
                 <Label
                   title={product.name}
