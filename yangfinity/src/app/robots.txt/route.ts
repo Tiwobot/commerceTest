@@ -16,6 +16,10 @@ Allow: /faq/
 Allow: /contact/
 Allow: /terms/
 Allow: /refund-policy/
+Allow: /blog/
+Allow: /guides/
+Allow: /servers/
+Allow: /orders/
 
 # Crawl delay for better server performance
 Crawl-delay: 1

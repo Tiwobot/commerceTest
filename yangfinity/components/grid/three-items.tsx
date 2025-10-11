@@ -30,7 +30,8 @@ function ThreeItemGridItem({
             size === 'full' ? '(min-width: 768px) 66vw, 100vw' : '(min-width: 768px) 33vw, 100vw'
           }
           priority={priority}
-          alt={item.name}
+          alt={`${item.name} - Buy Yang & Won for Metin2`}
+          title={`${item.name} Yang & Won - €${item.price.toFixed(2)}`}
           label={{
             position: size === 'full' ? 'center' : 'bottom',
             title: item.name,

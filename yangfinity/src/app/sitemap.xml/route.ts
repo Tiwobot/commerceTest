@@ -66,8 +66,36 @@ export async function GET() {
     { url: '/blog/payment-methods-security', priority: '0.7', changefreq: 'monthly' },
   ];
 
+  // Guide pages (18 comprehensive guides)
+  const guidePages = [
+    // Buying guides
+    { url: '/guides/buying-safely', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/payment-methods', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/choosing-seller', priority: '0.8', changefreq: 'monthly' },
+    // Server guides
+    { url: '/guides/gameforge-vs-private', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/server-population', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/server-types', priority: '0.7', changefreq: 'monthly' },
+    // Farming guides
+    { url: '/guides/yang-farming', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/farming-locations', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/farming-equipment', priority: '0.7', changefreq: 'monthly' },
+    // Trading guides
+    { url: '/guides/trading-basics', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/market-analysis', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/advanced-trading', priority: '0.7', changefreq: 'monthly' },
+    // Mobile guides
+    { url: '/guides/mobile-overview', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/mobile-yang', priority: '0.7', changefreq: 'monthly' },
+    { url: '/guides/mobile-vs-pc', priority: '0.7', changefreq: 'monthly' },
+    // Security guides
+    { url: '/guides/account-security', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/avoiding-scams', priority: '0.8', changefreq: 'monthly' },
+    { url: '/guides/secure-trading', priority: '0.8', changefreq: 'monthly' },
+  ];
+
   // Combine all pages
-  const allPages = [...staticPages, ...serverCategories, ...productPages, ...serverPages, ...blogPages];
+  const allPages = [...staticPages, ...serverCategories, ...productPages, ...serverPages, ...blogPages, ...guidePages];
   
   // Generate sitemap XML
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

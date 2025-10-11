@@ -13,6 +13,9 @@ export function Carousel() {
       <ul className="flex animate-carousel gap-4">
         {carouselProducts.map((product, i) => {
           const handle = encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase());
+          // Only first 6 carousel items load with priority, rest are lazy
+          const isPriority = i < 6;
+          
           return (
           <li
               key={`${product.name}${i}`}
@@ -21,10 +24,13 @@ export function Carousel() {
               <Link href={`/products/${handle}`} className="relative h-full w-full rounded-2xl bg-black border border-neutral-800 shadow-lg overflow-hidden block">
                 <Image
                   src={product.logo || '/yangfinity-logo-notext.png'}
-                  alt={product.name}
+                  alt={`${product.name} - Metin2 Yang & Won`}
+                  title={`Buy ${product.name} Yang & Won - €${product.price.toFixed(2)}`}
                   fill
                   className="object-contain object-center transition-transform duration-300 group-hover:scale-105"
-                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                  loading={isPriority ? undefined : 'lazy'}
+                  priority={isPriority}
               />
                 <div className="absolute left-3 bottom-3 flex flex-col gap-2">
                   <span className="bg-black/80 text-white px-3 py-1 rounded-full text-xs font-semibold shadow">

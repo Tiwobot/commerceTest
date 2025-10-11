@@ -12,8 +12,8 @@ import TrustpilotBanner from '../../components/TrustpilotBanner';
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 
 export const metadata = {
-  title: "Yangfinity - Buy Metin2 Yang & Won for Gameforge, Private & Mobile Servers",
-  description: "Buy Yang & Won for Metin2 Gameforge (West, East, TR), Private, and Mobile servers. Fast delivery for Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Elveron, Alturi2, Merlis, Helios2, Levia, Rubinum and more.",
+  title: "Yangfinity - Buy Metin2 Yang & Won",
+  description: "Buy Metin2 Yang & Won fast and secure. Trusted seller for Gameforge, Private & Mobile servers. 24/7 support, instant delivery.",
   keywords: [
     "Metin2 Yang", "Metin2", "Yang", "Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
     "Private Servers", "Mobile Metin2", "Eostre", "Teutonia", "Germania", "Europe", "Tigerghost",
@@ -37,21 +37,19 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <head>
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/yangfinity-logo-notext.png" type="image/png" sizes="32x32" />
-          <meta name="description" content={metadata.description} />
-          <meta name="keywords" content={metadata.keywords} />
           <meta name="robots" content="index, follow" />
           <link rel="canonical" href="https://yangfinity.com/" />
           {/* Open Graph Meta Tags */}
-          <meta property="og:title" content={metadata.title} />
-          <meta property="og:description" content={metadata.description} />
+          <meta property="og:title" content="Yangfinity - Buy Metin2 Yang & Won" />
+          <meta property="og:description" content="Trusted Metin2 Yang & Won seller. Fast delivery, 24/7 support, secure payment." />
           <meta property="og:image" content="/yangfinity-logo-notext.png" />
           <meta property="og:url" content="https://yangfinity.com/" />
           <meta property="og:site_name" content="Yangfinity" />
           <meta property="og:type" content="website" />
           {/* Twitter Card Meta Tags */}
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:title" content={metadata.title} />
-          <meta name="twitter:description" content={metadata.description} />
+          <meta name="twitter:title" content="Yangfinity - Buy Metin2 Yang & Won" />
+          <meta name="twitter:description" content="Trusted Metin2 Yang & Won seller. Fast delivery, secure payment." />
           <meta name="twitter:image" content="/yangfinity-logo-notext.png" />
           {/* JSON-LD Structured Data */}
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -60,7 +58,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
             logo: 'https://yangfinity.com/yangfinity-logo-notext.png',
-            description: 'Buy Yang & Won for Metin2 Gameforge, Private, and Mobile servers. Fast delivery, secure payment, 24/7 support.',
+            description: 'Trusted Metin2 Yang & Won seller. Fast delivery, secure payment, 24/7 support.',
             address: {
               '@type': 'PostalAddress',
               addressCountry: 'EU'
@@ -81,7 +79,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@type': 'WebSite',
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
-            description: 'Buy Yang & Won for Metin2 servers - Gameforge, Private, and Mobile. Instant delivery, secure payment.',
+            description: 'Buy Metin2 Yang & Won - Gameforge, Private & Mobile servers. Instant delivery.',
             potentialAction: {
               '@type': 'SearchAction',
               target: 'https://yangfinity.com/search?q={search_term_string}',
@@ -93,7 +91,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@type': 'Store',
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
-            description: 'Metin2 Yang & Won store for Gameforge, Private, and Mobile servers',
+            description: 'Metin2 Yang & Won store - all servers supported',
             priceRange: '€0.20 - €10.00',
             currenciesAccepted: 'EUR',
             paymentAccepted: 'Credit Card, PayPal, Apple Pay, Google Pay',
