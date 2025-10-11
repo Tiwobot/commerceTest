@@ -278,7 +278,7 @@ export function Navbar() {
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
       <div className="block flex-none md:hidden">
-        <div className="flex flex-row items-center gap-2">
+        <div className="flex flex-row items-center gap-2 navbar-scale">
         <Suspense fallback={null}>
             <MobileMenu menu={[
               { title: t('nav.home'), path: '/' },
@@ -303,7 +303,7 @@ export function Navbar() {
               <Image src="/yangfinity-logo-trans.png" alt="YANGFINITY Logo" width={120} height={32} />
             </span>
           </Link>
-            <ul className="hidden gap-6 text-sm md:flex md:items-center">
+            <ul className="hidden gap-6 text-sm md:flex md:items-center navbar-scale">
             <li><Link href="/" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.home')}</Link></li>
             <li><Link href="/products" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.products')}</Link></li>
             <li><Link href="/guides" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">Guides</Link></li>
@@ -312,12 +312,12 @@ export function Navbar() {
             <li><Link href="/faq" className="text-neutral-400 underline-offset-4 hover:text-neutral-300 hover:underline">{t('nav.faq')}</Link></li>
             </ul>
         </div>
-        <div className="hidden justify-center md:flex md:w-1/3">
+        <div className="hidden justify-center md:flex md:w-1/3 navbar-scale">
           <Suspense fallback={<SearchSkeleton />}>
             <Search />
           </Suspense>
         </div>
-        <div className="flex justify-end md:w-1/3 items-center">
+        <div className="flex justify-end md:w-1/3 items-center navbar-scale">
           <div className="hidden md:block"><LanguageSelector /></div>
           <CartIcon quantity={totalQuantity} onClick={() => setCartOpen(true)} />
           <span onClick={() => setProfileOpen(true)}><ProfileIcon /></span>
