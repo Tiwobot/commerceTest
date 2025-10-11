@@ -12,8 +12,8 @@ import TrustpilotBanner from '../../components/TrustpilotBanner';
 // GeistSans already provides a .variable and .className for Tailwind/Next.js
 
 export const metadata = {
-  title: "Yangfinity - Buy Metin2 Yang for Gameforge, Private & Mobile Servers",
-  description: "Buy Yang for Metin2 Gameforge (West, East, TR), Private, and Mobile servers. Fast delivery for Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Elveron, Alturi2, Merlis, Helios2, Levia, Rubinum and more.",
+  title: "Yangfinity - Buy Metin2 Yang & Won for Gameforge, Private & Mobile Servers",
+  description: "Buy Yang & Won for Metin2 Gameforge (West, East, TR), Private, and Mobile servers. Fast delivery for Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Elveron, Alturi2, Merlis, Helios2, Levia, Rubinum and more.",
   keywords: [
     "Metin2 Yang", "Metin2", "Yang", "Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
     "Private Servers", "Mobile Metin2", "Eostre", "Teutonia", "Germania", "Europe", "Tigerghost",
@@ -60,7 +60,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
             logo: 'https://yangfinity.com/yangfinity-logo-notext.png',
-            description: 'Buy Yang for Metin2 Gameforge, Private, and Mobile servers. Fast delivery, secure payment, 24/7 support.',
+            description: 'Buy Yang & Won for Metin2 Gameforge, Private, and Mobile servers. Fast delivery, secure payment, 24/7 support.',
             address: {
               '@type': 'PostalAddress',
               addressCountry: 'EU'
@@ -81,7 +81,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@type': 'WebSite',
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
-            description: 'Buy Yang for Metin2 servers - Gameforge, Private, and Mobile. Instant delivery, secure payment.',
+            description: 'Buy Yang & Won for Metin2 servers - Gameforge, Private, and Mobile. Instant delivery, secure payment.',
             potentialAction: {
               '@type': 'SearchAction',
               target: 'https://yangfinity.com/search?q={search_term_string}',
@@ -93,7 +93,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             '@type': 'Store',
             name: 'Yangfinity',
             url: 'https://yangfinity.com/',
-            description: 'Metin2 Yang store for Gameforge, Private, and Mobile servers',
+            description: 'Metin2 Yang & Won store for Gameforge, Private, and Mobile servers',
             priceRange: '€0.20 - €10.00',
             currenciesAccepted: 'EUR',
             paymentAccepted: 'Credit Card, PayPal, Apple Pay, Google Pay',

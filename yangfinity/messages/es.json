@@ -38,8 +38,8 @@
     "list": [
       { "q": "¿Qué es Yangfinity?", "a": "Yangfinity es un servicio que proporciona entrega rápida y segura de Yang y Won (moneda del juego) para servidores Gameforge, Privados y Móviles de Metin2." },
       { "q": "¿Qué servidores soportan?", "a": "Soportamos Gameforge (West, East, TR), servidores Privados y Móviles. Servidores principales: Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Willow, Ruby Kirin, Cesko, Magyarorszag, Polska, Romania, Tara Romanesca, Greece, Arabia, Zephyr, Ruby Lucifer, Onyx Bazalt, Emerald Alesta, Ruby Charon, Anadolu, Arkadaslar, Bagjanamu, Barbaros, Dandanakan, Ezel, Alturi2, Elveron, Kerion, NewMt2, Solis2, Rubinum Saphirus, Merlis, Lucerna Laetus, Levia, Celestial World, Notorius2, Pegasus2, Fortis2, Helios2, M2Classic, Shiva, Azyrah, Rubinum, Zenit, Royale, Mobile2 Tuva, Mobile2 Tramola, Mobile2 Alesta y más." },
-      { "q": "¿Qué tan rápida es la entrega de Yang?", "a": "La mayoría de los pedidos se entregan en minutos. Los tiempos de entrega pueden variar según el estado del servidor y el volumen de pedidos." },
-      { "q": "¿Es seguro comprar Yang?", "a": "Priorizamos su seguridad y privacidad. Nuestros métodos están diseñados para minimizar el riesgo, pero tenga en cuenta que comprar moneda del juego puede violar algunas reglas del servidor. Proceda bajo su propio riesgo." },
+      { "q": "¿Qué tan rápida es la entrega de Yang & Won?", "a": "La mayoría de los pedidos se entregan en minutos. Los tiempos de entrega pueden variar según el estado del servidor y el volumen de pedidos." },
+      { "q": "¿Es seguro comprar Yang & Won?", "a": "Priorizamos su seguridad y privacidad. Nuestros métodos están diseñados para minimizar el riesgo, pero tenga en cuenta que comprar moneda del juego puede violar algunas reglas del servidor. Proceda bajo su propio riesgo." },
       { "q": "¿Cómo puedo contactar con soporte?", "a": "Puede comunicarse con nuestro equipo de soporte a través del formulario de contacto en nuestro sitio web o a través de nuestros canales de redes sociales." }
     ]
   },
@@ -144,5 +144,182 @@
   "trustpilotBanner": {
     "text": "¿No estás seguro si el sitio es legítimo? Mira las reseñas aquí",
     "cta": "¡Haz clic aquí!"
+  },
+  "guides": {
+    "hero": {
+      "badge": "Aprende y Domina",
+      "title": "Metin2 Yang & Won",
+      "titleHighlight": "Guías",
+      "description": "Domina el arte del comercio de Yang & Won. Desde comprar de forma segura hasta maximizar las ganancias, nuestras guías expertas te cubren."
+    },
+    "cta": {
+      "title": "¿Listo para comprar Yang & Won?",
+      "description": "Explora nuestros productos y comienza tu viaje en Metin2 hoy.",
+      "browseProducts": "Ver Productos",
+      "getSupport": "Obtener Soporte"
+    },
+    "categories": {
+      "buying-guides": {
+        "title": "Guías de Compra",
+        "description": "Aprende a comprar Yang & Won de forma segura y eficiente"
+      },
+      "server-guides": {
+        "title": "Guías de Servidor",
+        "description": "Todo sobre los servidores de Metin2 y sus diferencias"
+      },
+      "farming-guides": {
+        "title": "Guías de Farming",
+        "description": "Maximiza tus ganancias de Yang & Won con estas estrategias"
+      },
+      "trading-guides": {
+        "title": "Guías de Comercio",
+        "description": "Domina el arte del comercio en Metin2"
+      },
+      "mobile-guides": {
+        "title": "Guías Móviles",
+        "description": "Todo sobre Metin2 Mobile Yang & Won"
+      },
+      "security-guides": {
+        "title": "Guías de Seguridad",
+        "description": "Protege tu cuenta e inversiones de Yang & Won"
+      }
+    },
+    "items": {
+      "buy-safely": {
+        "title": "Cómo Comprar Yang & Won de Forma Segura",
+        "description": "Guía completa para comprar sin ser estafado"
+      },
+      "payment-methods": {
+        "title": "Métodos de Pago Explicados",
+        "description": "Compara diferentes opciones de pago y su seguridad"
+      },
+      "choosing-seller": {
+        "title": "Elegir el Vendedor Correcto",
+        "description": "Qué buscar en un vendedor confiable de Yang & Won"
+      },
+      "gameforge-vs-private": {
+        "title": "Gameforge vs Servidores Privados",
+        "description": "Compara experiencias de servidores oficiales y privados"
+      },
+      "server-population": {
+        "title": "Guía de Población de Servidores",
+        "description": "Encuentra los servidores más activos y poblados"
+      },
+      "server-types": {
+        "title": "Tipos de Servidores Explicados",
+        "description": "Entiende diferentes tasas y características del servidor"
+      },
+      "yang-farming": {
+        "title": "Consejos de Farming Yang & Won",
+        "description": "Estrategias probadas para ganar más Yang & Won en el juego"
+      },
+      "farming-locations": {
+        "title": "Mejores Ubicaciones de Farming",
+        "description": "Los mejores lugares para farming eficiente de Yang & Won"
+      },
+      "farming-equipment": {
+        "title": "Guía de Equipamiento de Farming",
+        "description": "Equipo esencial para farming exitoso"
+      },
+      "trading-basics": {
+        "title": "Fundamentos del Comercio",
+        "description": "Aprende los fundamentos del comercio en Metin2"
+      },
+      "market-analysis": {
+        "title": "Análisis de Mercado",
+        "description": "Cómo analizar precios y tendencias del mercado"
+      },
+      "advanced-trading": {
+        "title": "Estrategias de Comercio Avanzadas",
+        "description": "Técnicas profesionales de comercio para beneficios"
+      },
+      "mobile-overview": {
+        "title": "Resumen de Metin2 Mobile",
+        "description": "Guía completa del juego de Metin2 Mobile"
+      },
+      "mobile-yang": {
+        "title": "Guía de Yang & Won Mobile",
+        "description": "Cómo comprar y usar Yang & Won en Metin2 Mobile"
+      },
+      "mobile-vs-pc": {
+        "title": "Diferencias Mobile vs PC",
+        "description": "Diferencias clave entre versiones móvil y PC"
+      },
+      "account-security": {
+        "title": "Seguridad de Cuenta",
+        "description": "Mantén tu cuenta de Metin2 a salvo de hackers"
+      },
+      "avoiding-scams": {
+        "title": "Evitar Estafas",
+        "description": "Estafas comunes y cómo evitarlas"
+      },
+      "secure-trading": {
+        "title": "Prácticas de Comercio Seguras",
+        "description": "Métodos seguros para comerciar con otros jugadores"
+      }
+    },
+    "content": {
+      "backToGuides": "← Volver a Guías",
+      "readyToBuy": "¿Listo para comprar Yang & Won?",
+      "browseProducts": "Explorar Productos de Yang & Won"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Últimas Novedades",
+      "title": "Metin2 Yang & Won",
+      "titleHighlight": "Blog",
+      "description": "Consejos de expertos, actualizaciones de servidores y todo lo que necesitas saber sobre el comercio de Metin2 Yang & Won."
+    },
+    "filters": {
+      "allPosts": "Todas las Publicaciones"
+    },
+    "categories": {
+      "guides": "Guías",
+      "comparison": "Comparación",
+      "server-info": "Info del Servidor",
+      "tips": "Consejos",
+      "mobile": "Móvil",
+      "security": "Seguridad"
+    },
+    "newsletter": {
+      "title": "Mantente en el",
+      "titleHighlight": "Bucle",
+      "description": "Recibe ofertas exclusivas de Yang & Won, actualizaciones de servidores y consejos de expertos en tu bandeja de entrada.",
+      "placeholder": "tu@email.com",
+      "subscribe": "Suscribirse"
+    },
+    "posts": {
+      "how-to-buy-yang-safely": {
+        "title": "Cómo Comprar Metin2 Yang & Won de Forma Segura - Guía Completa",
+        "excerpt": "Aprende las mejores prácticas para comprar Yang & Won en Metin2 sin ser estafado. Nuestra guía completa cubre todo lo que necesitas saber.",
+        "category": "Guías"
+      },
+      "gameforge-vs-private-servers": {
+        "title": "Gameforge vs Servidores Privados - ¿Qué Yang / Won Comprar?",
+        "excerpt": "Compara servidores oficiales de Gameforge con servidores privados. Descubre qué tipo ofrece mejor valor.",
+        "category": "Comparación"
+      },
+      "metin2-server-population-guide": {
+        "title": "Guía de Población de Servidores Metin2 - Encuentra Servidores Activos",
+        "excerpt": "Descubre los servidores Metin2 más poblados en 2024. Aprende cómo verificar la actividad del servidor.",
+        "category": "Info del Servidor"
+      },
+      "yang-farming-tips": {
+        "title": "Top 10 Consejos de Farming Yang & Won para Metin2",
+        "excerpt": "Maximiza tus ganancias de Yang & Won con estrategias probadas de farming. Desde principiante hasta avanzado.",
+        "category": "Consejos"
+      },
+      "mobile-metin2-guide": {
+        "title": "Guía de Metin2 Mobile Yang & Won - Todo lo que Necesitas Saber",
+        "excerpt": "Guía completa para comprar y usar Yang & Won en Metin2 Mobile.",
+        "category": "Móvil"
+      },
+      "payment-methods-security": {
+        "title": "Métodos de Pago Seguros para Metin2 Yang & Won",
+        "excerpt": "Compara métodos de pago para comprar Yang & Won. Aprende sobre características de seguridad y tarifas.",
+        "category": "Seguridad"
+      }
+    }
   }
 }

@@ -10,19 +10,19 @@ export async function GET() {
       url: '/products?category=Gameforge%20West', 
       priority: '0.9', 
       changefreq: 'weekly',
-      title: 'Gameforge West Servers - Metin2 Yang'
+      title: 'Gameforge West Servers - Metin2 Yang & Won'
     },
     { 
       url: '/products?category=Gameforge%20East', 
       priority: '0.9', 
       changefreq: 'weekly',
-      title: 'Gameforge East Servers - Metin2 Yang'
+      title: 'Gameforge East Servers - Metin2 Yang & Won'
     },
     { 
       url: '/products?category=Gameforge%20TR', 
       priority: '0.9', 
       changefreq: 'weekly',
-      title: 'Gameforge TR Servers - Metin2 Yang'
+      title: 'Gameforge TR Servers - Metin2 Yang & Won'
     },
     { 
       url: '/products?category=Private%20Servers', 

@@ -8,17 +8,17 @@ interface BlogPostProps {
 
 const blogPosts = {
   'how-to-buy-yang-safely': {
-    title: 'How to Buy Metin2 Yang Safely - Complete Guide',
+    title: 'How to Buy Metin2 Yang & Won Safely - Complete Guide',
     excerpt: 'Learn the best practices for buying Yang in Metin2 without getting scammed. Our comprehensive guide covers everything you need to know.',
     date: '2024-01-15',
     category: 'Guides',
     readTime: '5 min read',
     content: `
-# How to Buy Metin2 Yang Safely - Complete Guide
+# How to Buy Metin2 Yang & Won Safely - Complete Guide
 
 Buying Yang in Metin2 can be risky if you don't know what to look for. This comprehensive guide will help you purchase Yang safely and avoid common scams.
 
-## Why Buy Yang?
+## Why Buy Yang & Won?
 
 Yang is the primary currency in Metin2, used for:
 - Purchasing equipment and items
@@ -211,7 +211,7 @@ Choosing between Gameforge official servers and private servers can be challengi
 ## Tips for Both Types
 
 ### Gameforge Tips
-- Buy Yang during events for better rates
+- Buy Yang & Won during events for better rates
 - Join active guilds for support
 - Participate in official events
 - Use official payment methods
@@ -319,7 +319,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <div className="mt-8 text-center">
         <div className="bg-black border border-neutral-800 rounded-lg p-6">
           <h2 className="text-xl font-bold text-white mb-4">
-            Ready to Buy Yang?
+            Ready to Buy Yang & Won?
           </h2>
           <p className="text-neutral-300 mb-4">
             Now that you know how to buy safely, check out our secure Yang store.
@@ -328,7 +328,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
             href="/products"
             className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Browse Yang Products
+            Browse Yang & Won Products
           </Link>
         </div>
       </div>

@@ -1,189 +1,113 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Metin2 Yang Guides - Complete Tutorials & Tips | Yangfinity',
-  description: 'Comprehensive guides for buying, using, and maximizing Metin2 Yang. Learn about servers, farming, trading, and more.',
-  keywords: 'Metin2 guides, Yang tutorials, Metin2 tips, server guides, farming guides, trading guides',
-  openGraph: {
-    title: 'Metin2 Yang Guides - Complete Tutorials & Tips',
-    description: 'Comprehensive guides for buying, using, and maximizing Metin2 Yang. Learn about servers, farming, trading, and more.',
-  },
-  alternates: {
-    canonical: 'https://yangfinity.com/guides'
-  }
-};
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+// SEO is handled by parent layout
 
 const guideCategories = [
   {
     id: 'buying-guides',
-    title: 'Buying Guides',
-    description: 'Learn how to buy Yang safely and efficiently',
     guides: [
-      {
-        title: 'How to Buy Yang Safely',
-        description: 'Complete guide to purchasing Yang without getting scammed',
-        link: '/guides/buying-safely'
-      },
-      {
-        title: 'Payment Methods Explained',
-        description: 'Compare different payment options and their security',
-        link: '/guides/payment-methods'
-      },
-      {
-        title: 'Choosing the Right Seller',
-        description: 'What to look for in a reputable Yang seller',
-        link: '/guides/choosing-seller'
-      }
+      { key: 'buy-safely', link: '/guides/buying-safely' },
+      { key: 'payment-methods', link: '/guides/payment-methods' },
+      { key: 'choosing-seller', link: '/guides/choosing-seller' }
     ]
   },
   {
     id: 'server-guides',
-    title: 'Server Guides',
-    description: 'Everything about Metin2 servers and their differences',
     guides: [
-      {
-        title: 'Gameforge vs Private Servers',
-        description: 'Compare official and private server experiences',
-        link: '/guides/gameforge-vs-private'
-      },
-      {
-        title: 'Server Population Guide',
-        description: 'Find the most active and populated servers',
-        link: '/guides/server-population'
-      },
-      {
-        title: 'Server Types Explained',
-        description: 'Understand different server rates and features',
-        link: '/guides/server-types'
-      }
+      { key: 'gameforge-vs-private', link: '/guides/gameforge-vs-private' },
+      { key: 'server-population', link: '/guides/server-population' },
+      { key: 'server-types', link: '/guides/server-types' }
     ]
   },
   {
     id: 'farming-guides',
-    title: 'Farming Guides',
-    description: 'Maximize your Yang earnings with these strategies',
     guides: [
-      {
-        title: 'Yang Farming Tips',
-        description: 'Proven strategies to earn more Yang in-game',
-        link: '/guides/yang-farming'
-      },
-      {
-        title: 'Best Farming Locations',
-        description: 'Top spots for efficient Yang farming',
-        link: '/guides/farming-locations'
-      },
-      {
-        title: 'Farming Equipment Guide',
-        description: 'Essential gear for successful farming',
-        link: '/guides/farming-equipment'
-      }
+      { key: 'yang-farming', link: '/guides/yang-farming' },
+      { key: 'farming-locations', link: '/guides/farming-locations' },
+      { key: 'farming-equipment', link: '/guides/farming-equipment' }
     ]
   },
   {
     id: 'trading-guides',
-    title: 'Trading Guides',
-    description: 'Master the art of trading in Metin2',
     guides: [
-      {
-        title: 'Trading Basics',
-        description: 'Learn the fundamentals of Metin2 trading',
-        link: '/guides/trading-basics'
-      },
-      {
-        title: 'Market Analysis',
-        description: 'How to analyze prices and market trends',
-        link: '/guides/market-analysis'
-      },
-      {
-        title: 'Advanced Trading Strategies',
-        description: 'Professional trading techniques for profit',
-        link: '/guides/advanced-trading'
-      }
+      { key: 'trading-basics', link: '/guides/trading-basics' },
+      { key: 'market-analysis', link: '/guides/market-analysis' },
+      { key: 'advanced-trading', link: '/guides/advanced-trading' }
     ]
   },
   {
     id: 'mobile-guides',
-    title: 'Mobile Guides',
-    description: 'Everything about Mobile Metin2 and Yang',
     guides: [
-      {
-        title: 'Mobile Metin2 Overview',
-        description: 'Complete guide to Mobile Metin2 gameplay',
-        link: '/guides/mobile-overview'
-      },
-      {
-        title: 'Mobile Yang Guide',
-        description: 'How to buy and use Yang in Mobile Metin2',
-        link: '/guides/mobile-yang'
-      },
-      {
-        title: 'Mobile vs PC Differences',
-        description: 'Key differences between mobile and PC versions',
-        link: '/guides/mobile-vs-pc'
-      }
+      { key: 'mobile-overview', link: '/guides/mobile-overview' },
+      { key: 'mobile-yang', link: '/guides/mobile-yang' },
+      { key: 'mobile-vs-pc', link: '/guides/mobile-vs-pc' }
     ]
   },
   {
     id: 'security-guides',
-    title: 'Security Guides',
-    description: 'Protect your account and Yang investments',
     guides: [
-      {
-        title: 'Account Security',
-        description: 'Keep your Metin2 account safe from hackers',
-        link: '/guides/account-security'
-      },
-      {
-        title: 'Avoiding Scams',
-        description: 'Common scams and how to avoid them',
-        link: '/guides/avoiding-scams'
-      },
-      {
-        title: 'Secure Trading Practices',
-        description: 'Safe methods for trading with other players',
-        link: '/guides/secure-trading'
-      }
+      { key: 'account-security', link: '/guides/account-security' },
+      { key: 'avoiding-scams', link: '/guides/avoiding-scams' },
+      { key: 'secure-trading', link: '/guides/secure-trading' }
     ]
   }
 ];
 
 export default function GuidesPage() {
+  const t = useTranslations();
+  
   return (
-    <div className="mx-auto w-full max-w-screen-2xl px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-white mb-4">
-          Metin2 Yang Guides
-        </h1>
-        <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-          Comprehensive guides to help you buy, use, and maximize your Metin2 Yang experience. 
-          From beginners to advanced players, we have everything you need to know.
-        </p>
+    <div className="mx-auto w-full max-w-7xl px-4 md:px-8 py-12">
+      {/* Hero Section */}
+      <div className="relative mb-16 overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 border border-neutral-700 p-8 md:p-12">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#b6e700] opacity-5 rounded-full blur-3xl"></div>
+        <div className="relative">
+          <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase bg-neutral-800 text-[#b6e700] rounded-full">
+            {t('guides.hero.badge')}
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            {t('guides.hero.title')} <span className="text-[#b6e700]">{t('guides.hero.titleHighlight')}</span>
+          </h1>
+          <p className="text-lg text-neutral-300 max-w-2xl">
+            {t('guides.hero.description')}
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      {/* Guide Categories Grid */}
+      <div className="space-y-12">
         {guideCategories.map((category) => (
-          <div key={category.id} className="bg-black border border-neutral-800 rounded-lg p-6">
-            <h2 className="text-2xl font-bold text-white mb-3">
-              {category.title}
-            </h2>
-            <p className="text-neutral-300 mb-6">
-              {category.description}
-            </p>
+          <div key={category.id} id={category.id}>
+            <div className="mb-6">
+              <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-3">
+                <span className="w-1 h-8 bg-[#b6e700] rounded-full"></span>
+                {t(`guides.categories.${category.id}.title`)}
+              </h2>
+              <p className="text-sm text-neutral-400 ml-7">
+                {t(`guides.categories.${category.id}.description`)}
+              </p>
+            </div>
             
-            <div className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {category.guides.map((guide, index) => (
                 <Link
                   key={index}
                   href={guide.link}
-                  className="block group bg-neutral-900 border border-neutral-700 rounded-lg p-4 hover:border-blue-600 transition-colors"
+                  className="group relative bg-neutral-900/50 backdrop-blur border border-neutral-800 rounded-xl p-6 hover:border-[#b6e700] hover:bg-neutral-900 transition-all duration-300"
                 >
-                  <h3 className="text-lg font-semibold text-white group-hover:text-blue-400 transition-colors mb-2">
-                    {guide.title}
+                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <svg className="w-5 h-5 text-[#b6e700]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-[#b6e700] transition-colors mb-2 pr-8">
+                    {t(`guides.items.${guide.key}.title`)}
                   </h3>
-                  <p className="text-neutral-400 text-sm">
-                    {guide.description}
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    {t(`guides.items.${guide.key}.description`)}
                   </p>
                 </Link>
               ))}
@@ -192,26 +116,30 @@ export default function GuidesPage() {
         ))}
       </div>
 
-      <div className="mt-12">
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Need Help Choosing Yang?
-          </h2>
-          <p className="text-blue-100 mb-6">
-            Our guides will help you make informed decisions about buying Yang for your preferred server.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      {/* Bottom CTA */}
+      <div className="mt-16 relative overflow-hidden rounded-2xl bg-gradient-to-r from-neutral-900 to-neutral-800 border border-neutral-700 p-8">
+        <div className="absolute inset-0 bg-[#b6e700] opacity-5"></div>
+        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 className="text-2xl font-bold text-white mb-2">
+              {t('guides.cta.title')}
+            </h2>
+            <p className="text-neutral-400">
+              {t('guides.cta.description')}
+            </p>
+          </div>
+          <div className="flex gap-3 shrink-0">
             <Link 
               href="/products"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="px-6 py-3 bg-[#b6e700] text-black rounded-lg font-semibold hover:bg-[#a5d600] transition-all shadow-lg hover:shadow-[#b6e700]/20"
             >
-              Browse Yang Products
+              {t('guides.cta.browseProducts')}
             </Link>
             <Link 
               href="/contact"
-              className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              className="px-6 py-3 bg-transparent border border-neutral-600 text-white rounded-lg font-semibold hover:border-[#b6e700] hover:text-[#b6e700] transition-all"
             >
-              Contact Support
+              {t('guides.cta.getSupport')}
             </Link>
           </div>
         </div>

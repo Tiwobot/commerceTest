@@ -39,9 +39,9 @@
     "a1": "Yangfinity, Metin2 Gameforge, Özel ve Mobil sunucular için hızlı ve güvenli Yang ve Won (oyun içi para birimi) teslimatı sağlayan bir hizmettir.",
     "q2": "Hangi sunucuları destekliyorsunuz?",
     "a2": "Gameforge (Batı, Doğu, TR), Özel ve Mobil sunucuları destekliyoruz. Başlıca desteklenen sunucular: Eostre, Teutonia, Germania, Europe, Tigerghost, Ruby Chimera, Emerald Aurora, Iberia, Italy, Azrael, Onyx Obsidian, Willow, Ruby Kirin, Cesko, Magyarorszag, Polska, Romania, Tara Romanesca, Greece, Arabia, Zephyr, Ruby Lucifer, Onyx Bazalt, Emerald Alesta, Ruby Charon, Anadolu, Arkadaslar, Bagjanamu, Barbaros, Dandanakan, Ezel, Alturi2, Elveron, Kerion, NewMt2, Solis2, Rubinum Saphirus, Merlis, Lucerna Laetus, Levia, Celestial World, Notorius2, Pegasus2, Fortis2, Helios2, M2Classic, Shiva, Azyrah, Rubinum, Zenit, Royale, Mobile2 Tuva, Mobile2 Tramola, Mobile2 Alesta ve daha fazlası.",
-    "q3": "Yang teslimatı ne kadar hızlı?",
+    "q3": "Yang & Won teslimatı ne kadar hızlı?",
     "a3": "Çoğu sipariş dakikalar içinde teslim edilir. Teslimat süreleri sunucu durumu ve sipariş yoğunluğuna göre değişebilir.",
-    "q4": "Yang satın almak güvenli mi?",
+    "q4": "Yang & Won satın almak güvenli mi?",
     "a4": "Güvenliğinize ve gizliliğinize öncelik veriyoruz. Yöntemlerimiz riski en aza indirecek şekilde tasarlanmıştır, ancak oyun içi para birimi satın almanın bazı sunucu kurallarını ihlal edebileceğini unutmayın. Kendi takdirinize göre hareket edin.",
     "q5": "Destek ile nasıl iletişime geçebilirim?",
     "a5": "Destek ekibimize web sitemizdeki iletişim formu veya sosyal medya kanallarımız aracılığıyla ulaşabilirsiniz."
@@ -134,7 +134,7 @@
   "product": {
     "notFound": "Ürün bulunamadı.",
     "quantity": "Adet",
-    "description": "Metin2 sunucuları için Yang satın alın. Hızlı, güvenli ve güvenilir teslimat.",
+    "description": "Metin2 sunucuları için Yang & Won satın alın. Hızlı, güvenli ve güvenilir teslimat.",
     "addToCart": "Sepete Ekle",
     "related": "Benzer Ürünler",
     "liveChatWarning": "Güncel fiyatı her zaman canlı sohbetten sorunuz.",
@@ -198,5 +198,182 @@
   "trustpilotBanner": {
     "text": "Sitenin güvenilir olup olmadığından emin değil misiniz? Yorumlara buradan bakın",
     "cta": "Buraya tıklayın!"
+  },
+  "guides": {
+    "hero": {
+      "badge": "Öğren ve Ustalaş",
+      "title": "Metin2 Yang & Won",
+      "titleHighlight": "Rehberler",
+      "description": "Yang & Won ticareti sanatında ustalaşın. Güvenli alışverişten kâr maksimizasyonuna kadar, uzman rehberlerimiz yanınızda."
+    },
+    "cta": {
+      "title": "Yang & Won satın almaya hazır mısınız?",
+      "description": "Ürünlerimizi keşfedin ve Metin2 yolculuğunuza bugün başlayın.",
+      "browseProducts": "Ürünlere Göz At",
+      "getSupport": "Destek Al"
+    },
+    "categories": {
+      "buying-guides": {
+        "title": "Satın Alma Rehberleri",
+        "description": "Yang & Won'u güvenli ve verimli bir şekilde nasıl alacağınızı öğrenin"
+      },
+      "server-guides": {
+        "title": "Sunucu Rehberleri",
+        "description": "Metin2 sunucuları ve farklılıkları hakkında her şey"
+      },
+      "farming-guides": {
+        "title": "Farming Rehberleri",
+        "description": "Yang & Won kazancınızı bu stratejilerle maksimize edin"
+      },
+      "trading-guides": {
+        "title": "Ticaret Rehberleri",
+        "description": "Metin2'de ticaret sanatında ustalaşın"
+      },
+      "mobile-guides": {
+        "title": "Mobil Rehberler",
+        "description": "Mobil Metin2 Yang & Won hakkında her şey"
+      },
+      "security-guides": {
+        "title": "Güvenlik Rehberleri",
+        "description": "Hesabınızı ve Yang & Won yatırımlarınızı koruyun"
+      }
+    },
+    "items": {
+      "buy-safely": {
+        "title": "Yang & Won'u Güvenli Nasıl Alınır",
+        "description": "Dolandırılmadan Yang & Won satın alma rehberi"
+      },
+      "payment-methods": {
+        "title": "Ödeme Yöntemleri Açıklaması",
+        "description": "Farklı ödeme seçeneklerini ve güvenliklerini karşılaştırın"
+      },
+      "choosing-seller": {
+        "title": "Doğru Satıcı Seçimi",
+        "description": "Güvenilir Yang & Won satıcısında nelere dikkat etmeli"
+      },
+      "gameforge-vs-private": {
+        "title": "Gameforge vs Özel Sunucular",
+        "description": "Resmi ve özel sunucu deneyimlerini karşılaştırın"
+      },
+      "server-population": {
+        "title": "Sunucu Popülasyon Rehberi",
+        "description": "En aktif ve kalabalık sunucuları bulun"
+      },
+      "server-types": {
+        "title": "Sunucu Türleri Açıklaması",
+        "description": "Farklı sunucu oranlarını ve özelliklerini anlayın"
+      },
+      "yang-farming": {
+        "title": "Yang & Won Farming İpuçları",
+        "description": "Oyun içinde daha fazla Yang & Won kazanmak için kanıtlanmış stratejiler"
+      },
+      "farming-locations": {
+        "title": "En İyi Farming Lokasyonları",
+        "description": "Verimli Yang & Won farming için en iyi noktalar"
+      },
+      "farming-equipment": {
+        "title": "Farming Ekipman Rehberi",
+        "description": "Başarılı farming için gerekli ekipmanlar"
+      },
+      "trading-basics": {
+        "title": "Ticaret Temelleri",
+        "description": "Metin2 ticaretinin temellerini öğrenin"
+      },
+      "market-analysis": {
+        "title": "Pazar Analizi",
+        "description": "Fiyatları ve pazar trendlerini nasıl analiz edileceğini öğrenin"
+      },
+      "advanced-trading": {
+        "title": "İleri Seviye Ticaret Stratejileri",
+        "description": "Kâr için profesyonel ticaret teknikleri"
+      },
+      "mobile-overview": {
+        "title": "Mobil Metin2 Genel Bakış",
+        "description": "Mobil Metin2 oynanışına tam rehber"
+      },
+      "mobile-yang": {
+        "title": "Mobil Yang & Won Rehberi",
+        "description": "Mobil Metin2'de Yang & Won nasıl alınır ve kullanılır"
+      },
+      "mobile-vs-pc": {
+        "title": "Mobil vs PC Farkları",
+        "description": "Mobil ve PC versiyonları arasındaki temel farklar"
+      },
+      "account-security": {
+        "title": "Hesap Güvenliği",
+        "description": "Metin2 hesabınızı hackerlardan koruyun"
+      },
+      "avoiding-scams": {
+        "title": "Dolandırıcılıklardan Kaçınma",
+        "description": "Yaygın dolandırıcılıklar ve nasıl kaçınılır"
+      },
+      "secure-trading": {
+        "title": "Güvenli Ticaret Uygulamaları",
+        "description": "Diğer oyuncularla güvenli ticaret yöntemleri"
+      }
+    },
+    "content": {
+      "backToGuides": "← Rehberlere Dön",
+      "readyToBuy": "Yang & Won almaya hazır mısınız?",
+      "browseProducts": "Yang & Won Ürünlerine Göz Atın"
+    }
+  },
+  "blog": {
+    "hero": {
+      "badge": "Son Gelişmeler",
+      "title": "Metin2 Yang & Won",
+      "titleHighlight": "Blog",
+      "description": "Uzman ipuçları, sunucu güncellemeleri ve Metin2 Yang & Won ticareti hakkında bilmeniz gereken her şey."
+    },
+    "filters": {
+      "allPosts": "Tüm Gönderiler"
+    },
+    "categories": {
+      "guides": "Rehberler",
+      "comparison": "Karşılaştırma",
+      "server-info": "Sunucu Bilgisi",
+      "tips": "İpuçları",
+      "mobile": "Mobil",
+      "security": "Güvenlik"
+    },
+    "newsletter": {
+      "title": "Döngüde",
+      "titleHighlight": "Kalın",
+      "description": "Özel Yang & Won fırsatları, sunucu güncellemeleri ve uzman ipuçlarını e-postanızda alın.",
+      "placeholder": "email@ornek.com",
+      "subscribe": "Abone Ol"
+    },
+    "posts": {
+      "how-to-buy-yang-safely": {
+        "title": "Metin2 Yang & Won'u Güvenli Nasıl Alınır - Tam Rehber",
+        "excerpt": "Dolandırılmadan Metin2'de Yang & Won satın almak için en iyi uygulamaları öğrenin. Kapsamlı rehberimiz bilmeniz gereken her şeyi kapsar.",
+        "category": "Rehberler"
+      },
+      "gameforge-vs-private-servers": {
+        "title": "Gameforge vs Özel Sunucular - Hangi Yang / Won Alınmalı?",
+        "excerpt": "Gameforge resmi sunucularını özel sunucularla karşılaştırın. Hangi Yang / Won türünün daha iyi değer ve oyun deneyimi sunduğunu öğrenin.",
+        "category": "Karşılaştırma"
+      },
+      "metin2-server-population-guide": {
+        "title": "Metin2 Sunucu Popülasyon Rehberi - Aktif Sunucuları Bulun",
+        "excerpt": "2024'te en kalabalık Metin2 sunucularını keşfedin. Sunucu aktivitesini nasıl kontrol edeceğinizi ve ihtiyaçlarınıza en uygun sunucuyu nasıl seçeceğinizi öğrenin.",
+        "category": "Sunucu Bilgisi"
+      },
+      "yang-farming-tips": {
+        "title": "Metin2 için En İyi 10 Yang & Won Farming İpucu",
+        "excerpt": "Kanıtlanmış farming stratejileriyle Yang & Won kazancınızı maksimize edin. Tüm sunucu türleri için başlangıçtan ileri seviyeye teknikler.",
+        "category": "İpuçları"
+      },
+      "mobile-metin2-guide": {
+        "title": "Mobil Metin2 Yang & Won Rehberi - Bilmeniz Gereken Her Şey",
+        "excerpt": "Mobil Metin2'de Yang & Won satın alma ve kullanma tam rehberi. Mobil'e özel özellikleri ve en iyi uygulamaları öğrenin.",
+        "category": "Mobil"
+      },
+      "payment-methods-security": {
+        "title": "Metin2 Yang & Won için Güvenli Ödeme Yöntemleri",
+        "excerpt": "Yang & Won satın almak için ödeme yöntemlerini karşılaştırın. Güvenlik özellikleri, ücretler ve hangi yöntemin sizin için en iyi olduğunu öğrenin.",
+        "category": "Güvenlik"
+      }
+    }
   }
 }

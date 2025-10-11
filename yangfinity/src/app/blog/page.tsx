@@ -1,125 +1,121 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Metin2 Yang Blog - Guides, Tips & News | Yangfinity',
-  description: 'Latest Metin2 Yang guides, server news, and tips. Learn how to buy Yang safely, server updates, and gaming strategies.',
-  keywords: 'Metin2 blog, Yang guides, Metin2 tips, server news, gaming guides, Metin2 strategies',
-  openGraph: {
-    title: 'Metin2 Yang Blog - Guides, Tips & News',
-    description: 'Latest Metin2 Yang guides, server news, and tips. Learn how to buy Yang safely, server updates, and gaming strategies.',
-  },
-  alternates: {
-    canonical: 'https://yangfinity.com/blog'
-  }
-};
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+
+// SEO is handled by parent layout
 
 const blogPosts = [
-  {
-    id: 'how-to-buy-yang-safely',
-    title: 'How to Buy Metin2 Yang Safely - Complete Guide',
-    excerpt: 'Learn the best practices for buying Yang in Metin2 without getting scammed. Our comprehensive guide covers everything you need to know.',
-    date: '2024-01-15',
-    category: 'Guides',
-    readTime: '5 min read'
-  },
-  {
-    id: 'gameforge-vs-private-servers',
-    title: 'Gameforge vs Private Servers - Which Yang to Buy?',
-    excerpt: 'Compare Gameforge official servers with private servers. Find out which type of Yang offers better value and gameplay experience.',
-    date: '2024-01-10',
-    category: 'Comparison',
-    readTime: '7 min read'
-  },
-  {
-    id: 'metin2-server-population-guide',
-    title: 'Metin2 Server Population Guide - Find Active Servers',
-    excerpt: 'Discover the most populated Metin2 servers in 2024. Learn how to check server activity and choose the best server for your needs.',
-    date: '2024-01-05',
-    category: 'Server Info',
-    readTime: '4 min read'
-  },
-  {
-    id: 'yang-farming-tips',
-    title: 'Top 10 Yang Farming Tips for Metin2',
-    excerpt: 'Maximize your Yang earnings with these proven farming strategies. From beginner to advanced techniques for all server types.',
-    date: '2024-01-01',
-    category: 'Tips',
-    readTime: '6 min read'
-  },
-  {
-    id: 'mobile-metin2-guide',
-    title: 'Mobile Metin2 Yang Guide - Everything You Need to Know',
-    excerpt: 'Complete guide to buying and using Yang in Mobile Metin2. Learn about mobile-specific features and best practices.',
-    date: '2023-12-28',
-    category: 'Mobile',
-    readTime: '5 min read'
-  },
-  {
-    id: 'payment-methods-security',
-    title: 'Secure Payment Methods for Metin2 Yang',
-    excerpt: 'Compare payment methods for buying Yang. Learn about security features, fees, and which method works best for you.',
-    date: '2023-12-25',
-    category: 'Security',
-    readTime: '4 min read'
-  }
+  { id: 'how-to-buy-yang-safely', date: '2024-01-15', readTime: '5 min read' },
+  { id: 'gameforge-vs-private-servers', date: '2024-01-10', readTime: '7 min read' },
+  { id: 'metin2-server-population-guide', date: '2024-01-05', readTime: '4 min read' },
+  { id: 'yang-farming-tips', date: '2024-01-01', readTime: '6 min read' },
+  { id: 'mobile-metin2-guide', date: '2023-12-28', readTime: '5 min read' },
+  { id: 'payment-methods-security', date: '2023-12-25', readTime: '4 min read' }
 ];
 
 export default function BlogPage() {
+  const t = useTranslations();
+  
   return (
-    <div className="mx-auto w-full max-w-screen-2xl px-4 py-8">
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-white mb-4">
-          Metin2 Yang Blog
-        </h1>
-        <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-          Latest guides, tips, and news about Metin2 Yang. Learn how to buy safely, 
-          find the best servers, and maximize your gaming experience.
-        </p>
+    <div className="mx-auto w-full max-w-7xl px-4 md:px-8 py-12">
+      {/* Hero Section */}
+      <div className="relative mb-16 overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 border border-neutral-700 p-8 md:p-12">
+        <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#b6e700] opacity-10 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-600 opacity-5 rounded-full blur-3xl"></div>
+        <div className="relative">
+          <span className="inline-block px-3 py-1 mb-4 text-xs font-semibold tracking-wider uppercase bg-neutral-800 text-[#b6e700] rounded-full">
+            {t('blog.hero.badge')}
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            {t('blog.hero.title')} <span className="text-[#b6e700]">{t('blog.hero.titleHighlight')}</span>
+          </h1>
+          <p className="text-lg text-neutral-300 max-w-2xl">
+            {t('blog.hero.description')}
+          </p>
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.map((post) => (
+      {/* Category Filter Pills */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        <Link 
+          href="/blog"
+          className="px-4 py-2 text-sm bg-neutral-800 border border-neutral-700 hover:border-[#b6e700] text-white rounded-full transition-all"
+        >
+          {t('blog.filters.allPosts')}
+        </Link>
+        {['guides', 'comparison', 'server-info', 'tips', 'mobile', 'security'].map((cat) => (
           <Link
-            key={post.id}
-            href={`/blog/${post.id}`}
-            className="group bg-black border border-neutral-800 rounded-lg p-6 hover:border-blue-600 transition-colors"
+            key={cat}
+            href={`/blog?category=${cat}`}
+            className="px-4 py-2 text-sm bg-neutral-900 border border-neutral-800 hover:border-[#b6e700] hover:bg-neutral-800 text-neutral-300 hover:text-[#b6e700] rounded-full transition-all"
           >
-            <div className="mb-4">
-              <span className="inline-block bg-blue-600 text-white text-sm px-3 py-1 rounded-full mb-3">
-                {post.category}
-              </span>
-              <h2 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors mb-3">
-                {post.title}
-              </h2>
-              <p className="text-neutral-300 text-sm leading-relaxed">
-                {post.excerpt}
-              </p>
-            </div>
-            <div className="flex items-center justify-between text-sm text-neutral-400">
-              <span>{post.date}</span>
-              <span>{post.readTime}</span>
-            </div>
+            {t(`blog.categories.${cat}`)}
           </Link>
         ))}
       </div>
 
-      <div className="mt-12 text-center">
-        <div className="bg-black border border-neutral-800 rounded-lg p-8">
-          <h2 className="text-2xl font-bold text-white mb-4">
-            Stay Updated with Metin2 News
+      {/* Blog Posts Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {blogPosts.map((post) => (
+            <Link
+              key={post.id}
+              href={`/blog/${post.id}`}
+              className="group relative bg-neutral-900/50 backdrop-blur border border-neutral-800 rounded-xl overflow-hidden hover:border-[#b6e700] transition-all duration-300 hover:shadow-lg hover:shadow-[#b6e700]/10"
+            >
+              {/* Category Badge */}
+              <div className="absolute top-4 right-4 px-3 py-1 bg-neutral-800/80 backdrop-blur text-[#b6e700] text-xs font-semibold rounded-full">
+                {t(`blog.posts.${post.id}.category`)}
+              </div>
+
+              <div className="p-6">
+                <h2 className="text-xl font-bold text-white group-hover:text-[#b6e700] transition-colors mb-3 pr-20 leading-snug">
+                  {t(`blog.posts.${post.id}.title`)}
+                </h2>
+                <p className="text-neutral-400 text-sm leading-relaxed mb-4 line-clamp-3">
+                  {t(`blog.posts.${post.id}.excerpt`)}
+                </p>
+              
+              <div className="flex items-center justify-between text-xs text-neutral-500 pt-4 border-t border-neutral-800">
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  {post.date}
+                </span>
+                <span className="flex items-center gap-1">
+                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {post.readTime}
+                </span>
+              </div>
+            </div>
+
+            {/* Hover effect indicator */}
+            <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#b6e700] to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+          </Link>
+        ))}
+      </div>
+
+      {/* Newsletter CTA */}
+      <div className="mt-16 relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-800 border border-neutral-700 p-8">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#b6e700] opacity-5 rounded-full blur-3xl"></div>
+        <div className="relative z-10 text-center max-w-xl mx-auto">
+          <h2 className="text-2xl font-bold text-white mb-3">
+            {t('blog.newsletter.title')} <span className="text-[#b6e700]">{t('blog.newsletter.titleHighlight')}</span>
           </h2>
-          <p className="text-neutral-300 mb-6">
-            Get the latest Metin2 server updates, Yang price changes, and exclusive tips delivered to your inbox.
+          <p className="text-neutral-400 text-sm mb-6">
+            {t('blog.newsletter.description')}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-2 rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder={t('blog.newsletter.placeholder')}
+              className="flex-1 px-4 py-3 rounded-lg bg-neutral-800 border border-neutral-700 text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#b6e700] transition-colors"
             />
-            <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-              Subscribe
+            <button className="px-6 py-3 bg-[#b6e700] text-black font-semibold rounded-lg hover:bg-[#a5d600] transition-all shadow-lg hover:shadow-[#b6e700]/20">
+              {t('blog.newsletter.subscribe')}
             </button>
           </div>
         </div>

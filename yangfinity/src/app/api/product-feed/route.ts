@@ -14,9 +14,9 @@ export async function GET() {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:g="http://base.google.com/ns/1.0" version="2.0">
   <channel>
-    <title>Yangfinity - Metin2 Yang Products</title>
+    <title>Yangfinity - Metin2 Yang & Won Products</title>
     <link>${baseUrl}</link>
-    <description>Buy Yang for Metin2 Gameforge, Private, and Mobile servers. Fast delivery, secure payment.</description>
+    <description>Buy Yang & Won for Metin2 Gameforge, Private, and Mobile servers. Fast delivery, secure payment.</description>
 ${productData.map((product) => {
   const productUrl = `${baseUrl}/products/${product.handle}`;
   const imageUrl = product.logo 

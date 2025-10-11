@@ -97,7 +97,7 @@ function LanguageSelector({ mobile }: { mobile?: boolean }) {
         <span className="absolute bottom-1 right-1 text-xs font-semibold">{lang.toUpperCase()}</span>
       </button>
       {open && (
-        <div className="absolute right-0 mt-2 w-28 rounded-md bg-black shadow-lg ring-0 z-50">
+        <div className="absolute right-0 mt-2 w-28 rounded-md bg-black shadow-lg ring-0 z-[200]">
           <ul className="py-1">
             {languages.map((l) => (
               <li key={l.code}>
@@ -137,7 +137,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
   const whatsappHref = `https://wa.me/4915736729768?text=${cartMessage}`;
   
   return (
-    <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
+    <div className={`fixed inset-0 z-[150] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
@@ -216,7 +216,7 @@ function ProfilePanel({ open, onClose }: { open: boolean; onClose: () => void })
   const router = useRouter();
   const t = useTranslations('profile');
   return (
-    <div className={`fixed inset-0 z-50 ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
+    <div className={`fixed inset-0 z-[150] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}
       <div
         className={`fixed inset-0 bg-black/30 transition-opacity ${open ? 'opacity-100' : 'opacity-0'}`}
         onClick={onClose}
@@ -276,7 +276,7 @@ export function Navbar() {
     }
   }, [isLoaded, user]);
   return (
-    <nav className="relative flex items-center justify-between p-4 lg:px-6">
+    <nav className="relative flex items-center justify-between p-4 lg:px-6 z-[250]">
       <div className="block flex-none md:hidden">
         <div className="flex flex-row items-center gap-2 navbar-scale">
         <Suspense fallback={null}>

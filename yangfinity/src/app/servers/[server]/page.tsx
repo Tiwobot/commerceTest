@@ -25,23 +25,26 @@ export async function generateMetadata({ params }: ServerPageProps): Promise<Met
   const category = firstProduct.category;
   
   return {
-    title: `Buy ${serverName} Yang - Metin2 ${category} | Yangfinity`,
-    description: `Buy Yang for ${serverName} Metin2 server. Fast delivery, secure payment, 24/7 support. Best prices for ${category} servers.`,
+    title: `Buy ${serverName} Yang & Won - Metin2 ${category} | Yangfinity`,
+    description: `Buy Yang & Won for ${serverName} Metin2 server. Fast delivery, secure payment, 24/7 support. Best prices for ${category} servers.`,
     keywords: [
       `${serverName} Yang`,
       `${serverName} Metin2`,
       `Metin2 ${serverName}`,
       `${category} Yang`,
+      `${category} Won`,
       'Metin2 Yang',
+      'Metin2 Won',
       'Yang',
+      'Won',
       'Won',
       'Gameforge',
       'Private Server',
       'Mobile Metin2'
     ].join(', '),
     openGraph: {
-      title: `Buy ${serverName} Yang - Metin2 ${category}`,
-      description: `Buy Yang for ${serverName} Metin2 server. Fast delivery, secure payment, 24/7 support.`,
+      title: `Buy ${serverName} Yang & Won - Metin2 ${category}`,
+      description: `Buy Yang & Won for ${serverName} Metin2 server. Fast delivery, secure payment, 24/7 support.`,
       images: [firstProduct.logo || '/yangfinity-logo-notext.png'],
     },
     alternates: {
@@ -91,7 +94,7 @@ export default async function ServerPage({ params }: ServerPageProps) {
           {serverName} Metin2 Server
         </h1>
         <p className="text-xl text-neutral-300 mb-6">
-          Buy Yang for {serverName} - {category}
+          Buy Yang & Won for {serverName} - {category}
         </p>
         <div className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg">
           <span className="text-sm font-medium">Fast Delivery</span>
