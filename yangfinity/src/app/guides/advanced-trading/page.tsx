@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Advanced Trading Strategies - Yangfinity",
+  description: "Advanced trading strategies for Metin2 Yang & Won. Learn about market timing, price analysis, and maximizing your trading profits."
+};
 
 export default function AdvancedTradingPage() {
   const t = useTranslations('guides.items.advanced-trading');

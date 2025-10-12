@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Metin2 Server Types Guide - Yangfinity",
+  description: "Complete guide to different Metin2 server types. Learn about official servers, private servers, and their impact on Yang & Won trading."
+};
 
 export default function ServerTypesPage() {
   const t = useTranslations('guides.items.server-types');

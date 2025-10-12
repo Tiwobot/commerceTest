@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Avoiding Scams - Yangfinity",
+  description: "Learn how to avoid scams when buying Metin2 Yang & Won. Common scam tactics and how to protect yourself from fraudulent sellers."
+};
 
 export default function AvoidingScamsPage() {
   const t = useTranslations('guides.items.avoiding-scams');

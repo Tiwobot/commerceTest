@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Mobile vs PC Metin2 - Yangfinity",
+  description: "Compare Mobile Metin2 vs PC Metin2. Learn the differences in gameplay, Yang & Won trading, and which version suits you best."
+};
 
 export default function MobileVsPCPage() {
   const t = useTranslations('guides.items.mobile-vs-pc');

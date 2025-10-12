@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Trading Basics - Yangfinity",
+  description: "Learn the fundamentals of Metin2 Yang & Won trading. Understand basic concepts, terminology, and get started with trading safely."
+};
 
 export default function TradingBasicsPage() {
   const t = useTranslations('guides.items.trading-basics');

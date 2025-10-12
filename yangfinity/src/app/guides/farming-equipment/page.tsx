@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Farming Equipment Guide - Yangfinity",
+  description: "Essential equipment for efficient Yang farming in Metin2. Learn about weapons, armor, and accessories that boost your farming speed."
+};
 
 export default function FarmingEquipmentPage() {
   const t = useTranslations('guides.items.farming-equipment');

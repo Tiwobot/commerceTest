@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Secure Trading Guide - Yangfinity",
+  description: "Complete guide to secure trading in Metin2. Learn about safe trading practices, escrow services, and protecting your transactions."
+};
 
 export default function SecureTradingPage() {
   const t = useTranslations('guides.items.secure-trading');

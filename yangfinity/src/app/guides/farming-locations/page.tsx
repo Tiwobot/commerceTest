@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Best Farming Locations - Yangfinity",
+  description: "Discover the best Yang farming locations in Metin2. Learn about optimal farming spots, spawn rates, and efficiency strategies."
+};
 
 export default function FarmingLocationsPage() {
   const t = useTranslations('guides.items.farming-locations');

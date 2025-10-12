@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Server Population Guide - Yangfinity",
+  description: "Understanding Metin2 server population and its impact on Yang & Won trading. Learn how population affects prices and trading opportunities."
+};
 
 export default function ServerPopulationPage() {
   const t = useTranslations('guides.items.server-population');

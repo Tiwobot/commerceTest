@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Choosing the Right Seller - Yangfinity",
+  description: "How to choose a trustworthy Metin2 Yang & Won seller. Learn what to look for in reputable sellers and red flags to avoid."
+};
 
 export default function ChoosingSellerPage() {
   const t = useTranslations('guides.items.choosing-seller');

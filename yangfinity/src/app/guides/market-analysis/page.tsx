@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Market Analysis Guide - Yangfinity",
+  description: "Learn how to analyze Metin2 Yang & Won markets. Understand price trends, market cycles, and make informed trading decisions."
+};
 
 export default function MarketAnalysisPage() {
   const t = useTranslations('guides.items.market-analysis');
