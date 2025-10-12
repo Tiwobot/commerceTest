@@ -9,6 +9,7 @@ import { GeistSans } from 'geist/font/sans';
 import { useCart } from '../../../../components/cart/CartContext';
 import { productData } from '../productData';
 import { useTranslations } from 'next-intl';
+import Script from 'next/script';
 
 
 export default function ProductPage({ params }: { params: Promise<{ handle: string }> }) {
@@ -25,6 +26,65 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
     return <div className="p-8 text-center text-lg">{t('notFound')}</div>;
   }
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': `https://yangfinity.com/products/${handle}#product`,
+    name: product.name,
+    description: `Buy ${product.name} for Metin2. Fast delivery, secure payment, 24/7 support. ${product.category} server.`,
+    image: product.logo ? `https://yangfinity.com${product.logo}` : 'https://yangfinity.com/yangfinity-logo-notext.png',
+    brand: {
+      '@type': 'Brand',
+      name: 'Yangfinity'
+    },
+    offers: {
+      '@type': 'Offer',
+      url: `https://yangfinity.com/products/${handle}`,
+      priceCurrency: 'EUR',
+      price: product.price.toFixed(2),
+      availability: 'https://schema.org/InStock',
+      priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+      seller: {
+        '@type': 'Organization',
+        '@id': 'https://yangfinity.com/#organization',
+        name: 'Yangfinity'
+      }
+    },
+    category: product.category,
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '500',
+      bestRating: '5',
+      worstRating: '1'
+    }
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yangfinity.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Products',
+        item: 'https://yangfinity.com/products'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: product.name,
+        item: `https://yangfinity.com/products/${handle}`
+      }
+    ]
+  };
+
   const handleAddToCart = () => {
     addItem({
       id: `${handle}`,
@@ -38,8 +98,19 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
   };
 
   return (
-    <div className="mx-auto w-full max-w-screen-2xl px-4">
-      <div className="flex flex-col rounded-lg border border-neutral-800 bg-black p-8 md:p-12">
+    <>
+      <Script
+        id="product-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="mx-auto w-full max-w-screen-2xl px-4">
+        <div className="flex flex-col rounded-lg border border-neutral-800 bg-black p-8 md:p-12">
         <div className="flex flex-col lg:flex-row lg:gap-8">
           <div className="h-full w-full basis-full lg:basis-4/6">
             <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
@@ -131,6 +202,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
           ))}
         </ul>
       </div>
-    </div>
+      </div>
+    </>
   );
 } 

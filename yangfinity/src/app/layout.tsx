@@ -15,7 +15,7 @@ export const metadata = {
   title: "Yangfinity - Buy Metin2 Yang & Won",
   description: "Buy Metin2 Yang & Won fast and secure. Trusted seller for Gameforge, Private & Mobile servers. 24/7 support, instant delivery.",
   keywords: [
-    "Metin2 Yang", "Metin2", "Yang", "Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
+    "Metin2 Yang", "Meting2 Won", "Metin2", "Yang", "Won", "Metin2 Yang Kaufen", "Buy Yang", "Metin2 Won Kaufen", "Buy Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
     "Private Servers", "Mobile Metin2", "Eostre", "Teutonia", "Germania", "Europe", "Tigerghost",
     "Ruby Chimera", "Emerald Aurora", "Iberia", "Italy", "Azrael", "Onyx Obsidian", "Willow", "Ruby Kirin",
     "Cesko", "Magyarorszag", "Polska", "Romania", "Tara Romanesca", "Greece", "Arabia", "Zephyr",
@@ -50,58 +50,90 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <meta name="twitter:title" content="Yangfinity - Buy Metin2 Yang & Won" />
           <meta name="twitter:description" content="Trusted Metin2 Yang & Won seller. Fast delivery, secure payment." />
           <meta name="twitter:image" content="/yangfinity-logo-notext.png" />
-          {/* JSON-LD Structured Data */}
+          {/* JSON-LD Structured Data with @graph */}
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
             '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Yangfinity',
-            url: 'https://yangfinity.com/',
-            logo: 'https://yangfinity.com/yangfinity-logo-notext.png',
-            description: 'Trusted Metin2 Yang & Won seller. Fast delivery, secure payment, 24/7 support.',
-            address: {
-              '@type': 'PostalAddress',
-              addressCountry: 'EU'
-            },
-            contactPoint: {
-              '@type': 'ContactPoint',
-              contactType: 'customer service',
-              availableLanguage: ['English', 'German', 'Spanish', 'French', 'Italian', 'Turkish']
-            },
-            sameAs: [
-              'https://www.facebook.com/',
-              'https://twitter.com/',
-              'https://www.instagram.com/'
+            '@graph': [
+              {
+                '@type': 'Organization',
+                '@id': 'https://yangfinity.com/#organization',
+                name: 'Yangfinity',
+                url: 'https://yangfinity.com/',
+                logo: {
+                  '@type': 'ImageObject',
+                  '@id': 'https://yangfinity.com/#logo',
+                  url: 'https://yangfinity.com/yangfinity-logo-notext.png',
+                  contentUrl: 'https://yangfinity.com/yangfinity-logo-notext.png',
+                  caption: 'Yangfinity - Buy Metin2 Yang & Won',
+                  inLanguage: 'en-US'
+                },
+                description: 'Trusted Metin2 Yang & Won seller. Fast delivery, secure payment, 24/7 support.',
+                address: {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'Marbacher Strasse',
+                  addressLocality: 'Ludwigsburg',
+                  addressCountry: 'Germany'
+                },
+                contactPoint: {
+                  '@type': 'ContactPoint',
+                  contactType: 'customer service',
+                  telephone: '+90 538 062 34 22',
+                  availableLanguage: ['English', 'German', 'Spanish', 'French', 'Italian', 'Turkish'],
+                  areaServed: 'Worldwide'
+                },
+                sameAs: [
+                  'https://www.trustpilot.com/review/yangfinity.com',
+                  'https://www.facebook.com/',
+                  'https://twitter.com/',
+                  'https://www.instagram.com/'
+                ],
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '4.8',
+                  reviewCount: '500',
+                  bestRating: '5',
+                  worstRating: '1'
+                }
+              },
+              {
+                '@type': ['Store', 'OnlineStore'],
+                '@id': 'https://yangfinity.com/#store',
+                name: 'Yangfinity',
+                url: 'https://yangfinity.com/',
+                description: 'Metin2 Yang & Won store - all servers supported',
+                priceRange: '€0.16 - €10.00',
+                currenciesAccepted: 'EUR',
+                paymentAccepted: ['Credit Card', 'PayPal', 'Apple Pay', 'Google Pay', 'Mastercard', 'Visa'],
+                openingHours: 'Mo-Su 00:00-23:59',
+                telephone: '+90 538 062 34 22',
+                address: {
+                  '@type': 'PostalAddress',
+                  streetAddress: 'Marbacher Strasse',
+                  addressLocality: 'Ludwigsburg',
+                  addressCountry: 'Germany'
+                },
+                image: 'https://yangfinity.com/yangfinity-logo-notext.png'
+              },
+              {
+                '@type': 'WebSite',
+                '@id': 'https://yangfinity.com/#website',
+                url: 'https://yangfinity.com/',
+                name: 'Yangfinity - Buy Metin2 Yang & Won',
+                description: 'Buy Metin2 Yang & Won - Gameforge, Private & Mobile servers. Instant delivery.',
+                publisher: {
+                  '@id': 'https://yangfinity.com/#organization'
+                },
+                inLanguage: 'en-US',
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: 'https://yangfinity.com/search?q={search_term_string}'
+                  },
+                  'query-input': 'required name=search_term_string'
+                }
+              }
             ]
-          }) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'WebSite',
-            name: 'Yangfinity',
-            url: 'https://yangfinity.com/',
-            description: 'Buy Metin2 Yang & Won - Gameforge, Private & Mobile servers. Instant delivery.',
-            potentialAction: {
-              '@type': 'SearchAction',
-              target: 'https://yangfinity.com/search?q={search_term_string}',
-              'query-input': 'required name=search_term_string'
-            }
-          }) }} />
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Store',
-            name: 'Yangfinity',
-            url: 'https://yangfinity.com/',
-            description: 'Metin2 Yang & Won store - all servers supported',
-            priceRange: '€0.20 - €10.00',
-            currenciesAccepted: 'EUR',
-            paymentAccepted: 'Credit Card, PayPal, Apple Pay, Google Pay',
-            openingHours: 'Mo-Su 00:00-23:59',
-            telephone: '+90 538 062 34 22',
-            address: {
-              '@type': 'PostalAddress',
-              streetAddress: 'Marbacher Strasse',
-              addressLocality: 'Ludwigsburg',
-              addressCountry: 'Germany'
-            }
           }) }} />
           {/* Trustpilot Verification Script (plain for crawler detection) */}
           <script

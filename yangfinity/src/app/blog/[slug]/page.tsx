@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Script from 'next/script';
 
 interface BlogPostProps {
   params: Promise<{ slug: string }>;
@@ -272,8 +273,75 @@ export default async function BlogPost({ params }: BlogPostProps) {
     notFound();
   }
 
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `https://yangfinity.com/blog/${slug}#article`,
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    dateModified: post.date,
+    author: {
+      '@type': 'Organization',
+      '@id': 'https://yangfinity.com/#organization',
+      name: 'Yangfinity'
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://yangfinity.com/#organization',
+      name: 'Yangfinity',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://yangfinity.com/yangfinity-logo-notext.png'
+      }
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://yangfinity.com/blog/${slug}`
+    },
+    image: 'https://yangfinity.com/yangfinity-logo-notext.png',
+    articleSection: post.category,
+    inLanguage: 'en-US'
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://yangfinity.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: 'https://yangfinity.com/blog'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.title,
+        item: `https://yangfinity.com/blog/${slug}`
+      }
+    ]
+  };
+
   return (
-    <div className="mx-auto w-full max-w-4xl px-4 py-8">
+    <>
+      <Script
+        id="article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <Script
+        id="breadcrumb-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <div className="mx-auto w-full max-w-4xl px-4 py-8">
       <div className="mb-8">
         <Link 
           href="/blog" 
@@ -332,6 +400,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
           </Link>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
