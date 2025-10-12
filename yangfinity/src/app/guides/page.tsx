@@ -4,7 +4,10 @@ import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: "Guides - Yangfinity",
-  description: "Complete guides for buying Metin2 Yang & Won safely, choosing servers, farming tips, and trading strategies."
+  description: "Complete guides for buying Metin2 Yang & Won safely, choosing servers, farming tips, and trading strategies.",
+  alternates: {
+    canonical: 'https://yangfinity.com/guides',
+  },
 };
 
 // SEO is handled by parent layout

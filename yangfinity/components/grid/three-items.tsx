@@ -24,7 +24,7 @@ function ThreeItemGridItem({
         prefetch={false}
       >
         <GridTileImage
-          src={item.logo || '/yangfinity-logo-notext.png'}
+          src={item.logo || '/yangfinity-logo-notext-basic.png'}
           fill
           sizes={
             size === 'full' ? '(min-width: 768px) 66vw, 100vw' : '(min-width: 768px) 33vw, 100vw'

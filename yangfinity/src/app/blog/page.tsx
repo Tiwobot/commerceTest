@@ -4,7 +4,10 @@ import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: "Blog - Yangfinity",
-  description: "Latest insights about Metin2 Yang & Won trading, server updates, and gaming strategies."
+  description: "Latest insights about Metin2 Yang & Won trading, server updates, and gaming strategies.",
+  alternates: {
+    canonical: 'https://yangfinity.com/blog',
+  },
 };
 
 // SEO is handled by parent layout

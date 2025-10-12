@@ -38,7 +38,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
           <link rel="icon" href="/yangfinity-logo-notext.png" type="image/png" sizes="32x32" />
           <meta name="robots" content="index, follow" />
-          <link rel="canonical" href="https://yangfinity.com/" />
           {/* Open Graph Meta Tags */}
           <meta property="og:title" content="Yangfinity - Buy Metin2 Yang & Won" />
           <meta property="og:description" content="Trusted Metin2 Yang & Won seller. Fast delivery, 24/7 support, secure payment." />

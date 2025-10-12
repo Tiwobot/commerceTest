@@ -1,27 +1,31 @@
 import { Metadata } from 'next';
 import { productData } from '../productData';
 
-interface ProductLayoutProps {
+type Props = {
   params: Promise<{ handle: string }>;
-  children: React.ReactNode;
-}
+};
 
-export async function generateMetadata({ params }: ProductLayoutProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { handle } = await params;
   const product = productData.find(p =>
     handle === p.name.replace(/\s+/g, '-').toLowerCase()
   );
-  
+
   if (!product) {
     return {
-      title: "Product Not Found - Yangfinity",
-      description: "The requested Metin2 Yang & Won product could not be found."
+      title: 'Product Not Found - Yangfinity',
+      alternates: {
+        canonical: `https://yangfinity.com/products/${handle}`,
+      },
     };
   }
-  
+
   return {
-    title: `${product.name} - Yangfinity`,
-    description: `Buy ${product.name} Yang & Won for €${product.price.toFixed(2)}. Fast delivery, secure payment, 24/7 support.`
+    title: `${product.name} - Buy Yang/Won - Yangfinity`,
+    description: `Buy ${product.name} for €${product.price.toFixed(2)} EUR. Fast delivery, secure payment, 24/7 support. ${product.category} server.`,
+    alternates: {
+      canonical: `https://yangfinity.com/products/${handle}`,
+    },
   };
 }
 

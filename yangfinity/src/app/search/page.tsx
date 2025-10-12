@@ -54,7 +54,7 @@ function SearchPageContent() {
               <Link href={`/products/${product.handle}`} className="relative inline-block h-full w-full group">
                 <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black hover:border-blue-600 border-neutral-800">
                   <Image
-                    src={product.logo || "/yangfinity-logo-notext.png"}
+                    src={product.logo || "/yangfinity-logo-notext-basic.png"}
                     alt={product.name}
                     fill
                     className="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"

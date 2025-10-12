@@ -21,7 +21,7 @@ function ProductGrid() {
           <a href={"/products/" + encodeURIComponent(product.name.replace(/\s+/g, '-').toLowerCase())} className="relative inline-block h-full w-full group">
             <div className="group flex h-full w-full items-center justify-center overflow-hidden rounded-lg border bg-black hover:border-blue-600 border-neutral-800">
               <Image
-                src="/yangfinity-logo-notext.png"
+                src="/yangfinity-logo-notext-basic.png"
                 alt={product.name}
                 fill
                 className="relative h-full w-full object-contain transition duration-300 ease-in-out group-hover:scale-105"

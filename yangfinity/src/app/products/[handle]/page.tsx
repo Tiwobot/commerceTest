@@ -30,7 +30,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
       id: `${handle}`,
       name: product.name,
       price: product.price,
-      image: product.logo || '/yangfinity-logo-notext.png',
+      image: product.logo || '/yangfinity-logo-notext-basic.png',
     }, quantity);
     if (typeof window !== 'undefined') {
       window.dispatchEvent(new CustomEvent('open-cart-modal'));
@@ -44,7 +44,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
           <div className="h-full w-full basis-full lg:basis-4/6">
             <div className="relative aspect-square h-full max-h-[550px] w-full overflow-hidden">
               <Image
-                src={product.logo || '/yangfinity-logo-notext.png'}
+                src={product.logo || '/yangfinity-logo-notext-basic.png'}
                 alt={product.name}
                 fill
                 className="h-full w-full object-contain"
@@ -122,7 +122,7 @@ export default function ProductPage({ params }: { params: Promise<{ handle: stri
                     currencyCode: 'EUR',
                     position: 'bottom',
                   }}
-                  src={related.logo || "/yangfinity-logo-notext.png"}
+                  src={related.logo || "/yangfinity-logo-notext-basic.png"}
                   fill
                   sizes="(min-width: 1024px) 20vw, (min-width: 768px) 25vw, (min-width: 640px) 33vw, (min-width: 475px) 50vw, 100vw"
                 />

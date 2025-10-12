@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: ServerPageProps): Promise<Met
     openGraph: {
       title: `Buy ${serverName} Yang & Won - Metin2 ${category}`,
       description: `Buy Yang & Won for ${serverName} Metin2 server. Fast delivery, secure payment, 24/7 support.`,
-      images: [firstProduct.logo || '/yangfinity-logo-notext.png'],
+      images: [firstProduct.logo || '/yangfinity-logo-notext-basic.png'],
     },
     alternates: {
       canonical: `https://yangfinity.com/servers/${server}`
@@ -143,7 +143,7 @@ export default async function ServerPage({ params }: ServerPageProps) {
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-16 h-16 relative">
                   <Image
-                    src={product.logo || '/yangfinity-logo-notext.png'}
+                    src={product.logo || '/yangfinity-logo-notext-basic.png'}
                     alt={product.name}
                     fill
                     className="object-contain"
@@ -189,7 +189,7 @@ export default async function ServerPage({ params }: ServerPageProps) {
                 >
                   <div className="w-12 h-12 relative mx-auto mb-2">
                     <Image
-                      src={product.logo || '/yangfinity-logo-notext.png'}
+                      src={product.logo || '/yangfinity-logo-notext-basic.png'}
                       alt={relatedServerName}
                       fill
                       className="object-contain"

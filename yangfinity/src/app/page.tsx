@@ -1,6 +1,13 @@
 import { ThreeItemGrid } from '../../components/grid/three-items';
 import { Carousel } from '../../components/carousel';
 import { GeistSans } from 'geist/font/sans';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: 'https://yangfinity.com',
+  },
+};
 
 export default function Home() {
   return (
