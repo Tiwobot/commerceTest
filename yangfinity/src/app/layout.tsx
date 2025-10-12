@@ -95,7 +95,14 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             priceRange: '€0.20 - €10.00',
             currenciesAccepted: 'EUR',
             paymentAccepted: 'Credit Card, PayPal, Apple Pay, Google Pay',
-            openingHours: 'Mo-Su 00:00-23:59'
+            openingHours: 'Mo-Su 00:00-23:59',
+            telephone: '+90 538 062 34 22',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'Marbacher Strasse',
+              addressLocality: 'Ludwigsburg',
+              addressCountry: 'Germany'
+            }
           }) }} />
           {/* Trustpilot Verification Script (plain for crawler detection) */}
           <script
