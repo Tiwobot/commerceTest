@@ -1,8 +1,9 @@
 'use client';
+
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function AboutPage() {
+function AboutPageClient() {
   const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -54,4 +55,8 @@ export default function AboutPage() {
       </div>
     </main>
   );
+}
+
+export default function AboutPage() {
+  return <AboutPageClient />;
 } 

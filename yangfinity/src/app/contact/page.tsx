@@ -1,8 +1,9 @@
 'use client';
+
 import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function ContactPage() {
+function ContactPageClient() {
   const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
   const [name, setName] = useState('');
@@ -86,4 +87,8 @@ export default function ContactPage() {
       </div>
     </main>
   );
+}
+
+export default function ContactPage() {
+  return <ContactPageClient />;
 } 

@@ -5,7 +5,7 @@ import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 import { useTranslations } from 'next-intl';
 
 
-export default function FAQPage() {
+function FAQPageClient() {
   const t = useTranslations();
   const [open, setOpen] = useState<number | null>(null);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -88,4 +88,8 @@ export default function FAQPage() {
       </div>
     </main>
   );
+}
+
+export default function FAQPage() {
+  return <FAQPageClient />;
 } 

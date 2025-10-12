@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Yang Farming Guide - Yangfinity",
+  description: "Complete guide to farming Yang in Metin2. Learn the best strategies, locations, and equipment for efficient Yang farming."
+};
 
 export default function YangFarmingPage() {
   const t = useTranslations('guides.items.yang-farming');

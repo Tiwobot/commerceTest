@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Gameforge vs Private Servers - Yangfinity",
+  description: "Detailed comparison between Gameforge official servers and private servers for Metin2 Yang & Won trading."
+};
 
 export default function GameforgeVsPrivatePage() {
   const t = useTranslations('guides.items.gameforge-vs-private');

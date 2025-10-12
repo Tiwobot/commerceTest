@@ -15,7 +15,7 @@ const sorting = [
   { title: 'Price: High to Low', slug: 'price-desc' },
 ];
 
-export default function SearchPage() {
+function SearchPageClient() {
   return (
     <Suspense>
       <SearchPageContent />
@@ -78,4 +78,8 @@ function SearchPageContent() {
       </div>
     </div>
   );
+}
+
+export default function SearchPage() {
+  return <SearchPageClient />;
 } 

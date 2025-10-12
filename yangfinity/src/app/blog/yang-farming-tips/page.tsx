@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Yang Farming Tips - Yangfinity",
+  description: "Expert tips for farming Yang in Metin2. Learn the best locations, equipment, and strategies for efficient Yang farming."
+};
 
 export default function YangFarmingTipsBlogPage() {
   const t = useTranslations('blog.posts.yang-farming-tips');

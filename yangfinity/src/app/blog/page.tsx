@@ -1,7 +1,11 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Blog - Yangfinity",
+  description: "Latest insights about Metin2 Yang & Won trading, server updates, and gaming strategies."
+};
 
 // SEO is handled by parent layout
 
@@ -14,7 +18,7 @@ const blogPosts = [
   { id: 'payment-methods-security', date: '2023-12-25', readTime: '4 min read' }
 ];
 
-export default function BlogPage() {
+function BlogPageClient() {
   const t = useTranslations();
   
   return (
@@ -122,4 +126,8 @@ export default function BlogPage() {
       </div>
     </div>
   );
+}
+
+export default function BlogPage() {
+  return <BlogPageClient />;
 }

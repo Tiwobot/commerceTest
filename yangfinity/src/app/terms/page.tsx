@@ -1,8 +1,9 @@
 'use client';
+
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function TermsPage() {
+function TermsPageClient() {
   const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -58,4 +59,8 @@ export default function TermsPage() {
       </div>
     </main>
   );
+}
+
+export default function TermsPage() {
+  return <TermsPageClient />;
 } 

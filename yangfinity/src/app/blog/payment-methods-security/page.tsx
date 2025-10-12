@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Payment Methods & Security - Yangfinity",
+  description: "Secure payment methods for buying Metin2 Yang & Won. Learn about PayPal, credit cards, and cryptocurrency options."
+};
 
 export default function PaymentMethodsSecurityBlogPage() {
   const t = useTranslations('blog.posts.payment-methods-security');

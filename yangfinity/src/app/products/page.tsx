@@ -9,6 +9,7 @@ import { Suspense } from 'react';
 import { useTranslations } from 'next-intl';
 import FilterList from '../../../components/layout/search/filter';
 
+
 const sortingKeys = [
   { key: 'relevance', slug: 'relevance' },
   { key: 'priceAsc', slug: 'price-asc' },
@@ -75,7 +76,7 @@ function ProductGrid() {
   );
 }
 
-export default function ProductsPage() {
+function ProductsPageClient() {
   const t = useTranslations();
   // Build translated sorting and category lists
   const sorting = sortingKeys.map(s => ({ title: t(`products.sorting.${s.key}`), slug: s.slug }));
@@ -128,5 +129,13 @@ export default function ProductsPage() {
         </nav>
       </div>
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductsPageClient />
+    </Suspense>
   );
 } 

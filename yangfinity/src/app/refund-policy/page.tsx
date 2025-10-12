@@ -1,8 +1,9 @@
 'use client';
+
 import { useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 
-export default function RefundPolicyPage() {
+function RefundPolicyPageClient() {
   const t = useTranslations();
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -57,4 +58,8 @@ export default function RefundPolicyPage() {
       </div>
     </main>
   );
+}
+
+export default function RefundPolicyPage() {
+  return <RefundPolicyPageClient />;
 } 

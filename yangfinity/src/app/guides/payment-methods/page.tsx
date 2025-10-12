@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Payment Methods Guide - Yangfinity",
+  description: "Compare different payment methods for buying Metin2 Yang & Won. Learn about security, fees, and processing times."
+};
 
 export default function PaymentMethodsPage() {
   const t = useTranslations('guides.items.payment-methods');

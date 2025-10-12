@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Mobile Metin2 Guide - Yangfinity",
+  description: "Complete guide to Mobile Metin2 Yang & Won trading. Learn about mobile servers, features, and trading differences."
+};
 
 export default function MobileMetin2GuideBlogPage() {
   const t = useTranslations('blog.posts.mobile-metin2-guide');

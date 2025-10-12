@@ -1,7 +1,11 @@
-'use client';
-
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Guides - Yangfinity",
+  description: "Complete guides for buying Metin2 Yang & Won safely, choosing servers, farming tips, and trading strategies."
+};
 
 // SEO is handled by parent layout
 
@@ -56,7 +60,7 @@ const guideCategories = [
   }
 ];
 
-export default function GuidesPage() {
+function GuidesPageClient() {
   const t = useTranslations();
   
   return (
@@ -146,4 +150,8 @@ export default function GuidesPage() {
       </div>
     </div>
   );
+}
+
+export default function GuidesPage() {
+  return <GuidesPageClient />;
 }

@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Account Security Guide - Yangfinity",
+  description: "Protect your Metin2 account when buying Yang & Won. Learn about password security, 2FA, and avoiding account bans."
+};
 
 export default function AccountSecurityPage() {
   const t = useTranslations('guides.items.account-security');

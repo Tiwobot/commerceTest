@@ -10,6 +10,7 @@ import { useCart } from '../../../../components/cart/CartContext';
 import { productData } from '../productData';
 import { useTranslations } from 'next-intl';
 
+
 export default function ProductPage({ params }: { params: Promise<{ handle: string }> }) {
   const t = useTranslations('product');
   const { handle } = React.use(params);

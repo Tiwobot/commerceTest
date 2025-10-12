@@ -4,7 +4,7 @@ import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import { useEffect, useRef } from "react";
 import { useTranslations } from 'next-intl';
 
-export default function SupportPage() {
+function SupportPageClient() {
   const contentRef = useRef<HTMLDivElement>(null);
   const t = useTranslations('support');
 
@@ -73,4 +73,8 @@ export default function SupportPage() {
       </SignedOut>
     </>
   );
+}
+
+export default function SupportPage() {
+  return <SupportPageClient />;
 } 

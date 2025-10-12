@@ -1,6 +1,11 @@
-'use client';
+import { Metadata } from 'next';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+
+export const metadata: Metadata = {
+  title: "Buying Yang & Won Safely - Yangfinity",
+  description: "Essential safety steps for purchasing Metin2 Yang & Won. Learn how to verify sellers, use secure payments, and avoid common scams."
+};
 
 export default function BuyingSafelyGuidePage() {
   const t = useTranslations('guides.items.buy-safely');
