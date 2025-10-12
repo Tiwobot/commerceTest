@@ -29,8 +29,29 @@ function FAQPageClient() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Generate FAQ structured data for Google
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <main className="relative w-full overflow-x-hidden">
+      {/* FAQ Structured Data for Google */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData, null, 2)
+        }}
+      />
       <div className="relative w-full h-screen overflow-y-auto overflow-x-hidden flex items-center justify-center">
         {/* Giant solid color background YANG text, fixed */}
         <span
