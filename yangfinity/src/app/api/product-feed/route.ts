@@ -21,7 +21,7 @@ ${productData.map((product) => {
   const productUrl = `${baseUrl}/products/${product.handle}`;
   const imageUrl = product.logo 
     ? `${baseUrl}${product.logo}` 
-    : `${baseUrl}/yangfinity-logo-notext.png`;
+    : `${baseUrl}/yangfinity-logo-notext-basic.png`;
   
   // Generate unique ID
   const productId = `yangfinity_${product.handle}`;

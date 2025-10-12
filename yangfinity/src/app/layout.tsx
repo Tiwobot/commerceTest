@@ -36,7 +36,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <html lang={locale} className="dark">
         <head>
           <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-          <link rel="icon" href="/yangfinity-logo-notext.png" type="image/png" sizes="32x32" />
+          <link rel="icon" href="/yangfinity-logo-notext-basic.png" type="image/png" sizes="32x32" />
           <meta name="robots" content="index, follow" />
           {/* Open Graph Meta Tags */}
           <meta property="og:title" content="Yangfinity - Buy Metin2 Yang & Won" />
