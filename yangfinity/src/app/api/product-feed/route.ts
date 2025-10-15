@@ -79,8 +79,6 @@ ${productData.map((product) => {
     { code: 'LU', price: '0.00 EUR' },
     // Turkey
     { code: 'TR', price: '0.00 EUR' },
-    // South Korea
-    { code: 'KR', price: '0.00 EUR' },
     // United States
     { code: 'US', price: '0.00 EUR' },
     // Canada
@@ -155,7 +153,6 @@ ${shippingCountries.map(country => `      <g:shipping>
         <g:country>${country.code}</g:country>
         <g:service>Digital Delivery</g:service>
         <g:price>${country.price}</g:price>
-        <g:delivery_time>Instant</g:delivery_time>
       </g:shipping>`).join('\n')}
       <g:age_group>adult</g:age_group>
       <g:is_bundle>no</g:is_bundle>
