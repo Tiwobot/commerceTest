@@ -15,7 +15,7 @@ export const metadata = {
   title: "Yangfinity - Buy Metin2 Yang & Won",
   description: "Buy Metin2 Yang & Won fast and secure. Trusted seller for Gameforge, Private & Mobile servers. 24/7 support, instant delivery.",
   keywords: [
-    "Metin2 Yang", "Meting2 Won", "Metin2", "Yang", "Won", "Metin2 Yang Kaufen", "Buy Yang", "Metin2 Won Kaufen", "Buy Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
+    "Yangfinity", "Yangfinity.com", "Metin2 Yang", "Meting2 Won", "Metin2", "Yang", "Won", "Metin2 Yang Kaufen", "Buy Yang", "Metin2 Won Kaufen", "Buy Won", "Gameforge", "Gameforge West", "Gameforge East", "Gameforge TR",
     "Private Servers", "Mobile Metin2", "Eostre", "Teutonia", "Germania", "Europe", "Tigerghost",
     "Ruby Chimera", "Emerald Aurora", "Iberia", "Italy", "Azrael", "Onyx Obsidian", "Willow", "Ruby Kirin",
     "Cesko", "Magyarorszag", "Polska", "Romania", "Tara Romanesca", "Greece", "Arabia", "Zephyr",
