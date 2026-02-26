@@ -58,11 +58,11 @@
   },
   "refund": {
     "title": "İade Politikası",
-    "intro": "Yangfinity'de müşteri memnuniyeti önceliğimizdir. Lütfen aşağıdaki iade politikamızı inceleyin:",
-    "li1": "İadeler yalnızca siparişinizi taahhüt edilen süre içinde teslim edemezsek yapılır.",
-    "li2": "İade talepleri satın alma işleminden sonraki 24 saat içinde yapılmalıdır.",
-    "li3": "Tamamlanmış ve teslim edilmiş siparişler için iade yapılmaz.",
-    "li4": "İade talebinde bulunmak için lütfen sipariş bilgilerinizle destek ekibimizle iletişime geçin.",
+    "intro": "Herhangi bir nedenle 7 gün içinde iade kabul ediyoruz.",
+    "li1": "Değişim yok — sadece iade. Ödemeler yalnızca EUR olarak kabul edilir.",
+    "li2": "İade işlemi süresi 3 gündür.",
+    "li3": "Yeniden stoklama ücreti: ürün fiyatının %10'u.",
+    "li4": "İade talebi için lütfen sipariş bilgilerinizle destek ekibimizle iletişime geçin.",
     "contact": "Daha fazla soru için lütfen İletişim sayfası üzerinden bize ulaşın."
   },
   "contact": {

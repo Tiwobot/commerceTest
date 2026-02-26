@@ -58,10 +58,10 @@
   },
   "refund": {
     "title": "Rückerstattungsrichtlinie",
-    "intro": "Bei Yangfinity steht die Kundenzufriedenheit an erster Stelle. Bitte lesen Sie unsere Rückerstattungsrichtlinie unten:",
-    "li1": "Rückerstattungen werden nur gewährt, wenn wir Ihre Bestellung nicht innerhalb des zugesagten Zeitrahmens liefern können.",
-    "li2": "Rückerstattungsanträge müssen innerhalb von 24 Stunden nach dem Kauf gestellt werden.",
-    "li3": "Für abgeschlossene und gelieferte Bestellungen werden keine Rückerstattungen gewährt.",
+    "intro": "Wir akzeptieren Rücksendungen innerhalb von 7 Tagen aus jedem Grund.",
+    "li1": "Kein Umtausch — nur Rückerstattung. Zahlungen werden nur in EUR akzeptiert.",
+    "li2": "Die Bearbeitungszeit für Rückerstattungen beträgt 3 Tage.",
+    "li3": "Wiederauffüllungsgebühr: 10% des Produktpreises.",
     "li4": "Um eine Rückerstattung zu beantragen, kontaktieren Sie bitte unser Support-Team mit Ihren Bestelldaten.",
     "contact": "Für weitere Fragen kontaktieren Sie uns bitte über die Kontaktseite."
   },

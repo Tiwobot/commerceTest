@@ -58,10 +58,10 @@
   },
   "refund": {
     "title": "Politique de Remboursement",
-    "intro": "Chez Yangfinity, la satisfaction du client est notre priorité. Veuillez consulter notre politique de remboursement ci-dessous :",
-    "li1": "Les remboursements ne sont effectués que si nous ne pouvons pas livrer votre commande dans le délai promis.",
-    "li2": "Les demandes de remboursement doivent être faites dans les 24 heures suivant l'achat.",
-    "li3": "Aucun remboursement ne sera effectué pour les commandes terminées et livrées.",
+    "intro": "Nous acceptons les retours sous 7 jours pour toute raison.",
+    "li1": "Aucun échange — uniquement des remboursements. Paiements acceptés uniquement en EUR.",
+    "li2": "Le traitement du remboursement prend 3 jours.",
+    "li3": "Frais de restockage : 10% du prix du produit.",
     "li4": "Pour demander un remboursement, veuillez contacter notre équipe d'assistance avec les détails de votre commande.",
     "contact": "Pour toute question supplémentaire, veuillez nous contacter via la page Contact."
   },

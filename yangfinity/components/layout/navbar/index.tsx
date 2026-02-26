@@ -134,7 +134,7 @@ function CartModal({ open, onClose }: { open: boolean; onClose: () => void }) {
     ).join('\n') +
     (items.length ? `\n\n${t('total')} €${totalPrice.toFixed(2)}` : '')
   );
-  const whatsappHref = `https://wa.me/4915736729768?text=${cartMessage}`;
+  const whatsappHref = `https://wa.me/68?text=${cartMessage}`;
   
   return (
     <div className={`fixed inset-0 z-[500] ${open ? '' : 'pointer-events-none'}`}> {/* Overlay */}

@@ -69,10 +69,10 @@
   },
   "refund": {
     "title": "Refund Policy",
-    "intro": "At Yangfinity, customer satisfaction is our priority. Please review our refund policy below:",
-    "li1": "Refunds are only issued if we are unable to deliver your order within the promised timeframe.",
-    "li2": "Refund requests must be made within 24 hours of purchase.",
-    "li3": "Refunds will not be issued for completed and delivered orders.",
+    "intro": "We accept returns within 7 days for any reason.",
+    "li1": "No exchanges — refunds only. All payments are accepted in EUR.",
+    "li2": "Refund processing time is 3 days.",
+    "li3": "Restocking fee: 10% of the product price.",
     "li4": "To request a refund, please contact our support team with your order details.",
     "contact": "For further questions, please reach out via the Contact page."
   },
